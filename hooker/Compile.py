@@ -123,14 +123,16 @@ def recordIntoProject(eleProperties):
         }
 
         message = "是否添加控件：\n" + str(copyInfo)
-        result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                 # rasygui，可用
-        # result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                              # pywin32，返回值有误，不可用
+        # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
+        result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
         # result = msg.askyesnocancel('提示', message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
         # print(result)
         path = cf.get_value("path")
-        if result:
+        if result == 1:
             # 保存前脚本进行唯一性校验
-            # AC.checkBottom(keyObj)
+            # （True：可直接保存；False：人工进行index判断）
+            flag = AC.checkBottom(keyObj)           # TODO：根据判断识别出结果但应用程序实际不可识别处理方法
+
             # 点击后保存
             filePath = path + r"\log.txt"
             # print(filePath)

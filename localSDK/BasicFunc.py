@@ -50,6 +50,82 @@ class AppControl:
     def checkBottom(self, keyObj):
         ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
         :param keyObj: 控件树信息
+        :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
+        '''
+        import uiautomation as auto
+
+        bottomObj = keyObj[str(len(keyObj) - 1)]
+        x = bottomObj["x"]
+        y = bottomObj["y"]
+
+        searchStr = None
+        searchObj = None
+        """ 
+        最上层（桌面）及最下层（目标）除外，每层遍历一次 
+        先通过属性直接查找下一层，若坐标不匹配，再通过GetChildren结合属性+坐标查找下一层
+        """
+        for i in range(len(keyObj) - 1):
+            obj = keyObj[str(i + 1)]
+            ControlType = obj.get("ControlType")
+            AutomationId = obj.get("AutomationId")
+            ClassName = obj.get("ClassName")
+            Name = obj.get("Name")
+            SupportedPattern = obj.get("SupportedPattern")
+
+            # parentObj = auto if i == 0 else searchObj
+            searchStr = "auto" if i == 0 else "searchObj"
+            searchStr = searchStr + "." + str(ControlType) + \
+                        "(searchDepth=1, ClassName='" + ClassName + "'"
+
+            RegexName = ""
+            for myStr in list(Name):
+                RegexName += (".*" + myStr)
+            RegexName += ".*"
+            RegexNameStr = ", RegexName='" + RegexName + "'"
+            searchStr += RegexNameStr if Name else ""
+
+            AutomationIdStr = ", AutomationId='" + AutomationId + "'"
+            searchStr += AutomationIdStr if (AutomationId != "" and not AutomationId.isdigit()) else ""
+
+            SupportedPatternStr = ", SupportedPattern='" + SupportedPattern + "'"
+            searchStr += SupportedPatternStr if SupportedPattern else ""
+
+            DescStr = ", Desc='" + Name + "')"
+            searchStr += DescStr if i == 0 and Name else ")"
+
+            print(searchStr)
+            try:
+                searchObj = eval(searchStr)
+                searchObj.Refind()
+
+                # 置顶应用程序
+                if i == 0:
+                    # searchObj.SetTopmost()
+                    searchObj.SetActive()
+                    # searchObj.SetFocus()
+
+                # 检查坐标是否匹配
+                rect = searchObj.BoundingRectangle
+                print(rect)
+                assert x <= rect.right and x >= rect.left \
+                       and y <= rect.bottom and y >= rect.top, \
+                    "第 %s 层控件坐标不匹配！" %(i + 1)
+            except AssertionError as e:
+                print(e)
+                # raise e
+                return False
+            except Exception as e:
+                print("未找到第 %s 层控件！" %(i+ 2))
+                # raise e
+                return False
+
+        print("finish!")
+        return searchObj
+
+
+    def checkBottom_EX(self, keyObj):
+        ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
+        :param keyObj: 控件树信息
         :return:
         '''
         import uiautomation as auto
@@ -115,9 +191,23 @@ class AppControl:
 
 
     def objControl(self, name, conductType, string=None, **kwargs):
+        try:
+            info = self.dict.get(name).get("Depth")
+            obj = self.checkBottom(info)
+            assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
+
+            if conductType == "点击":
+                obj.Click()
+        except AssertionError as e:
+            raise e
+        except Exception as e:
+            raise e
+
+
+    def objControl_EX(self, name, conductType, string=None, **kwargs):
         import win32api
         # 每层遍历，直接通过属性查询
-        ''' 
+        '''
         info = self.dict.get(name)["Depth"]
         if len(info) == 2:
             searchObj = auto
@@ -163,70 +253,6 @@ class AppControl:
 
         # 每层遍历，在上一层的所有子控件中查找
         info = self.dict.get(name)["Depth"]
-
-    def objControl_EX(self, name, conductType, string=None, **kwargs):
-        import win32api
-        info = self.dict.get(name)["Depth"]
-        objInfo = info[str(len(info) - 1)]
-        appInfo = info.get("1")             # info为桌面信息时，只有一层“0”
-
-        # Step 1：定位APP
-        appWindow = auto.WindowControl(searchDepth=1, ClassName=appInfo["ClassName"],
-                                       RegexName=".*" + appInfo["Name"] + ".*", Desc=self.appName + " window")
-        # appWindow.SetActive()
-        appWindow.SetTopmost()
-        # appWindow.SetFocus()
-        try:
-            assert appWindow.Exists(maxSearchSeconds=self.waitTime, searchIntervalSeconds=self.intervalTime), \
-                "请检查待操作应用程序状态！"
-
-
-            # Step 2：获取倒数第二层
-
-
-            ct = objInfo["ControlType"]
-            cn = objInfo["ClassName"]
-            ai = objInfo["AutomationId"]
-            dt = objInfo["Depth"]
-
-            # 获取最下一层相同“ControlType”的控件集合
-            objs = appWindow.ButtonControl(searchDepth=dt, foundIndex=None)
-
-
-
-
-
-
-            if ct == "TextControl":     # TODO：待补充控件类型
-                obj = appWindow.TextControl(searchDepth=int(objInfo["Depth"]), ClassName=objInfo["ClassName"],
-                                      AutomationId=objInfo["AutomationId"], RegexName=".*" + objInfo["Name"] + ".*")
-            elif ct == "ButtonControl":
-                obj = appWindow.ButtonControl(searchDepth=int(objInfo["Depth"]), ClassName=objInfo["ClassName"],
-                                      AutomationId=objInfo["AutomationId"], RegexName=".*" + objInfo["Name"] + ".*")
-            elif ct == "EditControl":
-                obj = appWindow.EditControl(searchDepth=int(objInfo["Depth"]), ClassName=objInfo["ClassName"],
-                                      AutomationId=objInfo["AutomationId"], RegexName=".*" + objInfo["Name"] + ".*")
-            elif ct == "ComboBoxControl":
-                obj = appWindow.ComboBoxControl(searchDepth=int(objInfo["Depth"]), ClassName=objInfo["ClassName"],
-                                      AutomationId=objInfo["AutomationId"], RegexName=".*" + objInfo["Name"] + ".*")
-            elif ct == "MenuItemControl":
-                obj = appWindow.MenuItemControl(searchDepth=int(objInfo["Depth"]), ClassName=objInfo["ClassName"],
-                                      AutomationId=objInfo["AutomationId"], RegexName=".*" + objInfo["Name"] + ".*")
-
-            if conductType == "点击":
-                obj.Click()
-            elif conductType == "双击":
-                obj.DoubleClick()
-            elif conductType == "输入":
-                if ct == "EditControl":
-                    obj.GetValuePattern().SetValue(string)
-                else:
-                    pass
-        except AssertionError as e:
-            raise e
-        except Exception as e:
-            raise e
-
 
 
 if __name__ == "__main__":

@@ -4,8 +4,9 @@ import PyHook3
 import threading
 import time
 import pythoncom
+import win32api, win32con
 import config.Globals as cf
-# import uiautomation as auto
+import uiautomation as auto
 from hooker import *
 
 
@@ -22,16 +23,17 @@ def getTimeNow():
 
 # 鼠标事件处理函数
 def OnMouseEvent(event):
-    print('MessageName:',event.MessageName)  #事件名称
-    print('Message:',event.Message)          #windows消息常量
-    print('Time:',event.Time)                #事件发生的时间戳
-    print('Window:',event.Window)            #窗口句柄
-    print('WindowName:',event.WindowName)    #窗口标题
-    position = event.Position
-    x, y = pyautogui.position()
-    print('Position:',position, type(position), x, y)        #事件发生时相对于整个屏幕的坐标
-    print('Wheel:',event.Wheel)              #鼠标滚轮
-    print('Injected:',event.Injected)        #判断这个事件是否由程序方式生成，而不是正常的人为触发。
+    print('MessageName:',event.MessageName)  # 事件名称
+    print('Message:',event.Message)          # windows消息常量
+    print('Time:',event.Time)                # 事件发生的时间戳
+    print('Window:',event.Window)            # 窗口句柄
+    print('WindowName:',event.WindowName)    # 窗口标题
+
+    # position = event.Position              # pyhook3中获取鼠标坐标结果与uiautomation不一致，此处用后者
+    x, y = auto.GetCursorPos()
+    print('Position:', "(%s, %s)" %(x, y))   # 事件发生时相对于整个屏幕的坐标
+    print('Wheel:',event.Wheel)              # 鼠标滚轮
+    print('Injected:',event.Injected)        # 判断这个事件是否由程序方式生成，而不是正常的人为触发。
     print('---')
 
     if event.MessageName == "mouse left down":
@@ -41,7 +43,7 @@ def OnMouseEvent(event):
         fp.write('\n' + '[捕获时间] %s' %getTimeNow())
         fp.write('\n' + '[MessageName] ' + str(event.MessageName))
         fp.write('\n' + '[Message] ' + str(event.Message))
-        fp.write('\n' + '[position] ' + str(position))
+        fp.write('\n' + '[position] ' + "(%s, %s)" %(x, y))
         fp.write('\n' + '[Window] ' + str(event.Window))
         fp.write('\n' + '[WindowName] ' + str(event.WindowName) + '\n')
 
@@ -60,8 +62,8 @@ def OnMouseEvent(event):
         output = str(myPopen("automation.py -a -t0 -n"))
         cf.set_value("output", output)
 
-        cf.set_value("x", position[0])
-        cf.set_value("y", position[1])
+        cf.set_value("x", x)
+        cf.set_value("y", y)
         fp.write(output)
 
         # recordIntoProject(output)
@@ -151,10 +153,18 @@ def loopToHook():
     # print(type(output), "output:\n", output)
     output = eval(output)
     md = output["Depth"]
-    md[str(len(md) - 1)]["x"] = cf.get_value("x")
-    md[str(len(md) - 1)]["y"] = cf.get_value("y")
 
-    isRecord = recordIntoProject(output)
+    if md != {}:
+        # 正常识别时
+        md[str(len(md) - 1)]["x"] = cf.get_value("x")
+        md[str(len(md) - 1)]["y"] = cf.get_value("y")
+
+        isRecord = recordIntoProject(output)
+    else:
+        # 无法识别控件内容（uiautomation不支持）
+        win32api.MessageBox(0, "无法识别所选控件！", "提示", win32con.MB_OK)
+        isRecord = False
+
     time.sleep(0.5)
     cf.set_value("output", None)
     return isRecord

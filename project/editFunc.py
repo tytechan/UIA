@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # AC.openApp("D:\SAP\SAPgui\saplogon.exe")
     # AC.objControl("SAP-登陆环境", "点击")
     # AC.objControl("SAP-登陆按钮", "点击")
-    AC.objControl("SAP-登陆名输入框", "输入", "hanpeng")
-    AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
+    AC.objControl("SAP-登陆按钮", "点击")
+    # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
 
     # AC.killApp("saplogon.exe")

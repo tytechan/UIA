@@ -2680,3 +2680,747 @@ getValue() missing 2 required positional arguments: 'key' and 'str'
 
 [层级结构]
 {'Starts': '2019-11-21 20:15:20.058', 'Ends': '2019-11-21 20:15:20.693', 'Depth': {'1': {'ControlType': 'WindowControl', 'Depth': '1', 'AutomationId': '', 'ClassName': '#32770', 'Handle': '0x10DB4(69044)', 'Name': 'SAP', 'SupportedPattern': 'WindowPattern', 'Rect': '(651,153,1044,566)[393x413]'}, '0': {'ControlType': 'PaneControl', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]'}, '2': {'ControlType': 'ButtonControl', 'Depth': '2', 'AutomationId': '1087', 'ClassName': 'Button', 'Handle': '0x10DC0(69056)', 'Name': '可变登录...', 'SupportedPattern': 'InvokePattern', 'Rect': '(732,186,820,217)[88x31]'}}}
+-----
+[捕获时间] 11/22/19 10:12:38.772412
+[MessageName] mouse left down
+[Message] 513
+[position] (1147, 440)
+[Window] 330848
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Ends': '2019-11-22 10:12:40.191', 'Depth': {'5': {'Afx00C600000': '00C60000', 'Handle': '0x10AC4(68292)', 'Name': 'myContainer', 'Rect': '(741,217,1031,552)[290x335]', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl', 'Depth': '5', 'AutomationId': '5002', 'ClassName': 'Afx:00C60000:0'}, '4': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x10AB6(68278)', 'Name': '', 'Rect': '(741,217,1031,552)[290x335]', 'ControlType': 'PaneControl', 'Depth': '4', 'AutomationId': '59649', 'ClassName': 'AfxFrameOrView100'}, '8': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x0(0)', 'Name': '700', 'Rect': '(741,285,1030,302)[289x17]', 'ControlType': 'TextControl', 'Depth': '8', 'AutomationId': '', 'ClassName': ''}, '3': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x10AB2(68274)', 'Name': '', 'Rect': '(665,217,1030,552)[365x335]', 'ControlType': 'PaneControl', 'Depth': '3', 'AutomationId': '59648', 'ClassName': 'AfxMDIFrame100'}, '6': {'SupportedPattern': 'SelectionPattern', 'Handle': '0x10A8C(68236)', 'Name': '', 'ScrollPattern.VerticalScrollPercent': '0.0', 'Rect': '(741,217,1031,452)[290x235]', 'ScrollPattern.HorizontalScrollPercent': '0.0', 'ControlType': 'ListControl', 'Depth': '6', 'AutomationId': '1008', 'ClassName': 'SysListView32'}, '2': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x10AB0(68272)', 'Name': '', 'Rect': '(665,217,1030,552)[365x335]', 'ControlType': 'PaneControl', 'Depth': '2', 'AutomationId': '29512976', 'ClassName': 'AfxOleControl100'}, '1': {'SupportedPattern': 'WindowPattern', 'Handle': '0x40A0E(264718)', 'Name': 'SAP', 'Rect': '(651,153,1044,566)[393x413]', 'ControlType': 'WindowControl', 'Depth': '1', 'AutomationId': '', 'ClassName': '#32770'}, '0': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x10010(65552)', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769'}, '7': {'SupportedPattern': 'InvokePattern', 'Handle': '0x0(0)', 'Name': '700', 'Rect': '(741,285,1030,302)[289x17]', 'ControlType': 'ListItemControl', 'Depth': '7', 'AutomationId': '', 'SelectionItemPattern.IsSelected': 'True', 'ClassName': ''}}, 'Starts': '2019-11-22 10:12:39.908'}
+-----
+[捕获时间] 11/22/19 10:12:53.062450
+[MessageName] mouse left down
+[Message] 513
+[position] (1051, 296)
+[Window] 330848
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'Rect': '(666,186,732,217)[66x31]', 'ControlType': 'ButtonControl', 'AutomationId': '1068', 'Handle': '0x10A72(68210)', 'SupportedPattern': 'InvokePattern', 'ClassName': 'Button', 'Name': '登录(O)'}, '0': {'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'AutomationId': '', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': '#32769', 'Name': '桌面'}, '1': {'Depth': '1', 'Rect': '(651,153,1044,566)[393x413]', 'ControlType': 'WindowControl', 'AutomationId': '', 'Handle': '0x40A0E(264718)', 'SupportedPattern': 'WindowPattern', 'ClassName': '#32770', 'Name': 'SAP'}}, 'Starts': '2019-11-22 10:12:54.190', 'Ends': '2019-11-22 10:12:54.318'}
+-----
+[捕获时间] 11/22/19 10:14:43.751755
+[MessageName] mouse left down
+[Message] 513
+-----
+[捕获时间] 11/22/19 10:17:46.338148
+[MessageName] mouse left down
+[Message] 513
+[position] (704, 199)
+[Window] 330848
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'1': {'SupportedPattern': 'WindowPattern', 'Rect': '(651,153,1044,566)[393x413]', 'ClassName': '#32770', 'Name': 'SAP', 'Handle': '0x40A0E(264718)', 'Depth': '1', 'ControlType': 'WindowControl', 'AutomationId': ''}, '0': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'Name': '桌面', 'Handle': '0x10010(65552)', 'Depth': '0', 'ControlType': 'PaneControl', 'AutomationId': ''}, '2': {'SupportedPattern': 'InvokePattern', 'Rect': '(666,186,732,217)[66x31]', 'ClassName': 'Button', 'Name': '登录(O)', 'Handle': '0x10A72(68210)', 'Depth': '2', 'ControlType': 'ButtonControl', 'AutomationId': '1068'}}, 'Ends': '2019-11-22 10:17:47.543', 'Starts': '2019-11-22 10:17:47.424'}
+-----
+[捕获时间] 11/22/19 10:21:09.295929
+[MessageName] mouse left down
+[Message] 513
+[position] (701, 201)
+[Window] 134062
+[WindowName] HiJson V2.1.2
+
+[层级结构]
+{'Ends': '2019-11-22 10:21:10.461', 'Starts': '2019-11-22 10:21:10.343', 'Depth': {'1': {'Name': 'SAP', 'ControlType': 'WindowControl', 'Rect': '(651,153,1044,566)[393x413]', 'AutomationId': '', 'ClassName': '#32770', 'Handle': '0x40A0E(264718)', 'SupportedPattern': 'WindowPattern', 'Depth': '1'}, '0': {'Name': '桌面', 'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0'}, '2': {'Name': '登录(O)', 'ControlType': 'ButtonControl', 'Rect': '(666,186,732,217)[66x31]', 'AutomationId': '1068', 'ClassName': 'Button', 'Handle': '0x10A72(68210)', 'SupportedPattern': 'InvokePattern', 'Depth': '2'}}}
+-----
+[捕获时间] 11/22/19 10:27:55.372036
+[MessageName] mouse left down
+[Message] 513
+[position] (263, 472)
+[Window] 65900
+[WindowName] 运行中的应用程序
+
+[层级结构]
+{'Starts': '2019-11-22 10:27:56.447', 'Ends': '2019-11-22 10:27:56.650', 'Depth': {'1': {'ControlType': 'WindowControl', 'AutomationId': '', 'Handle': '0x20BAE(134062)', 'Depth': '1', 'Rect': '(-8,-8,1288,688)[1296x696]', 'Name': 'HiJson', 'ClassName': 'SunAwtFrame', 'SupportedPattern': 'WindowPattern'}, '0': {'ControlType': 'PaneControl', 'AutomationId': '', 'Handle': '0x10010(65552)', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 10:28:05.249617
+[MessageName] mouse left down
+[Message] 513
+[position] (757, 551)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Starts': '2019-11-22 10:28:06.305', 'Ends': '2019-11-22 10:28:06.477', 'Depth': {'1': {'ControlType': 'WindowControl', 'AutomationId': '', 'Handle': '0x20BAE(134062)', 'Depth': '1', 'Rect': '(-8,-8,1288,688)[1296x696]', 'Name': 'HiJson', 'ClassName': 'SunAwtFrame', 'SupportedPattern': 'WindowPattern'}, '0': {'ControlType': 'PaneControl', 'AutomationId': '', 'Handle': '0x10010(65552)', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 10:28:13.134919
+[MessageName] mouse left down
+[Message] 513
+[position] (2226, 618)
+[Window] 133336
+[WindowName] UIA [E:\python相关\RPA\UIA] - C:\Python35\Lib\site-packages\uiautomation\uiautomation.py - PyCharm
+
+[层级结构]
+{'Starts': '2019-11-22 10:28:14.632', 'Ends': '2019-11-22 10:28:14.840', 'Depth': {'1': {'ControlType': 'WindowControl', 'AutomationId': '', 'Handle': '0x208D8(133336)', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]', 'Rect': '(1529,-7,3591,1119)[2062x1126]', 'Name': 'UIA', 'SupportedPattern': 'WindowPattern', 'ClassName': 'SunAwtFrame', 'C\\Python35\\Lib\\site-packages\\uiautomation\\uiautomation.py': '\\Python35\\Lib\\site-packages\\uiautomation\\uiautomation.py', 'Depth': '1'}, '0': {'ControlType': 'PaneControl', 'AutomationId': '', 'Handle': '0x10010(65552)', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 10:47:55.667747
+[MessageName] mouse left down
+[Message] 513
+[position] (219, 193)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 10:47:57.167', 'Starts': '2019-11-22 10:47:57.012', 'Depth': {'0': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x10010(65552)', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]'}, '2': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Handle': '0x20D88(134536)', 'Depth': '2', 'Afx010100001008': '01010000', 'AutomationId': '100', 'ClassName': 'Afx:01010000:1008', 'Name': '', 'Rect': '(14,141,1266,652)[1252x511]'}, '1': {'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Handle': '0x160CBC(1445052)', 'Depth': '1', 'AutomationId': '', 'ClassName': 'SAP_FRONTEND_SESSION', 'Name': 'SAP', 'Rect': '(-7,-7,1288,688)[1295x695]'}}}
+-----
+[捕获时间] 11/22/19 11:22:00.664950
+[MessageName] mouse left down
+[Message] 513
+[position] (935, 157)
+[Window] 133336
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\localSDK\BasicFunc.py [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'0': {'ControlType': 'PaneControl', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'Handle': '0x10010(65552)'}, '1': {'ControlType': 'PaneControl', 'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'ClassName': 'Chrome_WidgetWin_1', 'Rect': '(-7,-7,1288,688)[1295x695]', 'Name': 'Dashboard', 'Handle': '0x507B8(329656)'}, '2': {'ControlType': 'DocumentControl', 'Depth': '2', 'AutomationId': '1845925936', 'TextPattern.Text': '', 'ScrollPattern.HorizontalScrollPercent': '0.0', 'ClassName': 'Chrome_RenderWidgetHostHWND', 'Rect': '(40,69,1280,680)[1240x611]', 'Name': '', 'ScrollPattern.VerticalScrollPercent': '0.0', 'Handle': '0x50C60(330848)'}}, 'Starts': '2019-11-22 11:22:01.987'}
+-----
+[捕获时间] 11/22/19 11:22:15.643367
+[MessageName] mouse left down
+[Message] 513
+[position] (209, 195)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'Afx010100001008': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl', 'Handle': '0x20D88(134536)', 'ClassName': 'Afx:01010000:1008', 'Name': '', 'Depth': '2', 'Rect': '(14,141,1266,652)[1252x511]', 'AutomationId': '100'}, '1': {'SupportedPattern': 'WindowPattern', 'Rect': '(-7,-7,1288,688)[1295x695]', 'AutomationId': '', 'ClassName': 'SAP_FRONTEND_SESSION', 'Name': 'SAP', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'ControlType': 'WindowControl'}, '0': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ClassName': '#32769', 'Name': '桌面', 'Depth': '0', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl'}}, 'Ends': '2019-11-22 11:22:17.186', 'Starts': '2019-11-22 11:22:17.039'}
+-----
+[捕获时间] 11/22/19 11:22:29.907656
+[MessageName] mouse left down
+[Message] 513
+[position] (201, 193)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 11:22:31.405', 'Starts': '2019-11-22 11:22:31.258', 'Depth': {'0': {'AutomationId': '', 'ClassName': '#32769', 'Name': '桌面', 'Depth': '0', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'AutomationId': '', 'ClassName': 'SAP_FRONTEND_SESSION', 'Name': 'SAP', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern'}, '2': {'AutomationId': '100', 'Afx010100001008': '01010000', 'ClassName': 'Afx:01010000:1008', 'Name': '', 'Depth': '2', 'Handle': '0x20D88(134536)', 'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 11:24:00.455851
+[MessageName] mouse left down
+[Message] 513
+[position] (195, 190)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'0': {'ClassName': '#32769', 'Name': '桌面', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': ''}, '2': {'ClassName': 'Afx:01010000:1008', 'Depth': '2', 'Name': '', 'Handle': '0x20D88(134536)', 'ControlType': 'PaneControl', 'Afx010100001008': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(14,141,1266,652)[1252x511]', 'AutomationId': '100'}, '1': {'ClassName': 'SAP_FRONTEND_SESSION', 'Name': 'SAP', 'Handle': '0x160CBC(1445052)', 'ControlType': 'WindowControl', 'Depth': '1', 'SupportedPattern': 'WindowPattern', 'Rect': '(-7,-7,1288,688)[1295x695]', 'AutomationId': ''}}, 'Ends': '2019-11-22 11:24:01.918', 'Starts': '2019-11-22 11:24:01.784'}
+-----
+[捕获时间] 11/22/19 11:26:19.696893
+[MessageName] mouse left down
+[Message] 513
+[position] (216, 193)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'AutomationId': '100', 'Depth': '2', 'Handle': '0x20D88(134536)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': 'Afx:01010000:1008', 'Afx010100001008': '01010000', 'ControlType': 'PaneControl', 'Name': '', 'Rect': '(14,141,1266,652)[1252x511]'}, '1': {'AutomationId': '', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'SupportedPattern': 'WindowPattern', 'ClassName': 'SAP_FRONTEND_SESSION', 'Name': 'SAP', 'ControlType': 'WindowControl', 'Rect': '(-7,-7,1288,688)[1295x695]'}, '0': {'AutomationId': '', 'Depth': '0', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': '#32769', 'Name': '桌面', 'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]'}}, 'Starts': '2019-11-22 11:26:20.935', 'Ends': '2019-11-22 11:26:21.074'}
+-----
+[捕获时间] 11/22/19 11:35:19.465729
+[MessageName] mouse left down
+[Message] 513
+[position] (224, 196)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 11:35:20.819', 'Starts': '2019-11-22 11:35:20.688', 'Depth': {'1': {'ControlType': 'WindowControl', 'Rect': '(-7,-7,1288,688)[1295x695]', 'Handle': '0x160CBC(1445052)', 'SupportedPattern': 'WindowPattern', 'Name': 'SAP', 'AutomationId': '', 'Depth': '1', 'ClassName': 'SAP_FRONTEND_SESSION'}, '0': {'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'AutomationId': '', 'Depth': '0', 'ClassName': '#32769'}, '2': {'ControlType': 'PaneControl', 'Rect': '(14,141,1266,652)[1252x511]', 'Handle': '0x20D88(134536)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '', 'AutomationId': '100', 'ClassName': 'Afx:01010000:1008', 'Depth': '2', 'Afx010100001008': '01010000'}}}
+-----
+[捕获时间] 11/22/19 11:37:17.727925
+[MessageName] mouse left down
+[Message] 513
+[position] (213, 193)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 11:37:18.948', 'Ends': '2019-11-22 11:37:19.076', 'Depth': {'1': {'ControlType': 'WindowControl', 'Name': 'SAP', 'Depth': '1', 'Rect': '(-7,-7,1288,688)[1295x695]', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Handle': '0x160CBC(1445052)', 'ClassName': 'SAP_FRONTEND_SESSION'}, '0': {'ControlType': 'PaneControl', 'Name': '桌面', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Handle': '0x10010(65552)', 'ClassName': '#32769'}, '2': {'ControlType': 'PaneControl', 'Name': '', 'Depth': '2', 'Rect': '(14,141,1266,652)[1252x511]', 'Handle': '0x20D88(134536)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '100', 'Afx010100001008': '01010000', 'ClassName': 'Afx:01010000:1008'}}}
+-----
+[捕获时间] 11/22/19 11:40:57.662586
+[MessageName] mouse left down
+[Message] 513
+[position] (217, 192)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'1': {'Handle': '0x160CBC(1445052)', 'Name': 'SAP', 'ClassName': 'SAP_FRONTEND_SESSION', 'Rect': '(-7,-7,1288,688)[1295x695]', 'Depth': '1', 'AutomationId': '', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern'}, '2': {'Handle': '0x20D88(134536)', 'Name': '', 'ClassName': 'Afx:01010000:1008', 'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'Depth': '2', 'Afx010100001008': '01010000', 'AutomationId': '100', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'Handle': '0x10010(65552)', 'Name': '桌面', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0', 'AutomationId': '', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern'}}, 'Starts': '2019-11-22 11:40:58.846', 'Ends': '2019-11-22 11:40:58.973'}
+-----
+[捕获时间] 11/22/19 11:41:31.179846
+[MessageName] mouse left down
+[Message] 513
+[position] (221, 194)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 11:41:32.519', 'Depth': {'1': {'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl', 'AutomationId': '', 'Handle': '0x160CBC(1445052)', 'SupportedPattern': 'WindowPattern', 'Name': 'SAP', 'Depth': '1', 'ClassName': 'SAP_FRONTEND_SESSION'}, '0': {'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'AutomationId': '', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'Depth': '0', 'ClassName': '#32769'}, '2': {'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'AutomationId': '100', 'Handle': '0x20D88(134536)', 'Afx010100001008': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '', 'Depth': '2', 'ClassName': 'Afx:01010000:1008'}}, 'Starts': '2019-11-22 11:41:32.378'}
+-----
+[捕获时间] 11/22/19 11:44:08.416334
+[MessageName] mouse left down
+[Message] 513
+[position] (223, 197)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'Afx010100001008': '01010000', 'Handle': '0x20D88(134536)', 'ControlType': 'PaneControl', 'Rect': '(14,141,1266,652)[1252x511]', 'ClassName': 'Afx:01010000:1008', 'AutomationId': '100', 'Name': '', 'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'AutomationId': '', 'Name': '桌面', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'Handle': '0x160CBC(1445052)', 'ControlType': 'WindowControl', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ClassName': 'SAP_FRONTEND_SESSION', 'AutomationId': '', 'Name': 'SAP', 'Depth': '1', 'SupportedPattern': 'WindowPattern'}}, 'Starts': '2019-11-22 11:44:09.635', 'Ends': '2019-11-22 11:44:09.765'}
+-----
+[捕获时间] 11/22/19 11:45:48.415608
+[MessageName] mouse left down
+[Message] 513
+[position] (225, 211)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 11:45:49.572', 'Ends': '2019-11-22 11:45:49.701', 'Depth': {'0': {'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Depth': '0', 'Handle': '0x10010(65552)', 'Name': '桌面', 'ClassName': '#32769'}, '2': {'AutomationId': '100', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'Depth': '2', 'Handle': '0x20D88(134536)', 'Name': '', 'ClassName': 'Afx:01010000:1008', 'Afx010100001008': '01010000'}, '1': {'AutomationId': '', 'SupportedPattern': 'WindowPattern', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'Name': 'SAP', 'ClassName': 'SAP_FRONTEND_SESSION'}}}
+-----
+[捕获时间] 11/22/19 11:48:23.555240
+[MessageName] mouse left down
+[Message] 513
+[position] (366, 386)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Depth': {'0': {'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'Name': '桌面', 'AutomationId': '', 'Handle': '0x10010(65552)'}, '4': {'ClassName': 'NamedContainerAutomationPeer', 'Rect': '(210,358,504,401)[294x43]', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'Name': '显示控件', 'AutomationId': 'DisplayControls', 'Handle': '0x0(0)'}, '5': {'ClassName': 'Button', 'Rect': '(309,358,406,401)[97x43]', 'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'Name': '清除', 'AutomationId': 'clearButton', 'Handle': '0x0(0)'}, '3': {'ClassName': 'LandmarkTarget', 'Rect': '(107,84,607,579)[500x495]', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'Name': '', 'AutomationId': '', 'Handle': '0x0(0)'}, '1': {'ClassName': 'ApplicationFrameWindow', 'Rect': '(100,51,615,590)[515x539]', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'Name': '计算器', 'AutomationId': '', 'Handle': '0x50566(329062)'}, '2': {'ClassName': 'Windows.UI.Core.CoreWindow', 'Rect': '(107,52,607,583)[500x531]', 'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'Name': '计算器', 'AutomationId': '', 'Handle': '0xA0166(655718)'}}, 'Starts': '2019-11-22 11:48:25.333', 'Ends': '2019-11-22 11:48:25.710'}
+-----
+[捕获时间] 11/22/19 11:49:43.745896
+[MessageName] mouse left down
+[Message] 513
+[position] (367, 386)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Ends': '2019-11-22 11:49:45.165', 'Depth': {'3': {'Handle': '0x0(0)', 'Rect': '(107,84,607,579)[500x495]', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'ClassName': 'LandmarkTarget', 'AutomationId': '', 'ControlType': 'GroupControl', 'Name': ''}, '4': {'Handle': '0x0(0)', 'Rect': '(210,358,504,401)[294x43]', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'ClassName': 'NamedContainerAutomationPeer', 'AutomationId': 'DisplayControls', 'ControlType': 'GroupControl', 'Name': '显示控件'}, '0': {'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'ClassName': '#32769', 'AutomationId': '', 'ControlType': 'PaneControl', 'Name': '桌面'}, '5': {'Handle': '0x0(0)', 'Rect': '(309,358,406,401)[97x43]', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'ClassName': 'Button', 'AutomationId': 'clearButton', 'ControlType': 'ButtonControl', 'Name': '清除'}, '1': {'Handle': '0x50566(329062)', 'Rect': '(100,51,615,590)[515x539]', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'ClassName': 'ApplicationFrameWindow', 'AutomationId': '', 'ControlType': 'WindowControl', 'Name': '计算器'}, '2': {'Handle': '0xA0166(655718)', 'Rect': '(107,52,607,583)[500x531]', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'ClassName': 'Windows.UI.Core.CoreWindow', 'AutomationId': '', 'ControlType': 'WindowControl', 'Name': '计算器'}}, 'Starts': '2019-11-22 11:49:44.986'}
+-----
+[捕获时间] 11/22/19 11:51:47.912906
+[MessageName] mouse left down
+[Message] 513
+[position] (357, 382)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Ends': '2019-11-22 11:51:49.236', 'Depth': {'0': {'AutomationId': '', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl', 'Name': '桌面', 'ClassName': '#32769'}, '1': {'AutomationId': '', 'Depth': '1', 'Rect': '(100,51,615,590)[515x539]', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern', 'ControlType': 'WindowControl', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow'}, '2': {'AutomationId': '', 'Depth': '2', 'Rect': '(107,52,607,583)[500x531]', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'WindowControl', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow'}, '5': {'AutomationId': 'clearButton', 'Depth': '5', 'Rect': '(309,358,406,401)[97x43]', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'ControlType': 'ButtonControl', 'Name': '清除', 'ClassName': 'Button'}, '4': {'AutomationId': 'DisplayControls', 'Depth': '4', 'Rect': '(210,358,504,401)[294x43]', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'ControlType': 'GroupControl', 'Name': '显示控件', 'ClassName': 'NamedContainerAutomationPeer'}, '3': {'AutomationId': '', 'Depth': '3', 'Rect': '(107,84,607,579)[500x495]', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'ControlType': 'GroupControl', 'Name': '', 'ClassName': 'LandmarkTarget'}}, 'Starts': '2019-11-22 11:51:49.057'}
+-----
+[捕获时间] 11/22/19 11:53:20.726190
+[MessageName] mouse left down
+[Message] 513
+[position] (354, 388)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Starts': '2019-11-22 11:53:21.941', 'Ends': '2019-11-22 11:53:22.116', 'Depth': {'2': {'Rect': '(107,52,607,583)[500x531]', 'ControlType': 'WindowControl', 'Handle': '0xA0166(655718)', 'AutomationId': '', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2'}, '5': {'Rect': '(309,358,406,401)[97x43]', 'ControlType': 'ButtonControl', 'Handle': '0x0(0)', 'AutomationId': 'clearButton', 'Name': '清除', 'ClassName': 'Button', 'SupportedPattern': 'InvokePattern', 'Depth': '5'}, '0': {'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0'}, '4': {'Rect': '(210,358,504,401)[294x43]', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'AutomationId': 'DisplayControls', 'Name': '显示控件', 'ClassName': 'NamedContainerAutomationPeer', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4'}, '3': {'Rect': '(107,84,607,579)[500x495]', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'AutomationId': '', 'Name': '', 'ClassName': 'LandmarkTarget', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3'}, '1': {'Rect': '(100,51,615,590)[515x539]', 'ControlType': 'WindowControl', 'Handle': '0x50566(329062)', 'AutomationId': '', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow', 'SupportedPattern': 'WindowPattern', 'Depth': '1'}}}
+-----
+[捕获时间] 11/22/19 11:56:58.966429
+[MessageName] mouse left down
+[Message] 513
+[position] (373, 378)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Ends': '2019-11-22 11:57:00.325', 'Starts': '2019-11-22 11:57:00.132', 'Depth': {'5': {'Depth': '5', 'Rect': '(309,358,406,401)[97x43]', 'Name': '清除', 'ClassName': 'Button', 'AutomationId': 'clearButton', 'ControlType': 'ButtonControl', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern'}, '0': {'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769', 'AutomationId': '', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'Depth': '2', 'Rect': '(107,52,607,583)[500x531]', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow', 'AutomationId': '', 'ControlType': 'WindowControl', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'Depth': '4', 'Rect': '(210,358,504,401)[294x43]', 'Name': '显示控件', 'ClassName': 'NamedContainerAutomationPeer', 'AutomationId': 'DisplayControls', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern'}, '3': {'Depth': '3', 'Rect': '(107,84,607,579)[500x495]', 'Name': '', 'ClassName': 'LandmarkTarget', 'AutomationId': '', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern'}, '1': {'Depth': '1', 'Rect': '(100,51,615,590)[515x539]', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow', 'AutomationId': '', 'ControlType': 'WindowControl', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern'}}}
+-----
+[捕获时间] 11/22/19 13:34:32.671475
+[MessageName] mouse left down
+[Message] 513
+[position] (339, 388)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Depth': {'1': {'Handle': '0x50566(329062)', 'ClassName': 'ApplicationFrameWindow', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'Name': '计算器', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]'}, '2': {'Handle': '0xA0166(655718)', 'ClassName': 'Windows.UI.Core.CoreWindow', 'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'Name': '计算器', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]'}, '0': {'Handle': '0x10010(65552)', 'ClassName': '#32769', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'Name': '桌面', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]'}, '4': {'Handle': '0x0(0)', 'ClassName': 'NamedContainerAutomationPeer', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'Name': '显示控件', 'AutomationId': 'DisplayControls', 'Rect': '(210,358,504,401)[294x43]'}, '5': {'Handle': '0x0(0)', 'ClassName': 'Button', 'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'Name': '清除', 'AutomationId': 'clearButton', 'Rect': '(309,358,406,401)[97x43]'}, '3': {'Handle': '0x0(0)', 'ClassName': 'LandmarkTarget', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'Name': '', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]'}}, 'Ends': '2019-11-22 13:34:34.376', 'Starts': '2019-11-22 13:34:34.035'}
+-----
+[捕获时间] 11/22/19 13:37:07.852264
+[MessageName] mouse left down
+[Message] 513
+[position] (357, 394)
+[Window] 330848
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'0': {'ClassName': '#32769', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]'}, '2': {'ClassName': 'Windows.UI.Core.CoreWindow', 'Handle': '0xA0166(655718)', 'ControlType': 'WindowControl', 'Name': '计算器', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]'}, '3': {'ClassName': 'LandmarkTarget', 'Handle': '0x0(0)', 'ControlType': 'GroupControl', 'Name': '', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]'}, '1': {'ClassName': 'ApplicationFrameWindow', 'Handle': '0x50566(329062)', 'ControlType': 'WindowControl', 'Name': '计算器', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]'}, '5': {'ClassName': 'Button', 'Handle': '0x0(0)', 'ControlType': 'ButtonControl', 'Name': '清除', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'AutomationId': 'clearButton', 'Rect': '(309,358,406,401)[97x43]'}, '4': {'ClassName': 'NamedContainerAutomationPeer', 'Handle': '0x0(0)', 'ControlType': 'GroupControl', 'Name': '显示控件', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'AutomationId': 'DisplayControls', 'Rect': '(210,358,504,401)[294x43]'}}, 'Ends': '2019-11-22 13:37:09.439', 'Starts': '2019-11-22 13:37:09.236'}
+-----
+[捕获时间] 11/22/19 13:41:28.519345
+[MessageName] mouse left down
+[Message] 513
+[position] (348, 378)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Depth': {'1': {'Depth': '1', 'Name': '计算器', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]', 'Handle': '0x50566(329062)', 'ClassName': 'ApplicationFrameWindow'}, '5': {'Depth': '5', 'Name': '清除', 'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'clearButton', 'Rect': '(309,358,406,401)[97x43]', 'Handle': '0x0(0)', 'ClassName': 'Button'}, '2': {'Depth': '2', 'Name': '计算器', 'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]', 'Handle': '0xA0166(655718)', 'ClassName': 'Windows.UI.Core.CoreWindow'}, '4': {'Depth': '4', 'Name': '显示控件', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'AutomationId': 'DisplayControls', 'Rect': '(210,358,504,401)[294x43]', 'Handle': '0x0(0)', 'ClassName': 'NamedContainerAutomationPeer'}, '3': {'Depth': '3', 'Name': '', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]', 'Handle': '0x0(0)', 'ClassName': 'LandmarkTarget'}, '0': {'Depth': '0', 'Name': '桌面', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'ClassName': '#32769'}}, 'Starts': '2019-11-22 13:41:29.925', 'Ends': '2019-11-22 13:41:30.132'}
+-----
+[捕获时间] 11/22/19 13:44:54.874407
+[MessageName] mouse left down
+[Message] 513
+[position] (711, 709)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'1': {'Depth': '1', 'Name': 'Dashboard', 'ControlType': 'PaneControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Rect': '(-7,-7,1288,688)[1295x695]', 'Handle': '0x507B8(329656)', 'ClassName': 'Chrome_WidgetWin_1'}, '0': {'Depth': '0', 'Name': '桌面', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'ClassName': '#32769'}, '2': {'Depth': '2', 'Name': '', 'ControlType': 'DocumentControl', 'ScrollPattern.HorizontalScrollPercent': '0.0', 'AutomationId': '1845925936', 'ScrollPattern.VerticalScrollPercent': '0.0', 'Rect': '(40,69,1280,680)[1240x611]', 'TextPattern.Text': '', 'Handle': '0x50C60(330848)', 'ClassName': 'Chrome_RenderWidgetHostHWND'}}, 'Starts': '2019-11-22 13:44:56.136'}
+-----
+[捕获时间] 11/22/19 14:00:45.867704
+[MessageName] mouse left down
+[Message] 513
+[position] (715, 706)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 14:00:46.986', 'Ends': '2019-11-22 14:00:47.164', 'Depth': {'0': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'Handle': '0x10010(65552)', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769'}, '1': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '1', 'Handle': '0x10116(65814)', 'AutomationId': '', 'Rect': '(0,680,1280,720)[1280x40]', 'Name': '任务栏', 'ClassName': 'Shell_TrayWnd'}}}
+-----
+[捕获时间] 11/22/19 14:00:51.238489
+[MessageName] mouse left down
+[Message] 513
+[position] (437, 385)
+[Window] 134062
+[WindowName] HiJson V2.1.2
+
+[层级结构]
+{'Starts': '2019-11-22 14:00:52.255', 'Ends': '2019-11-22 14:00:52.501', 'Depth': {'3': {'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'Handle': '0x0(0)', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]', 'Name': '', 'ClassName': 'LandmarkTarget'}, '0': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'Handle': '0x10010(65552)', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769'}, '4': {'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'Handle': '0x0(0)', 'AutomationId': 'DisplayControls', 'Rect': '(210,358,504,401)[294x43]', 'Name': '显示控件', 'ClassName': 'NamedContainerAutomationPeer'}, '1': {'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'Handle': '0x50566(329062)', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow'}, '5': {'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'Handle': '0x0(0)', 'AutomationId': 'backSpaceButton', 'Rect': '(408,358,505,401)[97x43]', 'Name': 'Backspace', 'ClassName': 'Button'}, '2': {'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'Handle': '0xA0166(655718)', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow'}}}
+-----
+[捕获时间] 11/22/19 14:01:35.696730
+[MessageName] mouse left down
+[Message] 513
+[position] (268, 430)
+[Window] 134062
+[WindowName] HiJson V2.1.2
+
+[层级结构]
+{'Starts': '2019-11-22 14:01:36.770', 'Ends': '2019-11-22 14:01:37.018', 'Depth': {'3': {'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'Handle': '0x0(0)', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]', 'Name': '', 'ClassName': 'LandmarkTarget'}, '0': {'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'Handle': '0x10010(65552)', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769'}, '4': {'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '4', 'Handle': '0x0(0)', 'AutomationId': 'NumberPad', 'Rect': '(210,403,504,579)[294x176]', 'Name': '数字键盘', 'ClassName': 'NamedContainerAutomationPeer'}, '1': {'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'Handle': '0x50566(329062)', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow'}, '5': {'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'Depth': '5', 'Handle': '0x0(0)', 'AutomationId': 'num7Button', 'Rect': '(210,403,307,446)[97x43]', 'Name': '七', 'ClassName': 'Button'}, '2': {'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'Handle': '0xA0166(655718)', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow'}}}
+-----
+[捕获时间] 11/22/19 14:13:07.930860
+[MessageName] mouse left down
+[Message] 513
+[position] (162, 383)
+[Window] 655718
+[WindowName] 计算器
+
+[层级结构]
+{'Ends': '2019-11-22 14:13:09.278', 'Depth': {'3': {'ControlType': 'GroupControl', 'Rect': '(107,84,607,579)[500x495]', 'Depth': '3', 'AutomationId': '', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'Name': '', 'ClassName': 'LandmarkTarget'}, '4': {'ControlType': 'ButtonControl', 'Rect': '(111,358,208,401)[97x43]', 'Depth': '4', 'AutomationId': 'shiftButton', 'Handle': '0x0(0)', 'SupportedPattern': 'TogglePattern', 'Name': '反函数', 'ClassName': 'ToggleButton', 'TogglePattern.ToggleState': 'ToggleState.On'}, '2': {'ControlType': 'WindowControl', 'Rect': '(107,52,607,583)[500x531]', 'Depth': '2', 'AutomationId': '', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow'}, '1': {'ControlType': 'WindowControl', 'Rect': '(100,51,615,590)[515x539]', 'Depth': '1', 'AutomationId': '', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow'}, '0': {'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0', 'AutomationId': '', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'ClassName': '#32769'}}, 'Starts': '2019-11-22 14:13:09.045'}
+-----
+[捕获时间] 11/22/19 14:15:36.769730
+[MessageName] mouse left down
+[Message] 513
+[position] (207, 195)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 14:15:38.150', 'Depth': {'1': {'Handle': '0x160CBC(1445052)', 'Depth': '1', 'Rect': '(-7,-7,1288,688)[1295x695]', 'AutomationId': '', 'ClassName': 'SAP_FRONTEND_SESSION', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Name': 'SAP'}, '0': {'Handle': '0x10010(65552)', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ClassName': '#32769', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面'}, '2': {'Handle': '0x20D88(134536)', 'Depth': '2', 'Rect': '(14,141,1266,652)[1252x511]', 'AutomationId': '100', 'ClassName': 'Afx:01010000:1008', 'Name': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Afx010100001008': '01010000', 'ControlType': 'PaneControl'}}, 'Starts': '2019-11-22 14:15:38.010'}
+-----
+[捕获时间] 11/22/19 14:16:12.040216
+[MessageName] mouse left down
+[Message] 513
+[position] (694, 197)
+[Window] 264718
+[WindowName] SAP Logon 730
+
+[层级结构]
+{'Ends': '2019-11-22 14:16:13.353', 'Starts': '2019-11-22 14:16:13.161', 'Depth': {'2': {'Handle': '0x10A72(68210)', 'SupportedPattern': 'InvokePattern', 'Name': '登录(O)', 'Depth': '2', 'Rect': '(666,186,732,217)[66x31]', 'ControlType': 'ButtonControl', 'ClassName': 'Button', 'AutomationId': '1068'}, '0': {'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'ClassName': '#32769', 'AutomationId': ''}, '1': {'Handle': '0x40A0E(264718)', 'SupportedPattern': 'WindowPattern', 'Name': 'SAP', 'Depth': '1', 'Rect': '(651,153,1044,566)[393x413]', 'ControlType': 'WindowControl', 'ClassName': '#32770', 'AutomationId': ''}}}
+-----
+[捕获时间] 11/22/19 14:39:36.170877
+[MessageName] mouse left down
+[Message] 513
+[position] (3000, 93)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'1': {'Depth': '1', 'Name': 'UIA', 'ClassName': 'SunAwtFrame', 'Handle': '0x208D8(133336)', 'SupportedPattern': 'WindowPattern', 'Rect': '(1529,-7,3591,1119)[2062x1126]', 'AutomationId': '', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ControlType': 'PaneControl'}}, 'Starts': '2019-11-22 14:39:37.328', 'Ends': '2019-11-22 14:39:37.511'}
+-----
+[捕获时间] 11/22/19 14:39:42.294068
+[MessageName] mouse left down
+[Message] 513
+[position] (694, 708)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'3': {'Depth': '3', 'Name': '运行中的应用程序', 'ClassName': 'MSTaskSwWClass', 'Handle': '0x1016A(65898)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(48,680,1030,720)[982x40]', 'AutomationId': '', 'ControlType': 'PaneControl'}, '4': {'Depth': '4', 'Name': '运行中的应用程序', 'ClassName': 'MSTaskListWClass', 'Handle': '0x1016C(65900)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(48,680,1030,720)[982x40]', 'AutomationId': '', 'ControlType': 'ToolBarControl'}, '1': {'Depth': '1', 'Name': '任务栏', 'ClassName': 'Shell_TrayWnd', 'Handle': '0x10116(65814)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,680,1280,720)[1280x40]', 'AutomationId': '', 'ControlType': 'PaneControl'}, '5': {'Depth': '5', 'Name': '计算器', 'ClassName': '', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'Rect': '(651,680,701,720)[50x40]', 'AutomationId': 'Microsoft.WindowsCalculator_8wekyb3d8bbwe!App', 'ControlType': 'ButtonControl'}, '0': {'Depth': '0', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ControlType': 'PaneControl'}, '2': {'Depth': '2', 'Name': '', 'ClassName': 'ReBarWindow32', 'Handle': '0x10160(65888)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(47,680,1030,720)[983x40]', 'AutomationId': '40965', 'ControlType': 'PaneControl'}}, 'Starts': '2019-11-22 14:39:43.384', 'Ends': '2019-11-22 14:39:43.639'}
+-----
+[捕获时间] 11/22/19 14:39:48.065100
+[MessageName] mouse left down
+[Message] 513
+[position] (189, 421)
+[Window] 2756368
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'1': {'Depth': '1', 'Name': '计算器', 'ClassName': 'ApplicationFrameWindow', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern', 'Rect': '(100,51,615,590)[515x539]', 'AutomationId': '', 'ControlType': 'WindowControl'}, '3': {'Depth': '3', 'Name': '', 'ClassName': 'LandmarkTarget', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'Rect': '(107,84,607,579)[500x495]', 'AutomationId': '', 'ControlType': 'GroupControl'}, '4': {'Depth': '4', 'Name': 'π', 'ClassName': 'Button', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'Rect': '(111,403,208,446)[97x43]', 'AutomationId': 'piButton', 'ControlType': 'ButtonControl'}, '0': {'Depth': '0', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ControlType': 'PaneControl'}, '2': {'Depth': '2', 'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(107,52,607,583)[500x531]', 'AutomationId': '', 'ControlType': 'WindowControl'}}, 'Starts': '2019-11-22 14:39:49.149', 'Ends': '2019-11-22 14:39:49.398'}
+-----
+[捕获时间] 11/22/19 14:40:07.197039
+[MessageName] mouse left down
+[Message] 513
+[position] (188, 421)
+[Window] 2756368
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'3': {'Name': '', 'ClassName': 'LandmarkTarget', 'Depth': '3', 'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern'}, '2': {'Name': '计算器', 'ClassName': 'Windows.UI.Core.CoreWindow', 'Depth': '2', 'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]', 'ControlType': 'WindowControl', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'Name': '桌面', 'ClassName': '#32769', 'Depth': '0', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'Name': '计算器', 'ClassName': 'ApplicationFrameWindow', 'Depth': '1', 'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]', 'ControlType': 'WindowControl', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern'}, '4': {'Name': 'π', 'ClassName': 'Button', 'Depth': '4', 'AutomationId': 'piButton', 'Rect': '(111,403,208,446)[97x43]', 'ControlType': 'ButtonControl', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern'}}, 'Starts': '2019-11-22 14:40:08.342', 'Ends': '2019-11-22 14:40:08.585'}
+-----
+[捕获时间] 11/22/19 14:40:29.644077
+[MessageName] mouse left down
+[Message] 513
+[position] (139, 435)
+[Window] 2756368
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Ends': '2019-11-22 14:40:30.988', 'Depth': {'0': {'Name': '桌面', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'Handle': '0x10010(65552)'}, '3': {'Name': '', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'AutomationId': '', 'Depth': '3', 'Rect': '(107,84,607,579)[500x495]', 'ClassName': 'LandmarkTarget', 'Handle': '0x0(0)'}, '1': {'Name': '计算器', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Depth': '1', 'Rect': '(100,51,615,590)[515x539]', 'ClassName': 'ApplicationFrameWindow', 'Handle': '0x50566(329062)'}, '2': {'Name': '计算器', 'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Depth': '2', 'Rect': '(107,52,607,583)[500x531]', 'ClassName': 'Windows.UI.Core.CoreWindow', 'Handle': '0xA0166(655718)'}, '4': {'Name': 'π', 'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'piButton', 'Depth': '4', 'Rect': '(111,403,208,446)[97x43]', 'ClassName': 'Button', 'Handle': '0x0(0)'}}, 'Starts': '2019-11-22 14:40:30.753'}
+-----
+[捕获时间] 11/22/19 14:41:05.636486
+[MessageName] mouse left down
+[Message] 513
+[position] (155, 429)
+[Window] 2756368
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Starts': '2019-11-22 14:41:06.765', 'Depth': {'0': {'AutomationId': '', 'Depth': '0', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'ControlType': 'PaneControl', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'AutomationId': '', 'Depth': '1', 'Handle': '0x50566(329062)', 'Rect': '(100,51,615,590)[515x539]', 'ClassName': 'ApplicationFrameWindow', 'ControlType': 'WindowControl', 'Name': '计算器', 'SupportedPattern': 'WindowPattern'}, '2': {'AutomationId': '', 'Depth': '2', 'Handle': '0xA0166(655718)', 'Rect': '(107,52,607,583)[500x531]', 'ClassName': 'Windows.UI.Core.CoreWindow', 'ControlType': 'WindowControl', 'Name': '计算器', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'AutomationId': 'piButton', 'Depth': '4', 'Handle': '0x0(0)', 'Rect': '(111,403,208,446)[97x43]', 'ClassName': 'Button', 'ControlType': 'ButtonControl', 'Name': 'π', 'SupportedPattern': 'InvokePattern'}, '3': {'AutomationId': '', 'Depth': '3', 'Handle': '0x0(0)', 'Rect': '(107,84,607,579)[500x495]', 'ClassName': 'LandmarkTarget', 'ControlType': 'GroupControl', 'Name': '', 'SupportedPattern': 'ScrollItemPattern'}}, 'Ends': '2019-11-22 14:41:07.002'}
+-----
+[捕获时间] 11/22/19 14:41:59.211479
+[MessageName] mouse left down
+[Message] 513
+[position] (426, 701)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 14:42:00.355', 'Depth': {'1': {'AutomationId': '', 'Depth': '1', 'Handle': '0x10116(65814)', 'Rect': '(0,680,1280,720)[1280x40]', 'ClassName': 'Shell_TrayWnd', 'ControlType': 'PaneControl', 'Name': '任务栏', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'AutomationId': '40965', 'Depth': '2', 'Handle': '0x10160(65888)', 'Rect': '(47,680,1030,720)[983x40]', 'ClassName': 'ReBarWindow32', 'ControlType': 'PaneControl', 'Name': '', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'AutomationId': '', 'Depth': '4', 'Handle': '0x1016C(65900)', 'Rect': '(66,680,981,720)[915x40]', 'ClassName': 'MSTaskListWClass', 'ControlType': 'ToolBarControl', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '5': {'AutomationId': 'D:\\SAP\\SAPgui\\saplogon.exe', 'D\\SAP\\SAPgui\\saplogon.exe': '\\SAP\\SAPgui\\saplogon.exe', 'Depth': '5', 'Handle': '0x0(0)', 'Rect': '(419,680,469,720)[50x40]', 'ExpandCollapsePattern.ExpandCollapseState': 'ExpandCollapseState.LeafNode', 'ClassName': '', 'ControlType': 'MenuItemControl', 'Name': 'SAP', 'SupportedPattern': 'InvokePattern'}, '3': {'AutomationId': '', 'Depth': '3', 'Handle': '0x1016A(65898)', 'Rect': '(66,680,981,720)[915x40]', 'ClassName': 'MSTaskSwWClass', 'ControlType': 'PaneControl', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'AutomationId': '', 'Depth': '0', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'ControlType': 'PaneControl', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern'}}, 'Ends': '2019-11-22 14:42:00.621'}
+-----
+[捕获时间] 11/22/19 14:42:05.811596
+[MessageName] mouse left down
+[Message] 513
+[position] (196, 596)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Starts': '2019-11-22 14:42:07.009', 'Depth': {'0': {'AutomationId': '', 'Depth': '0', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'ControlType': 'PaneControl', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'AutomationId': '', 'Depth': '1', 'Handle': '0x507B8(329656)', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ClassName': 'Chrome_WidgetWin_1', 'ControlType': 'PaneControl', 'Name': 'Python如何将字符串分割成单个字符，并形成一个list?', 'SupportedPattern': 'WindowPattern'}, '2': {'AutomationId': '1832918544', 'ScrollPattern.HorizontalScrollPercent': '0.0', 'TextPattern.Text': '', 'ScrollPattern.VerticalScrollPercent': '0.0', 'Depth': '2', 'Handle': '0x2A0F10(2756368)', 'Rect': '(40,69,1280,680)[1240x611]', 'ClassName': 'Chrome_RenderWidgetHostHWND', 'ControlType': 'DocumentControl', 'Name': ''}}}
+-----
+[捕获时间] 11/22/19 14:47:31.667342
+[MessageName] mouse left down
+[Message] 513
+[position] (175, 471)
+[Window] 65900
+[WindowName] 运行中的应用程序
+
+[层级结构]
+{'Depth': {'4': {'Rect': '(111,447,208,490)[97x43]', 'Name': '分数', 'Handle': '0x0(0)', 'ControlType': 'ButtonControl', 'SupportedPattern': 'InvokePattern', 'Depth': '4', 'ClassName': 'Button', 'AutomationId': 'factorialButton'}, '3': {'Rect': '(107,84,607,579)[500x495]', 'Name': '', 'Handle': '0x0(0)', 'ControlType': 'GroupControl', 'SupportedPattern': 'ScrollItemPattern', 'Depth': '3', 'ClassName': 'LandmarkTarget', 'AutomationId': ''}, '1': {'Rect': '(100,51,615,590)[515x539]', 'Name': '计算器', 'Handle': '0x50566(329062)', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'ClassName': 'ApplicationFrameWindow', 'AutomationId': ''}, '0': {'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '0', 'ClassName': '#32769', 'AutomationId': ''}, '2': {'Rect': '(107,52,607,583)[500x531]', 'Name': '计算器', 'Handle': '0xA0166(655718)', 'ControlType': 'WindowControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Depth': '2', 'ClassName': 'Windows.UI.Core.CoreWindow', 'AutomationId': ''}}, 'Starts': '2019-11-22 14:47:32.828', 'Ends': '2019-11-22 14:47:33.004'}
+-----
+[捕获时间] 11/22/19 14:47:47.474343
+[MessageName] mouse left down
+[Message] 513
+[position] (534, 341)
+[Window] 134062
+[WindowName] HiJson V2.1.2
+
+[层级结构]
+{'Starts': '2019-11-22 14:47:48.611', 'Ends': '2019-11-22 14:47:48.806', 'Depth': {'4': {'AutomationId': 'ScientificFunctions', 'Rect': '(111,269,602,356)[491x87]', 'Depth': '4', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'ClassName': 'NamedContainerAutomationPeer', 'Name': '科学函数'}, '2': {'AutomationId': '', 'Rect': '(107,52,607,583)[500x531]', 'Depth': '2', 'ControlType': 'WindowControl', 'Handle': '0xA0166(655718)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': 'Windows.UI.Core.CoreWindow', 'Name': '计算器'}, '5': {'AutomationId': 'degreesButton', 'Rect': '(507,313,604,355)[97x42]', 'Depth': '5', 'ControlType': 'ButtonControl', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'ClassName': 'Button', 'Name': '度'}, '0': {'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': '#32769', 'Name': '桌面'}, '1': {'AutomationId': '', 'Rect': '(100,51,615,590)[515x539]', 'Depth': '1', 'ControlType': 'WindowControl', 'Handle': '0x50566(329062)', 'SupportedPattern': 'WindowPattern', 'ClassName': 'ApplicationFrameWindow', 'Name': '计算器'}, '3': {'AutomationId': '', 'Rect': '(107,84,607,579)[500x495]', 'Depth': '3', 'ControlType': 'GroupControl', 'Handle': '0x0(0)', 'SupportedPattern': 'ScrollItemPattern', 'ClassName': 'LandmarkTarget', 'Name': ''}}}
+-----
+[捕获时间] 11/22/19 14:50:08.985026
+[MessageName] mouse left down
+[Message] 513
+[position] (423, 633)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Ends': '2019-11-22 14:50:10.300', 'Starts': '2019-11-22 14:50:10.173', 'Depth': {'2': {'Afx010100001008': '01010000', 'Rect': '(14,141,1266,652)[1252x511]', 'AutomationId': '100', 'Depth': '2', 'Handle': '0x20D88(134536)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '', 'ControlType': 'PaneControl', 'ClassName': 'Afx:01010000:1008'}, '0': {'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl', 'Name': '桌面'}, '1': {'ClassName': 'SAP_FRONTEND_SESSION', 'Handle': '0x160CBC(1445052)', 'Rect': '(-7,-7,1288,688)[1295x695]', 'AutomationId': '', 'Depth': '1', 'SupportedPattern': 'WindowPattern', 'ControlType': 'WindowControl', 'Name': 'SAP'}}}
+-----
+[捕获时间] 11/22/19 15:13:50.383190
+[MessageName] mouse left down
+[Message] 513
+[position] (233, 194)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'Handle': '0x20D88(134536)', 'Afx010100001008': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': 'Afx:01010000:1008', 'Rect': '(14,141,1266,652)[1252x511]', 'Name': '', 'AutomationId': '100', 'ControlType': 'PaneControl'}, '1': {'Depth': '1', 'Handle': '0x160CBC(1445052)', 'SupportedPattern': 'WindowPattern', 'ClassName': 'SAP_FRONTEND_SESSION', 'Rect': '(-7,-7,1288,688)[1295x695]', 'Name': 'SAP', 'AutomationId': '', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'AutomationId': '', 'ControlType': 'PaneControl'}}, 'Ends': '2019-11-22 15:13:51.715', 'Starts': '2019-11-22 15:13:51.554'}
+-----
+[捕获时间] 11/22/19 16:28:04.597578
+[MessageName] mouse left down
+[Message] 513
+[position] (45, 85)
+[Window] 134548
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 16:28:06.306', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 16:37:25.906603
+[MessageName] mouse left down
+[Message] 513
+[position] (293, 66)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 16:37:27.626'}
+-----
+[捕获时间] 11/22/19 16:40:33.059097
+[MessageName] mouse left down
+[Message] 513
+[position] (176, 74)
+[Window] 134548
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 16:40:34.596'}
+-----
+[捕获时间] 11/22/19 16:41:40.549382
+[MessageName] mouse left down
+[Message] 513
+[position] (119, 72)
+[Window] 134548
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 16:41:42.323'}
+-----
+[捕获时间] 11/22/19 16:55:55.484519
+[MessageName] mouse left down
+[Message] 513
+[position] (323, 617)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Depth': {'0': {'Rect': '(0,0,1280,720)[1280x720]', 'Name': '桌面', 'ClassName': '#32769', 'Depth': '0', 'Handle': '0x10010(65552)', 'AutomationId': '', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'Rect': '(14,141,1266,652)[1252x511]', 'ClassName': 'Afx:01010000:1008', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '', 'Handle': '0x20D88(134536)', 'Depth': '2', 'AutomationId': '100', 'Afx010100001008': '01010000', 'ControlType': 'PaneControl'}, '1': {'Rect': '(-7,-7,1288,688)[1295x695]', 'Name': 'SAP', 'ClassName': 'SAP_FRONTEND_SESSION', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'AutomationId': '', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern'}}, 'Ends': '2019-11-22 16:55:57.254', 'Starts': '2019-11-22 16:55:57.080'}
+-----
+[捕获时间] 11/22/19 16:58:26.320122
+[MessageName] mouse left down
+[Message] 513
+[position] (398, 587)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Ends': '2019-11-22 16:58:27.962', 'Depth': {'0': {'ClassName': '#32769', 'Depth': '0', 'Name': '桌面', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': ''}, '1': {'ClassName': 'SAP_FRONTEND_SESSION', 'Depth': '1', 'Name': 'SAP', 'Handle': '0x160CBC(1445052)', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': ''}, '2': {'ClassName': 'Afx:01010000:1008', 'Depth': '2', 'Afx010100001008': '01010000', 'Handle': '0x20D88(134536)', 'Rect': '(14,141,1266,652)[1252x511]', 'Name': '', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '100'}}, 'Starts': '2019-11-22 16:58:27.829'}
+-----
+[捕获时间] 11/22/19 16:58:36.033335
+[MessageName] mouse left down
+[Message] 513
+[position] (77, 79)
+[Window] 134548
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 16:58:37.514', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 17:00:39.048983
+[MessageName] mouse left down
+[Message] 513
+[position] (132, 72)
+[Window] 134548
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 17:00:40.600'}
+-----
+[捕获时间] 11/22/19 17:18:32.825898
+[MessageName] mouse left down
+[Message] 513
+[position] (2910, 88)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 17:18:34.390', 'Depth': {'1': {'Rect': '(1529,-7,3591,1119)[2062x1126]', 'ClassName': 'SunAwtFrame', 'Depth': '1', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]', 'Name': 'UIA', 'AutomationId': '', 'SupportedPattern': 'WindowPattern', 'ControlType': 'WindowControl', 'Handle': '0x208D8(133336)'}, '0': {'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'Depth': '0', 'Handle': '0x10010(65552)', 'Name': '桌面', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl'}}, 'Ends': '2019-11-22 17:18:34.534'}
+-----
+[捕获时间] 11/22/19 17:18:41.639693
+[MessageName] mouse left down
+[Message] 513
+[position] (182, 69)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 17:18:43.302', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 17:18:58.537415
+[MessageName] mouse left down
+[Message] 513
+[position] (133, 67)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 17:19:00.112', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 17:19:35.992522
+[MessageName] mouse left down
+[Message] 513
+[position] (205, 69)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 17:19:37.689'}
+-----
+[捕获时间] 11/22/19 17:20:06.135342
+[MessageName] mouse left down
+[Message] 513
+[position] (109, 67)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 17:20:07.811'}
+-----
+[捕获时间] 11/22/19 17:22:31.580494
+[MessageName] mouse left down
+[Message] 513
+[position] (161, 66)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 17:22:33.361', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 17:22:50.071340
+[MessageName] mouse left down
+[Message] 513
+[position] (195, 69)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 17:22:52.158'}
+-----
+[捕获时间] 11/22/19 17:25:44.503723
+[MessageName] mouse left down
+[Message] 513
+[position] (2918, 94)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 17:25:46.290', 'Starts': '2019-11-22 17:25:46.104', 'Depth': {'1': {'Handle': '0x208D8(133336)', 'ClassName': 'SunAwtFrame', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Depth': '1', 'Name': 'UIA', 'Rect': '(1529,-7,3591,1119)[2062x1126]', 'ControlType': 'WindowControl', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]'}, '0': {'Handle': '0x10010(65552)', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Depth': '0', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}}
+-----
+[捕获时间] 11/22/19 17:25:55.731995
+[MessageName] mouse left down
+[Message] 513
+[position] (217, 197)
+[Window] 134536
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 17:25:57.522', 'Starts': '2019-11-22 17:25:57.365', 'Depth': {'1': {'Handle': '0x160CBC(1445052)', 'ClassName': 'SAP_FRONTEND_SESSION', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Depth': '1', 'Name': 'SAP', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl'}, '0': {'Handle': '0x10010(65552)', 'ClassName': '#32769', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Depth': '0', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}, '2': {'Handle': '0x20D88(134536)', 'ClassName': 'Afx:01010000:1008', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '100', 'Depth': '2', 'Name': '', 'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'Afx010100001008': '01010000'}}}
+-----
+[捕获时间] 11/22/19 18:04:21.443111
+[MessageName] mouse left down
+[Message] 513
+[position] (662, 570)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Ends': '2019-11-22 18:04:23.210', 'Depth': {'0': {'Name': '桌面', 'ClassName': '#32769', 'Depth': '0', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]'}, '2': {'Name': '', 'ClassName': 'Afx:01010000:1008', 'Depth': '2', 'Handle': '0x20D88(134536)', 'ControlType': 'PaneControl', 'Afx010100001008': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '100', 'Rect': '(14,141,1266,652)[1252x511]'}, '1': {'Name': 'SAP', 'ClassName': 'SAP_FRONTEND_SESSION', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Rect': '(-7,-7,1288,688)[1295x695]'}}, 'Starts': '2019-11-22 18:04:23.055'}
+-----
+[捕获时间] 11/22/19 18:05:55.001222
+[MessageName] mouse left down
+[Message] 513
+[position] (130, 67)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-11-22 18:05:56.506', 'Depth': {'0': {'Name': '桌面', 'ClassName': '#32769', 'Depth': '0', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]'}, '2': {'Name': '', 'ClassName': 'Afx:01010000:0:00010005:00000010:00000000', 'Depth': '2', 'Handle': '0x50CD6(330966)', 'ControlType': 'PaneControl', 'Afx010100000000100050000001000000000': '01010000', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '59392', 'Rect': '(14,38,1266,69)[1252x31]'}, '1': {'Name': 'SAP', 'ClassName': 'SAP_FRONTEND_SESSION', 'Depth': '1', 'Handle': '0x160CBC(1445052)', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'AutomationId': '', 'Rect': '(-7,-7,1288,688)[1295x695]'}}, 'Starts': '2019-11-22 18:05:56.364'}
+-----
+[捕获时间] 11/22/19 18:10:17.197167
+[MessageName] mouse left down
+[Message] 513
+[position] (120, 67)
+[Window] 199972
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-11-22 18:10:18.634', 'Ends': '2019-11-22 18:10:18.789', 'Depth': {'2': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '', 'Rect': '(14,38,1266,69)[1252x31]', 'ClassName': 'Afx:01010000:0:00010005:00000010:00000000', 'AutomationId': '59392', 'ControlType': 'PaneControl', 'Depth': '2', 'Afx010100000000100050000001000000000': '01010000', 'Handle': '0x50CD6(330966)'}, '0': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'AutomationId': '', 'ControlType': 'PaneControl', 'Depth': '0', 'Handle': '0x10010(65552)'}, '1': {'SupportedPattern': 'WindowPattern', 'Name': 'SAP', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ClassName': 'SAP_FRONTEND_SESSION', 'AutomationId': '', 'ControlType': 'WindowControl', 'Depth': '1', 'Handle': '0x160CBC(1445052)'}}}
+-----
+[捕获时间] 11/22/19 18:10:33.808193
+[MessageName] mouse left down
+[Message] 513
+[position] (229, 10)
+[Window] 1445052
+[WindowName] SAP
+
+[层级结构]
+{'Starts': '2019-11-22 18:10:35.225', 'Ends': '2019-11-22 18:10:35.370', 'Depth': {'2': {'SupportedPattern': 'ValuePattern', 'Name': '', 'Rect': '(22,0,1280,23)[1258x23]', 'ClassName': '', 'AutomationId': '', 'ControlType': 'TitleBarControl', 'Depth': '2', 'ValuePattern.Value': 'SAP', 'Handle': '0x0(0)'}, '0': {'SupportedPattern': 'LegacyIAccessiblePattern', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'AutomationId': '', 'ControlType': 'PaneControl', 'Depth': '0', 'Handle': '0x10010(65552)'}, '1': {'SupportedPattern': 'WindowPattern', 'Name': 'SAP', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ClassName': 'SAP_FRONTEND_SESSION', 'AutomationId': '', 'ControlType': 'WindowControl', 'Depth': '1', 'Handle': '0x160CBC(1445052)'}}}
+-----
+[捕获时间] 11/22/19 18:11:53.536203
+[MessageName] mouse left down
+[Message] 513
+[position] (351, 82)
+[Window] 919172
+[WindowName] 微信
+
+[层级结构]
+{'Starts': '2019-11-22 18:11:55.118', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 18:12:30.270618
+[MessageName] mouse left down
+[Message] 513
+[position] (410, 85)
+[Window] 919172
+[WindowName] 微信
+
+[层级结构]
+{'Starts': '2019-11-22 18:12:31.784', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 18:13:08.423683
+[MessageName] mouse left down
+[Message] 513
+[position] (397, 84)
+[Window] 919172
+[WindowName] 微信
+
+[层级结构]
+{'Starts': '2019-11-22 18:13:10.086', 'Depth': {}}
+-----
+[捕获时间] 11/22/19 18:14:09.926379
+[MessageName] mouse left down
+[Message] 513
+[position] (377, 83)
+[Window] 919172
+[WindowName] 微信
+
+[层级结构]
+{'Depth': {}, 'Starts': '2019-11-22 18:14:11.454'}
+-----
+[捕获时间] 11/22/19 18:19:12.017614
+[MessageName] mouse left down
+[Message] 513
+[position] (357, 628)
+[Window] 65942
+[WindowName] FolderView
+
+[层级结构]
+{'Ends': '2019-11-22 18:19:13.891', 'Starts': '2019-11-22 18:19:13.748', 'Depth': {'2': {'Name': '', 'Depth': '2', 'Afx010100001008': '01010000', 'AutomationId': '100', 'ClassName': 'Afx:01010000:1008', 'Rect': '(14,141,1266,652)[1252x511]', 'ControlType': 'PaneControl', 'Handle': '0x20D88(134536)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'Name': 'SAP', 'Depth': '1', 'AutomationId': '', 'ClassName': 'SAP_FRONTEND_SESSION', 'Rect': '(-7,-7,1288,688)[1295x695]', 'ControlType': 'WindowControl', 'Handle': '0x160CBC(1445052)', 'SupportedPattern': 'WindowPattern'}, '0': {'Name': '桌面', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 18:19:20.667347
+[MessageName] mouse left down
+[Message] 513
+[position] (709, 205)
+[Window] 134062
+[WindowName] HiJson V2.1.2
+
+[层级结构]
+{'Ends': '2019-11-22 18:19:22.373', 'Starts': '2019-11-22 18:19:22.201', 'Depth': {'2': {'Name': '登录(O)', 'Depth': '2', 'AutomationId': '1068', 'ClassName': 'Button', 'Rect': '(666,186,732,217)[66x31]', 'ControlType': 'ButtonControl', 'Handle': '0x10A72(68210)', 'SupportedPattern': 'InvokePattern'}, '1': {'Name': 'SAP', 'Depth': '1', 'AutomationId': '', 'ClassName': '#32770', 'Rect': '(651,153,1044,566)[393x413]', 'ControlType': 'WindowControl', 'Handle': '0x40A0E(264718)', 'SupportedPattern': 'WindowPattern'}, '0': {'Name': '桌面', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 11/22/19 18:19:47.268783
+[MessageName] mouse left down
+[Message] 513
+[position] (1227, 12)
+[Window] 133336
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\project\hookFunc.py [UIA] - PyCharm
+
+[层级结构]
+{'Ends': '2019-11-22 18:19:48.837', 'Starts': '2019-11-22 18:19:48.707', 'Depth': {'1': {'Name': 'HiJson', 'Depth': '1', 'AutomationId': '', 'ClassName': 'SunAwtFrame', 'Rect': '(-8,-8,1288,688)[1296x696]', 'ControlType': 'WindowControl', 'Handle': '0x20BAE(134062)', 'SupportedPattern': 'WindowPattern'}, '0': {'Name': '桌面', 'Depth': '0', 'AutomationId': '', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
