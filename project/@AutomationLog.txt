@@ -2522,3 +2522,101 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
     ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-8,-8,1288,688)[1296x696]    Name: HiJson V2.1.2    Handle: 0x20BAE(134062)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
 2019-11-22 18:19:48.837 automation.py[110] main -> Ends
 
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:44:39.086 automation.py[75] main -> Starts, Current Cursor Position: (747, 137)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Dashboard · WakaTime - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1845925936    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x50C60(330848)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:44:53.415 automation.py[75] main -> Starts, Current Cursor Position: (830, 123)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Dashboard · WakaTime - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1845925936    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x50C60(330848)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:45:00.052 automation.py[75] main -> Starts, Current Cursor Position: (453, 676)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: ListControl    ClassName: TaskListThumbnailWnd    AutomationId:     Rect: (0,479,1280,680)[1280x201]    Name: 任务切换程序    Handle: 0x10170(65904)    Depth: 1    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+        ControlType: ListItemControl    ClassName:     AutomationId:     Rect: (289,534,502,680)[213x146]    Name: SAP ET3 (1)    Handle: 0x0(0)    Depth: 2    SelectionItemPattern.IsSelected: False    SupportedPattern: InvokePattern SelectionItemPattern LegacyIAccessiblePattern
+2019-11-22 18:45:00.263 automation.py[110] main -> Ends
+
+2019-11-22 18:45:15.762 BasicFunc.py[99] checkBottom -> Find Control Timeout: {RegexName: '.*任.*务.*切.*换.*程.*序.*', ControlType: ListControl, SupportedPattern: 'SelectionPattern', Desc: '任务切换程序', ClassName: 'TaskListThumbnailWnd'}
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:46:54.721 automation.py[75] main -> Starts, Current Cursor Position: (429, 669)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: ListControl    ClassName: TaskListThumbnailWnd    AutomationId:     Rect: (0,479,1280,680)[1280x201]    Name: 任务切换程序    Handle: 0x10170(65904)    Depth: 1    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+        ControlType: ListItemControl    ClassName:     AutomationId:     Rect: (289,534,502,680)[213x146]    Name: SAP ET3 (1)    Handle: 0x0(0)    Depth: 2    SelectionItemPattern.IsSelected: False    SupportedPattern: InvokePattern SelectionItemPattern LegacyIAccessiblePattern
+2019-11-22 18:46:54.910 automation.py[110] main -> Ends
+
+2019-11-22 18:47:13.548 BasicFunc.py[99] checkBottom -> Find Control Timeout: {RegexName: '.*任.*务.*切.*换.*程.*序.*', SupportedPattern: 'SelectionPattern', ClassName: 'TaskListThumbnailWnd', ControlType: ListControl, Desc: '任务切换程序'}
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:50:31.333 automation.py[75] main -> Starts, Current Cursor Position: (589, 699)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10116(65814)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10160(65888)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016A(65898)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: Microsoft.Windows.Explorer    Rect: (569,680,619,720)[50x40]    Name: 文件资源管理器 - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-22 18:50:31.530 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:51:50.416 automation.py[75] main -> Starts, Current Cursor Position: (785, 705)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10116(65814)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10160(65888)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016A(65898)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\cmd.exe    Rect: (769,680,819,720)[50x40]    Name: 命令提示符 - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-22 18:51:50.611 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:52:08.419 automation.py[75] main -> Starts, Current Cursor Position: (591, 705)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10116(65814)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10160(65888)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016A(65898)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: Microsoft.Windows.Explorer    Rect: (569,680,619,720)[50x40]    Name: 文件资源管理器 - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-22 18:52:08.612 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:52:24.285 automation.py[75] main -> Starts, Current Cursor Position: (435, 700)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10116(65814)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10160(65888)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016A(65898)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: MenuItemControl    ClassName:     AutomationId: D:\SAP\SAPgui\saplogon.exe    Rect: (419,680,469,720)[50x40]    Name: SAP Logon - 3 个运行窗口    Handle: 0x0(0)    Depth: 5    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.LeafNode    SupportedPattern: InvokePattern ExpandCollapsePattern LegacyIAccessiblePattern
+2019-11-22 18:52:24.489 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:54:16.198 automation.py[75] main -> Starts, Current Cursor Position: (299, 529)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Dashboard · WakaTime - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1845925936    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x50C60(330848)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:54:54.230 automation.py[75] main -> Starts, Current Cursor Position: (396, 484)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Dashboard · WakaTime - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1845925936    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x50C60(330848)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 18:55:15.253 automation.py[75] main -> Starts, Current Cursor Position: (245, 613)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Dashboard · WakaTime - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1845925936    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x50C60(330848)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 19:03:09.711 automation.py[75] main -> Starts, Current Cursor Position: (250, 602)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: win10无法安装KB971513_百度搜索 - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1901937472    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x4F0EF0(5181168)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 19:04:22.982 automation.py[75] main -> Starts, Current Cursor Position: (225, 606)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: win10无法安装KB971513_百度搜索 - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1901937472    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x4F0EF0(5181168)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-22 19:13:52.930 automation.py[75] main -> Starts, Current Cursor Position: (480, 605)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: win10无法安装KB971513_百度搜索 - Opera    Handle: 0x507B8(329656)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1901937472    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x4F0EF0(5181168)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: SAP-登陆按钮SAP-登陆按钮

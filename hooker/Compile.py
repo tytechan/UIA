@@ -132,6 +132,9 @@ def recordIntoProject(eleProperties):
             # 保存前脚本进行唯一性校验
             # （True：可直接保存；False：人工进行index判断）
             flag = AC.checkBottom(keyObj)           # TODO：根据判断识别出结果但应用程序实际不可识别处理方法
+            if not flag:
+                win32api.MessageBox(0, "依据获取信息无法识别控件，请检查控件状态！", "提示", win32con.MB_OK)
+                return False
 
             # 点击后保存
             filePath = path + r"\log.txt"

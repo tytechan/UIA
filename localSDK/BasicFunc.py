@@ -66,11 +66,11 @@ class AppControl:
         """
         for i in range(len(keyObj) - 1):
             obj = keyObj[str(i + 1)]
-            ControlType = obj.get("ControlType")
-            AutomationId = obj.get("AutomationId")
-            ClassName = obj.get("ClassName")
-            Name = obj.get("Name")
-            SupportedPattern = obj.get("SupportedPattern")
+            ControlType = obj.get("ControlType", "None")
+            AutomationId = obj.get("AutomationId", "None")
+            ClassName = obj.get("ClassName", "None")
+            Name = obj.get("Name", "None")
+            SupportedPattern = obj.get("SupportedPattern", "None")
 
             # parentObj = auto if i == 0 else searchObj
             searchStr = "auto" if i == 0 else "searchObj"
@@ -82,16 +82,16 @@ class AppControl:
                 RegexName += (".*" + myStr)
             RegexName += ".*"
             RegexNameStr = ", RegexName='" + RegexName + "'"
-            searchStr += RegexNameStr if Name else ""
+            searchStr += RegexNameStr if Name != "None" else ""
 
             AutomationIdStr = ", AutomationId='" + AutomationId + "'"
             searchStr += AutomationIdStr if (AutomationId != "" and not AutomationId.isdigit()) else ""
 
             SupportedPatternStr = ", SupportedPattern='" + SupportedPattern + "'"
-            searchStr += SupportedPatternStr if SupportedPattern else ""
+            searchStr += SupportedPatternStr if SupportedPattern != "None" else ""
 
             DescStr = ", Desc='" + Name + "')"
-            searchStr += DescStr if i == 0 and Name else ")"
+            searchStr += DescStr if (i == 0 and Name != "None") else ")"
 
             print(searchStr)
             try:
@@ -119,7 +119,7 @@ class AppControl:
                 # raise e
                 return False
 
-        print("finish!")
+        print("唯一性校验完毕！")
         return searchObj
 
 
@@ -192,6 +192,8 @@ class AppControl:
 
     def objControl(self, name, conductType, string=None, **kwargs):
         try:
+            assert self.dict.get(name) is not None, \
+                "本地库中未找到名称为 [%s] 的控件，请检查“log.txt”文件！" %name
             info = self.dict.get(name).get("Depth")
             obj = self.checkBottom(info)
             assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
@@ -202,6 +204,10 @@ class AppControl:
             raise e
         except Exception as e:
             raise e
+        finally:
+            # auto.Logger.Write(name)
+            logInfo = "----- 控件 [%s]，操作类型 [%s]，执行结束 -----" %(name, conductType)
+            auto.Logger.WriteLine(logInfo, auto.ConsoleColor.Cyan, writeToFile = True)
 
 
     def objControl_EX(self, name, conductType, string=None, **kwargs):

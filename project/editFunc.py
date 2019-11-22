@@ -1,7 +1,12 @@
 #!python3
 # -*- coding: utf-8 -*-
 from localSDK.BasicFunc import *
+from project import parentDirPath
 
+auto.uiautomation.DEBUG_EXIST_DISAPPEAR = True
+auto.uiautomation.DEBUG_SEARCH_TIME = True
+auto.uiautomation.TIME_OUT_SECOND = 10
+auto.Logger.SetLogFile(parentDirPath + "\log\ExecuteLog.txt")
 
 def readFromLog():
     ''' 读取log文件信息 '''
