@@ -1,0 +1,240 @@
+2019-11-12 15:52:11.549 UIAuto.py[106] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} does not exist.
+2019-11-12 15:52:13.027 UIAuto.py[108] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} TraverseControls: 5, SearchTime: 1.413s[15:52:11.614656 - 15:52:13.027943]
+2019-11-12 15:52:13.656 UIAuto.py[109] CalcOnWindows10 -> {AutomationId: 'TogglePaneButton', ControlType: ButtonControl} TraverseControls: 110, SearchTime: 0.120s[15:52:13.537167 - 15:52:13.656561]
+2019-11-12 15:52:14.532 UIAuto.py[110] CalcOnWindows10 -> {AutomationId: 'Scientific', ControlType: ListItemControl} TraverseControls: 121, SearchTime: 0.103s[15:52:14.429865 - 15:52:14.532590]
+2019-11-12 15:52:15.405 UIAuto.py[111] CalcOnWindows10 -> {AutomationId: 'clearButton', ControlType: ButtonControl} TraverseControls: 72, SearchTime: 0.124s[15:52:15.282069 - 15:52:15.405726]
+12019-11-12 15:52:16.290 UIAuto.py[26] Calc -> {AutomationId: 'num1Button', Desc: 'Button 1', ControlType: ButtonControl} TraverseControls: 90, SearchTime: 0.118s[15:52:16.172780 - 15:52:16.290450]
+22019-11-12 15:52:16.805 UIAuto.py[26] Calc -> {AutomationId: 'num2Button', Desc: 'Button 2', ControlType: ButtonControl} TraverseControls: 92, SearchTime: 0.205s[15:52:16.600463 - 15:52:16.805906]
+32019-11-12 15:52:17.156 UIAuto.py[26] Calc -> {AutomationId: 'num3Button', Desc: 'Button 3', ControlType: ButtonControl} TraverseControls: 94, SearchTime: 0.083s[15:52:17.074158 - 15:52:17.156937]
+42019-11-12 15:52:17.504 UIAuto.py[26] Calc -> {AutomationId: 'num4Button', Desc: 'Button 4', ControlType: ButtonControl} TraverseControls: 96, SearchTime: 0.078s[15:52:17.426100 - 15:52:17.504901]
+*2019-11-12 15:52:17.907 UIAuto.py[26] Calc -> {AutomationId: 'multiplyButton', Desc: 'Button *', ControlType: ButtonControl} TraverseControls: 61, SearchTime: 0.059s[15:52:17.848552 - 15:52:17.907385]
+(2019-11-12 15:52:18.405 UIAuto.py[26] Calc -> {AutomationId: 'openParenthesisButton', Desc: 'Button (', ControlType: ButtonControl} TraverseControls: 82, SearchTime: 0.066s[15:52:18.339397 - 15:52:18.405219]
+4+2019-11-12 15:52:19.231 UIAuto.py[26] Calc -> {AutomationId: 'plusButton', Desc: 'Button +', ControlType: ButtonControl} TraverseControls: 65, SearchTime: 0.060s[15:52:19.171828 - 15:52:19.231667]
+52019-11-12 15:52:19.771 UIAuto.py[26] Calc -> {AutomationId: 'num5Button', Desc: 'Button 5', ControlType: ButtonControl} TraverseControls: 98, SearchTime: 0.111s[15:52:19.661252 - 15:52:19.771954]
++62019-11-12 15:52:20.536 UIAuto.py[26] Calc -> {AutomationId: 'num6Button', Desc: 'Button 6', ControlType: ButtonControl} TraverseControls: 100, SearchTime: 0.081s[15:52:20.455444 - 15:52:20.536218]
+)2019-11-12 15:52:20.886 UIAuto.py[26] Calc -> {AutomationId: 'closeParenthesisButton', Desc: 'Button )', ControlType: ButtonControl} TraverseControls: 85, SearchTime: 0.076s[15:52:20.809256 - 15:52:20.886017]
+-2019-11-12 15:52:21.289 UIAuto.py[26] Calc -> {AutomationId: 'minusButton', Desc: 'Button -', ControlType: ButtonControl} TraverseControls: 63, SearchTime: 0.054s[15:52:21.235083 - 15:52:21.289940]
+72019-11-12 15:52:21.806 UIAuto.py[26] Calc -> {AutomationId: 'num7Button', Desc: 'Button 7', ControlType: ButtonControl} TraverseControls: 102, SearchTime: 0.081s[15:52:21.724773 - 15:52:21.806556]
+82019-11-12 15:52:22.321 UIAuto.py[26] Calc -> {AutomationId: 'num8Button', Desc: 'Button 8', ControlType: ButtonControl} TraverseControls: 104, SearchTime: 0.080s[15:52:22.240772 - 15:52:22.320554]
+/2019-11-12 15:52:22.778 UIAuto.py[26] Calc -> {AutomationId: 'divideButton', Desc: 'Button /', ControlType: ButtonControl} TraverseControls: 59, SearchTime: 0.185s[15:52:22.593964 - 15:52:22.778467]
+92019-11-12 15:52:23.259 UIAuto.py[26] Calc -> {AutomationId: 'num9Button', Desc: 'Button 9', ControlType: ButtonControl} TraverseControls: 106, SearchTime: 0.134s[15:52:23.125930 - 15:52:23.259570]
+02019-11-12 15:52:23.603 UIAuto.py[26] Calc -> {AutomationId: 'num0Button', Desc: 'Button 0', ControlType: ButtonControl} TraverseControls: 88, SearchTime: 0.073s[15:52:23.529927 - 15:52:23.603729]
+.2019-11-12 15:52:24.022 UIAuto.py[26] Calc -> {AutomationId: 'decimalSeparatorButton', Desc: 'Button .', ControlType: ButtonControl} TraverseControls: 108, SearchTime: 0.120s[15:52:23.901641 - 15:52:24.021326]
+8=2019-11-12 15:52:24.654 UIAuto.py[26] Calc -> {AutomationId: 'equalButton', Desc: 'Button =', ControlType: ButtonControl} TraverseControls: 67, SearchTime: 0.073s[15:52:24.581245 - 15:52:24.654048]
+3*3+4*4=2*3.14159*10=2019-11-12 15:52:35.336 UIAuto.py[130] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} TraverseControls: 5, SearchTime: 0.013s[15:52:35.323290 - 15:52:35.336256]
+2019-11-12 15:52:35.898 UIAuto.py[130] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} TraverseControls: 5, SearchTime: 0.046s[15:52:35.852448 - 15:52:35.898310]
+2019-11-12 15:52:36.343 UIAuto.py[130] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} TraverseControls: 5, SearchTime: 0.019s[15:52:36.323456 - 15:52:36.343364]
+2019-11-12 15:52:36.352 UIAuto.py[130] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} does not disappear.
+2019-11-12 15:52:38.003 UIAuto.py[132] CalcOnWindows10 -> {ControlType: WindowControl, Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x01CFE540>, Desc: 'Calculator Window', ClassName: 'ApplicationFrameWindow'} does not exist.
+2019-11-12 16:01:58.321 UIAuto.py[59] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} does not exist.
+2019-11-12 16:01:59.754 UIAuto.py[61] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} TraverseControls: 5, SearchTime: 1.371s[16:01:58.384682 - 16:01:59.754908]
+2019-11-12 16:02:00.409 UIAuto.py[62] CalcOnWindows10 -> {AutomationId: 'TogglePaneButton', ControlType: ButtonControl} TraverseControls: 110, SearchTime: 0.144s[16:02:00.265808 - 16:02:00.409371]
+2019-11-12 16:02:01.566 UIAuto.py[63] CalcOnWindows10 -> {AutomationId: 'Scientific', ControlType: ListItemControl} TraverseControls: 121, SearchTime: 0.101s[16:02:01.465930 - 16:02:01.566503]
+2019-11-12 16:02:02.443 UIAuto.py[64] CalcOnWindows10 -> {AutomationId: 'clearButton', ControlType: ButtonControl} TraverseControls: 72, SearchTime: 0.125s[16:02:02.317940 - 16:02:02.443658]
+12019-11-12 16:02:03.273 UIAuto.py[26] Calc -> {Desc: 'Button 1', AutomationId: 'num1Button', ControlType: ButtonControl} TraverseControls: 90, SearchTime: 0.067s[16:02:03.206016 - 16:02:03.273835]
+22019-11-12 16:02:03.714 UIAuto.py[26] Calc -> {Desc: 'Button 2', AutomationId: 'num2Button', ControlType: ButtonControl} TraverseControls: 92, SearchTime: 0.145s[16:02:03.569943 - 16:02:03.714762]
+32019-11-12 16:02:04.056 UIAuto.py[26] Calc -> {Desc: 'Button 3', AutomationId: 'num3Button', ControlType: ButtonControl} TraverseControls: 94, SearchTime: 0.072s[16:02:03.983904 - 16:02:04.056708]
+42019-11-12 16:02:04.414 UIAuto.py[26] Calc -> {Desc: 'Button 4', AutomationId: 'num4Button', ControlType: ButtonControl} TraverseControls: 96, SearchTime: 0.075s[16:02:04.339877 - 16:02:04.414675]
+*2019-11-12 16:02:04.826 UIAuto.py[26] Calc -> {Desc: 'Button *', AutomationId: 'multiplyButton', ControlType: ButtonControl} TraverseControls: 61, SearchTime: 0.066s[16:02:04.760989 - 16:02:04.826815]
+(2019-11-12 16:02:05.320 UIAuto.py[26] Calc -> {Desc: 'Button (', AutomationId: 'openParenthesisButton', ControlType: ButtonControl} TraverseControls: 82, SearchTime: 0.063s[16:02:05.257396 - 16:02:05.320218]
+4+2019-11-12 16:02:06.202 UIAuto.py[26] Calc -> {Desc: 'Button +', AutomationId: 'plusButton', ControlType: ButtonControl} TraverseControls: 65, SearchTime: 0.119s[16:02:06.082932 - 16:02:06.201613]
+52019-11-12 16:02:06.728 UIAuto.py[26] Calc -> {Desc: 'Button 5', AutomationId: 'num5Button', ControlType: ButtonControl} TraverseControls: 98, SearchTime: 0.097s[16:02:06.631648 - 16:02:06.728383]
++62019-11-12 16:02:07.543 UIAuto.py[26] Calc -> {Desc: 'Button 6', AutomationId: 'num6Button', ControlType: ButtonControl} TraverseControls: 100, SearchTime: 0.115s[16:02:07.428893 - 16:02:07.543583]
+)2019-11-12 16:02:07.880 UIAuto.py[26] Calc -> {Desc: 'Button )', AutomationId: 'closeParenthesisButton', ControlType: ButtonControl} TraverseControls: 85, SearchTime: 0.068s[16:02:07.811939 - 16:02:07.880754]
+-2019-11-12 16:02:08.275 UIAuto.py[26] Calc -> {Desc: 'Button -', AutomationId: 'minusButton', ControlType: ButtonControl} TraverseControls: 63, SearchTime: 0.054s[16:02:08.221577 - 16:02:08.275432]
+72019-11-12 16:02:08.822 UIAuto.py[26] Calc -> {Desc: 'Button 7', AutomationId: 'num7Button', ControlType: ButtonControl} TraverseControls: 102, SearchTime: 0.119s[16:02:08.703608 - 16:02:08.822290]
+82019-11-12 16:02:09.382 UIAuto.py[26] Calc -> {Desc: 'Button 8', AutomationId: 'num8Button', ControlType: ButtonControl} TraverseControls: 104, SearchTime: 0.118s[16:02:09.263842 - 16:02:09.382507]
+/2019-11-12 16:02:09.698 UIAuto.py[26] Calc -> {Desc: 'Button /', AutomationId: 'divideButton', ControlType: ButtonControl} TraverseControls: 59, SearchTime: 0.048s[16:02:09.649612 - 16:02:09.698482]
+92019-11-12 16:02:10.123 UIAuto.py[26] Calc -> {Desc: 'Button 9', AutomationId: 'num9Button', ControlType: ButtonControl} TraverseControls: 106, SearchTime: 0.079s[16:02:10.044868 - 16:02:10.123657]
+02019-11-12 16:02:10.545 UIAuto.py[26] Calc -> {Desc: 'Button 0', AutomationId: 'num0Button', ControlType: ButtonControl} TraverseControls: 88, SearchTime: 0.145s[16:02:10.399879 - 16:02:10.545483]
+.2019-11-12 16:02:10.919 UIAuto.py[26] Calc -> {Desc: 'Button .', AutomationId: 'decimalSeparatorButton', ControlType: ButtonControl} TraverseControls: 108, SearchTime: 0.082s[16:02:10.837733 - 16:02:10.919340]
+8=2019-11-12 16:02:11.598 UIAuto.py[26] Calc -> {Desc: 'Button =', AutomationId: 'equalButton', ControlType: ButtonControl} TraverseControls: 67, SearchTime: 0.125s[16:02:11.473491 - 16:02:11.598148]
+18509.140969162995594713656387665
+3*3+4*4=25
+2*3.14159*10=62.8318
+2019-11-12 16:02:22.357 UIAuto.py[83] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} TraverseControls: 5, SearchTime: 0.022s[16:02:22.335645 - 16:02:22.357585]
+2019-11-12 16:02:22.879 UIAuto.py[83] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} TraverseControls: 5, SearchTime: 0.012s[16:02:22.866776 - 16:02:22.879528]
+2019-11-12 16:02:23.360 UIAuto.py[83] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} TraverseControls: 5, SearchTime: 0.025s[16:02:23.335211 - 16:02:23.360095]
+2019-11-12 16:02:23.369 UIAuto.py[83] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} does not disappear.
+2019-11-12 16:02:25.149 UIAuto.py[85] CalcOnWindows10 -> {Desc: 'Calculator Window', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x022C1540>, ClassName: 'ApplicationFrameWindow', ControlType: WindowControl} does not exist.
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+2019-11-12 17:13:14.134 UIAuto.py[116] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 329, SearchTime: 1.479s[17:13:12.653409 - 17:13:14.132390]
+2019-11-12 17:25:45.139 UIAuto.py[116] <module> -> {ControlType: TextControl, Name: 'ET1'} TraverseControls: 503, SearchTime: 2.584s[17:25:42.554619 - 17:25:45.138310]
+2019-11-12 17:25:54.048 UIAuto.py[116] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 203, SearchTime: 1.060s[17:25:52.988791 - 17:25:54.048653]
+2019-11-12 17:44:15.203 UIAuto.py[123] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-12 17:44:15.208 UIAuto.py[123] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-12 17:44:37.731 UIAuto.py[123] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-12 17:44:37.737 UIAuto.py[123] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-12 17:46:09.203 UIAuto.py[124] <module> -> {ControlType: TextControl, Name: 'ET1'} does not exist.
+2019-11-12 17:46:09.209 UIAuto.py[124] <module> -> Find Control Timeout: {ControlType: TextControl, Name: 'ET1'}
+2019-11-12 17:46:29.715 UIAuto.py[124] <module> -> {ControlType: TextControl, Name: 'ET1'} TraverseControls: 203, SearchTime: 1.186s[17:46:28.528928 - 17:46:29.715754]
+2019-11-12 17:46:48.057 UIAuto.py[124] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-12 17:46:48.063 UIAuto.py[124] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-12 17:46:56.707 UIAuto.py[124] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 203, SearchTime: 1.079s[17:46:55.628661 - 17:46:56.707743]
+2019-11-12 17:48:46.159 UIAuto.py[125] <module> -> {ControlType: TextControl} TraverseControls: 80, SearchTime: 0.387s[17:48:45.772802 - 17:48:46.159522]
+2019-11-12 17:49:30.525 UIAuto.py[125] <module> -> {SupportedPattern: 'LegacyIAccessiblePattern', ControlType: TextControl} TraverseControls: 80, SearchTime: 0.409s[17:49:30.116446 - 17:49:30.525354]
+2019-11-12 17:49:51.634 UIAuto.py[125] <module> -> {SupportedPattern: 'LegacyIAccessiblePattern', Name: 'ET1', ControlType: TextControl} TraverseControls: 210, SearchTime: 1.229s[17:49:50.405776 - 17:49:51.634737]
+2019-11-12 17:50:17.641 UIAuto.py[125] <module> -> {ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.076s[17:50:17.565603 - 17:50:17.641071]
+2019-11-12 17:52:47.952 UIAuto.py[125] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-12 17:52:47.957 UIAuto.py[125] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-12 17:55:05.592 UIAuto.py[125] <module> -> {ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 8, SearchTime: 0.078s[17:55:05.513545 - 17:55:05.592355]
+2019-11-12 17:55:30.727 UIAuto.py[125] <module> -> {ClassName: '#32770', Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-12 17:55:30.734 UIAuto.py[125] <module> -> Find Control Timeout: {ClassName: '#32770', Name: 'SAP', ControlType: WindowControl}
+2019-11-12 17:55:43.879 UIAuto.py[125] <module> -> {ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 8, SearchTime: 0.080s[17:55:43.799674 - 17:55:43.879460]
+2019-11-13 09:49:37.134 UIAuto.py[125] <module> -> {SupportedPattern: 'LegacyIAccessiblePattern', ControlType: TextControl, Name: 'ET1'} TraverseControls: 192, SearchTime: 1.052s[09:49:36.082673 - 09:49:37.133724]
+2019-11-13 09:50:23.581 UIAuto.py[126] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 192, SearchTime: 1.016s[09:50:22.564547 - 09:50:23.580270]
+2019-11-13 09:51:03.484 UIAuto.py[126] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 192, SearchTime: 1.045s[09:51:02.438309 - 09:51:03.483003]
+2019-11-13 10:09:27.646 UIAuto.py[138] <module> -> {Name: 'ET1', ControlType: TextControl} TraverseControls: 232, SearchTime: 1.302s[10:09:26.343897 - 10:09:27.646138]
+2019-11-13 10:10:11.791 UIAuto.py[138] <module> -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:10:11.796 UIAuto.py[138] <module> -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+2019-11-13 10:11:58.856 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:11:58.860 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:12:15.102 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:12:15.107 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:12:31.466 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:12:31.471 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:12:48.965 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:12:48.970 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:13:05.362 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:13:05.366 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:13:22.273 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:13:22.277 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:13:39.028 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:13:39.033 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:13:55.955 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:13:55.960 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:14:12.713 pydevd_resolver.py[166] _getPyDictionary -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:14:12.718 pydevd_resolver.py[166] _getPyDictionary -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:14:45.595 UIAuto.py[138] <module> -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:14:45.599 UIAuto.py[138] <module> -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:17:46.295 UIAuto.py[138] <module> -> {ControlType: TextControl, Name: 'ET7'} does not exist.
+2019-11-13 10:17:46.300 UIAuto.py[138] <module> -> Find Control Timeout: {ControlType: TextControl, Name: 'ET7'}
+2019-11-13 10:18:32.332 pydevd_xml.py[321] var_to_xml -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:18:32.336 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:18:55.618 pydevd_xml.py[321] var_to_xml -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:18:55.624 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:18:55.727 pydevd_xml.py[321] var_to_xml -> {Name: 'ET7', ControlType: TextControl} does not exist.
+2019-11-13 10:18:55.732 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'ET7', ControlType: TextControl}
+2019-11-13 10:33:30.412 UIAuto.py[138] <module> -> {ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 13, SearchTime: 0.094s[10:33:30.318276 - 10:33:30.412138]
+2019-11-13 10:34:18.173 UIAuto.py[138] <module> -> {RegexName: '.*SAP.*', ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 13, SearchTime: 0.089s[10:34:18.083305 - 10:34:18.173036]
+2019-11-13 10:34:44.980 UIAuto.py[140] <module> -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 13, SearchTime: 0.088s[10:34:44.891312 - 10:34:44.979077]
+2019-11-13 10:35:20.448 UIAuto.py[141] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 10:35:20.453 UIAuto.py[141] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+2019-11-13 11:01:56.333 UIAuto.py[143] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:01:56.339 UIAuto.py[143] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+2019-11-13 11:06:02.336 <string>[1] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:06:02.341 <string>[1] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:06:23.707 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:06:23.712 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:07:29.430 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:07:29.435 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:07:39.578 <string>[1] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:07:39.583 <string>[1] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:07:49.719 <string>[1] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:07:49.724 <string>[1] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:07:59.913 pydevd_xml.py[321] var_to_xml -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:07:59.918 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:08:04.776 pydevd_xml.py[321] var_to_xml -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:08:04.781 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:11:07.603 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:11:07.608 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:22:25.151 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:22:25.156 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:22:35.387 <string>[1] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:22:35.392 <string>[1] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:22:45.564 <string>[1] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:22:45.569 <string>[1] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:22:55.726 pydevd_xml.py[321] var_to_xml -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:22:55.731 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:23:58.871 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:23:58.878 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:26:39.803 UIAuto.py[64] findObj -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:26:39.807 UIAuto.py[64] findObj -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:26:49.973 <string>[1] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:26:49.977 <string>[1] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:27:00.049 <string>[1] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:27:00.053 <string>[1] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:27:00.066 pydevd_xml.py[321] var_to_xml -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:27:00.074 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:27:58.932 pydevd_xml.py[321] var_to_xml -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:27:58.935 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 11:44:51.989 UIAuto.py[64] findObj -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 11:44:51.993 UIAuto.py[64] findObj -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 11:44:59.572 UIAuto.py[64] findObj -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 13, SearchTime: 0.088s[11:44:59.485040 - 11:44:59.572807]
+2019-11-13 11:45:17.255 UIAuto.py[64] findObj -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 13, SearchTime: 0.084s[11:45:17.170490 - 11:45:17.255263]
+2019-11-13 11:45:43.627 UIAuto.py[64] findObj -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 13, SearchTime: 0.092s[11:45:43.534825 - 11:45:43.627575]
+2019-11-13 11:45:51.708 UIAuto.py[64] findObj -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.076s[11:45:51.632984 - 11:45:51.708757]
+2019-11-13 11:45:59.752 UIAuto.py[64] findObj -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.074s[11:45:59.678315 - 11:45:59.752246]
+2019-11-13 11:46:25.745 UIAuto.py[64] findObj -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.076s[11:46:25.669817 - 11:46:25.745299]
+2019-11-13 11:46:36.787 <string>[1] <module> -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.113s[11:46:36.674454 - 11:46:36.787152]
+2019-11-13 11:46:56.179 <string>[1] <module> -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.087s[11:46:56.093106 - 11:46:56.179846]
+2019-11-13 11:47:35.975 UIAuto.py[64] findObj -> {ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 6, SearchTime: 0.084s[11:47:35.891511 - 11:47:35.975286]
+Can not load UIAutomationCore.dll.
+You may need to install Windows Update KB971513.
+https://github.com/yinkaisheng/WindowsUpdateKB971513ForIUIAutomation
+2019-11-13 11:50:21.387 pydevd_xml.py[321] var_to_xml -> {ControlType: WindowControl, ClassName: '#32770'} TraverseControls: 6, SearchTime: 0.117s[11:50:21.271076 - 11:50:21.387765]
+2019-11-13 11:50:49.296 UIAuto.py[64] findObj -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.079s[11:50:49.217572 - 11:50:49.296484]
+2019-11-13 11:51:06.902 UIAuto.py[148] <module> -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.075s[11:51:06.827715 - 11:51:06.902836]
+2019-11-13 11:51:22.649 UIAuto.py[148] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 11:51:22.654 UIAuto.py[148] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:02:47.856 UIAuto.py[148] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 14:02:47.862 UIAuto.py[148] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 14:03:33.953 UIAuto.py[149] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:03:33.958 UIAuto.py[149] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:06:40.743 UIAuto.py[149] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 14:06:40.748 UIAuto.py[149] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 14:07:35.214 UIAuto.py[149] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 14:07:35.218 UIAuto.py[149] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 14:09:50.705 UIAuto.py[149] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 14:09:50.709 UIAuto.py[149] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 14:12:25.615 UIAuto.py[149] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:12:25.620 UIAuto.py[149] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:15:43.542 UIAuto.py[149] <module> -> {Name: 'SAP', ControlType: WindowControl} does not exist.
+2019-11-13 14:15:43.546 UIAuto.py[149] <module> -> Find Control Timeout: {Name: 'SAP', ControlType: WindowControl}
+2019-11-13 14:16:16.514 <string>[1] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:16:16.519 <string>[1] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:16:26.888 pydevd_xml.py[321] var_to_xml -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:16:26.893 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:16:37.081 pydevd_xml.py[321] var_to_xml -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:16:37.086 pydevd_xml.py[321] var_to_xml -> Find Control Timeout: {ControlType: 2019-11-13 14:16:37.088 <string>[1] <module> -> {WindowControlControlType, : NameWindowControl: , 'SAP'Name}
+: 'SAP'} does not exist.
+2019-11-13 14:16:37.094 <string>[1] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:19:56.602 UIAuto.py[149] <module> -> {ControlType: WindowControl, Name: 'SAP'} does not exist.
+2019-11-13 14:20:06.852 UIAuto.py[149] <module> -> Find Control Timeout: {ControlType: WindowControl, Name: 'SAP'}
+2019-11-13 14:35:43.325 UIAuto.py[172] <module> -> {ControlType: WindowControl, RegexName: '.*SAP.*'} TraverseControls: 14, SearchTime: 0.101s[14:35:43.223510 - 14:35:43.324346]
+2019-11-13 14:35:43.695 UIAuto.py[174] <module> -> {ControlType: TextControl, Name: '810'} TraverseControls: 64, SearchTime: 0.364s[14:35:43.332329 - 14:35:43.695393]
+2019-11-13 14:36:01.523 UIAuto.py[172] <module> -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 14, SearchTime: 0.085s[14:36:01.438729 - 14:36:01.523478]
+2019-11-13 14:36:01.627 UIAuto.py[175] <module> -> {ControlType: TextControl} TraverseControls: 32, SearchTime: 0.098s[14:36:01.529462 - 14:36:01.627232]
+2019-11-13 14:41:08.083 UIAuto.py[204] <module> -> {RegexName: '.*SAP.*', ControlType: WindowControl} TraverseControls: 14, SearchTime: 0.094s[14:41:07.989655 - 14:41:08.083373]
+2019-11-13 14:41:08.188 UIAuto.py[207] <module> -> {ControlType: TextControl} TraverseControls: 32, SearchTime: 0.099s[14:41:08.089357 - 14:41:08.188093]
+2019-11-13 14:43:18.496 UIAuto.py[143] <module> -> {ControlType: WindowControl, RegexName: '.*SAP.*'} TraverseControls: 14, SearchTime: 0.088s[14:43:18.409415 - 14:43:18.496175]
+2019-11-13 14:45:01.160 UIAuto.py[143] <module> -> {ControlType: WindowControl, RegexName: '.*SAP.*'} TraverseControls: 14, SearchTime: 0.087s[14:45:01.073009 - 14:45:01.160134]
+2019-11-13 14:45:01.266 UIAuto.py[146] <module> -> {ControlType: TextControl} TraverseControls: 32, SearchTime: 0.101s[14:45:01.165147 - 14:45:01.266848]
+2019-11-13 15:57:43.529 UIAuto.py[88] <module> -> {ControlType: WindowControl, RegexName: '.*SAP.*'} TraverseControls: 15, SearchTime: 0.103s[15:57:43.425555 - 15:57:43.529277]
+2019-11-13 15:57:43.656 UIAuto.py[91] <module> -> {ControlType: TextControl} TraverseControls: 32, SearchTime: 0.121s[15:57:43.535262 - 15:57:43.656938]

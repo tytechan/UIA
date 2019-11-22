@@ -1,0 +1,508 @@
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 13:38:41.464 automation.py[75] main -> Starts, Current Cursor Position: (2734, 434)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 13:38:41.665 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 13:47:52.781 automation.py[75] main -> Starts, Current Cursor Position: (1682, 678)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 13:47:52.949 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 13:49:23.564 automation.py[75] main -> Starts, Current Cursor Position: (1679, 675)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 13:49:23.721 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:02:25.387 automation.py[75] main -> Starts, Current Cursor Position: (2931, 388)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:02:25.553 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:13:15.677 automation.py[75] main -> Starts, Current Cursor Position: (3158, 306)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:13:15.859 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:13:21.005 automation.py[75] main -> Starts, Current Cursor Position: (3078, 358)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:13:21.195 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:52:46.851 automation.py[75] main -> Starts, Current Cursor Position: (3262, 233)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:52:47.026 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:52:54.013 automation.py[75] main -> Starts, Current Cursor Position: (2110, 1125)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_SecondaryTrayWnd    AutomationId:     Rect: (1536,1112,3584,1152)[2048x40]    Name:     Handle: 0x10174(65908)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: WorkerW    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name:     Handle: 0x1017E(65918)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name: 运行中的应用程序    Handle: 0x10186(65926)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ButtonControl    ClassName:     AutomationId: C:\Python35\python.exe    Rect: (2083,1112,2133,1152)[50x40]    Name: Python 3.5 (32-bit) - 1 个运行窗口    Handle: 0x0(0)    Depth: 4    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-14 14:52:54.221 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:54:06.040 automation.py[75] main -> Starts, Current Cursor Position: (3322, 214)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:54:06.203 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:54:23.238 automation.py[75] main -> Starts, Current Cursor Position: (2935, 353)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 14:54:23.412 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:54:28.603 automation.py[75] main -> Starts, Current Cursor Position: (2100, 1138)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_SecondaryTrayWnd    AutomationId:     Rect: (1536,1112,3584,1152)[2048x40]    Name:     Handle: 0x10174(65908)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: WorkerW    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name:     Handle: 0x1017E(65918)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name: 运行中的应用程序    Handle: 0x10186(65926)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ButtonControl    ClassName:     AutomationId: C:\Python35\python.exe    Rect: (2083,1112,2133,1152)[50x40]    Name: Python 3.5 (32-bit) - 1 个运行窗口    Handle: 0x0(0)    Depth: 4    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-14 14:54:28.837 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 14:54:32.167 automation.py[75] main -> Starts, Current Cursor Position: (766, 454)
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:07:13.882 automation.py[75] main -> Starts, Current Cursor Position: (1690, 680)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:07:14.062 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:08:10.070 automation.py[75] main -> Starts, Current Cursor Position: (3100, 341)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:08:10.233 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:08:33.006 automation.py[75] main -> Starts, Current Cursor Position: (1694, 678)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:08:33.189 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:11:19.373 automation.py[75] main -> Starts, Current Cursor Position: (3141, 323)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:11:19.526 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:11:23.984 automation.py[75] main -> Starts, Current Cursor Position: (3113, 342)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:11:24.090 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:37:48.947 automation.py[75] main -> Starts, Current Cursor Position: (2750, 400)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:37:49.141 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:37:54.738 automation.py[75] main -> Starts, Current Cursor Position: (2160, 1144)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_SecondaryTrayWnd    AutomationId:     Rect: (1536,1112,3584,1152)[2048x40]    Name:     Handle: 0x10174(65908)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: WorkerW    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name:     Handle: 0x1017E(65918)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name: 运行中的应用程序    Handle: 0x10186(65926)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ButtonControl    ClassName:     AutomationId: C:\Python35\python.exe    Rect: (2133,1112,2183,1152)[50x40]    Name: Python 3.5 (32-bit) - 1 个运行窗口    Handle: 0x0(0)    Depth: 4    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-14 15:37:54.963 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:37:58.436 automation.py[75] main -> Starts, Current Cursor Position: (711, 459)
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:46:01.912 automation.py[75] main -> Starts, Current Cursor Position: (2966, 431)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:46:02.073 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:46:07.470 automation.py[75] main -> Starts, Current Cursor Position: (3010, 402)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:46:07.634 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:46:11.526 automation.py[75] main -> Starts, Current Cursor Position: (2155, 1131)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_SecondaryTrayWnd    AutomationId:     Rect: (1536,1112,3584,1152)[2048x40]    Name:     Handle: 0x10174(65908)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: WorkerW    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name:     Handle: 0x1017E(65918)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (1584,1112,3510,1152)[1926x40]    Name: 运行中的应用程序    Handle: 0x10186(65926)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ButtonControl    ClassName:     AutomationId: C:\Python35\python.exe    Rect: (2133,1112,2183,1152)[50x40]    Name: Python 3.5 (32-bit) - 1 个运行窗口    Handle: 0x0(0)    Depth: 4    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-14 15:46:11.699 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:48:32.947 automation.py[75] main -> Starts, Current Cursor Position: (2697, 430)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:48:33.103 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:48:46.217 automation.py[75] main -> Starts, Current Cursor Position: (2998, 370)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:48:46.374 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:50:29.598 automation.py[75] main -> Starts, Current Cursor Position: (2849, 257)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:50:29.753 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:55:39.650 automation.py[75] main -> Starts, Current Cursor Position: (2261, 362)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:55:39.805 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:56:21.301 automation.py[75] main -> Starts, Current Cursor Position: (2283, 368)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:56:21.454 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 15:56:40.689 automation.py[75] main -> Starts, Current Cursor Position: (3197, 230)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 15:56:40.843 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 17:53:33.364 automation.py[75] main -> Starts, Current Cursor Position: (2965, 304)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 17:53:33.568 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 17:53:36.050 automation.py[75] main -> Starts, Current Cursor Position: (2962, 260)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 17:53:36.151 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:01:13.833 automation.py[75] main -> Starts, Current Cursor Position: (3299, 128)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:01:13.987 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:10:32.460 automation.py[75] main -> Starts, Current Cursor Position: (2870, 424)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:10:32.615 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:11:29.543 automation.py[75] main -> Starts, Current Cursor Position: (3305, 198)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:11:29.700 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:11:48.931 automation.py[75] main -> Starts, Current Cursor Position: (3295, 219)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:11:49.095 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:28:52.777 automation.py[75] main -> Starts, Current Cursor Position: (3166, 227)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:28:52.945 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:37:11.440 automation.py[75] main -> Starts, Current Cursor Position: (3257, 231)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:37:11.664 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:50:10.555 automation.py[75] main -> Starts, Current Cursor Position: (3332, 138)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:50:10.742 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:51:17.818 automation.py[75] main -> Starts, Current Cursor Position: (3206, 238)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:51:18.009 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:51:56.695 automation.py[75] main -> Starts, Current Cursor Position: (3243, 149)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:51:56.865 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:52:16.876 automation.py[75] main -> Starts, Current Cursor Position: (3293, 183)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:52:17.044 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:53:38.875 automation.py[75] main -> Starts, Current Cursor Position: (3209, 238)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:53:39.081 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:54:04.107 automation.py[75] main -> Starts, Current Cursor Position: (3246, 166)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:54:04.293 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:58:25.911 automation.py[75] main -> Starts, Current Cursor Position: (2902, 227)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:58:26.078 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:59:01.599 automation.py[75] main -> Starts, Current Cursor Position: (3107, 250)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:59:01.766 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:59:19.595 automation.py[75] main -> Starts, Current Cursor Position: (3323, 102)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:59:19.751 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 18:59:24.730 automation.py[75] main -> Starts, Current Cursor Position: (3458, 168)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 18:59:24.943 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 19:00:20.743 automation.py[75] main -> Starts, Current Cursor Position: (3030, 301)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 19:00:20.906 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-14 19:00:51.996 automation.py[75] main -> Starts, Current Cursor Position: (3182, 340)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0x12086A(1181802)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-14 19:00:52.159 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:09:40.057 automation.py[75] main -> Starts, Current Cursor Position: (2822, 465)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:09:40.369 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:11:38.176 automation.py[75] main -> Starts, Current Cursor Position: (3245, 235)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:11:38.380 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:13:07.177 automation.py[75] main -> Starts, Current Cursor Position: (2802, 389)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:13:07.370 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:16:25.460 automation.py[75] main -> Starts, Current Cursor Position: (3118, 305)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:16:25.669 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:18:38.973 automation.py[75] main -> Starts, Current Cursor Position: (3251, 226)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:18:39.167 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:18:54.502 automation.py[75] main -> Starts, Current Cursor Position: (3122, 284)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:18:54.699 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:20:25.068 automation.py[75] main -> Starts, Current Cursor Position: (3194, 247)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:20:25.282 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:21:10.085 automation.py[75] main -> Starts, Current Cursor Position: (3072, 278)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:21:10.277 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:22:24.748 automation.py[75] main -> Starts, Current Cursor Position: (2826, 262)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:22:24.951 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:22:46.607 automation.py[75] main -> Starts, Current Cursor Position: (2657, 395)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:22:46.798 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:22:48.537 automation.py[75] main -> Starts, Current Cursor Position: (2758, 418)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:22:48.662 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:22:52.886 automation.py[75] main -> Starts, Current Cursor Position: (2170, 874)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:22:53.011 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:26:00.697 automation.py[75] main -> Starts, Current Cursor Position: (3180, 253)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:26:00.914 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:26:08.863 automation.py[75] main -> Starts, Current Cursor Position: (2489, 524)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:26:09.046 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:26:31.183 automation.py[75] main -> Starts, Current Cursor Position: (3231, 214)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:26:31.377 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:26:48.245 automation.py[75] main -> Starts, Current Cursor Position: (3090, 239)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:26:48.452 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:29:56.090 automation.py[75] main -> Starts, Current Cursor Position: (2825, 310)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:29:56.287 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:35:02.661 automation.py[75] main -> Starts, Current Cursor Position: (3194, 222)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:35:02.852 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 10:38:01.527 automation.py[75] main -> Starts, Current Cursor Position: (3002, 323)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 10:38:01.722 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:20:57.887 automation.py[75] main -> Starts, Current Cursor Position: (3110, 282)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:20:58.080 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:21:04.610 automation.py[75] main -> Starts, Current Cursor Position: (3126, 286)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:21:04.793 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:23:02.899 automation.py[75] main -> Starts, Current Cursor Position: (3290, 249)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:23:03.078 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:24:14.457 automation.py[75] main -> Starts, Current Cursor Position: (3254, 173)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:24:14.649 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:26:29.811 automation.py[75] main -> Starts, Current Cursor Position: (3084, 238)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:26:29.998 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:31:08.768 automation.py[75] main -> Starts, Current Cursor Position: (3350, 102)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\ThreadTools.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:31:08.957 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:38:40.575 automation.py[75] main -> Starts, Current Cursor Position: (2979, 430)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:38:40.772 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:38:48.374 automation.py[75] main -> Starts, Current Cursor Position: (863, 581)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: (1条消息)PyHook3简明教程 - 一个博客 - CSDN博客 - Opera    Handle: 0x10A8A(68234)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1627183808    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x20077E(2099070)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:38:51.195 automation.py[75] main -> Starts, Current Cursor Position: (626, 707)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x1D015A(1900890)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x101C8(65992)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (48,680,1030,720)[982x40]    Name: 运行中的应用程序    Handle: 0x101CE(65998)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (48,680,1030,720)[982x40]    Name: 运行中的应用程序    Handle: 0x101D0(66000)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: C:\Python35\python.exe    Rect: (601,680,651,720)[50x40]    Name: Python 3.5 (32-bit) - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-11-15 11:38:51.441 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:39:26.598 automation.py[75] main -> Starts, Current Cursor Position: (3028, 269)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:39:26.731 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:42:00.912 automation.py[75] main -> Starts, Current Cursor Position: (2998, 308)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:42:01.044 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:42:17.921 automation.py[75] main -> Starts, Current Cursor Position: (3074, 368)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Hook.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:42:18.056 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:43:53.812 automation.py[75] main -> Starts, Current Cursor Position: (285, 374)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: python如何跳出while循环-Python教程-PHP中文网 - Opera    Handle: 0x10A8A(68234)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 1807900208    Rect: (40,69,1280,680)[1240x611]    Name:     Handle: 0x1109B4(1116596)    Depth: 2    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:44:40.222 automation.py[75] main -> Starts, Current Cursor Position: (2627, 639)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:44:40.362 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-15 11:45:10.838 automation.py[75] main -> Starts, Current Cursor Position: (2302, 921)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\hooker\Compile.py [UIA] - PyCharm    Handle: 0xF02A8(983720)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-11-15 11:45:10.968 automation.py[110] main -> Ends
+
+UIAutomation 2.0.3 (Python 3.5.4, 32 bit)
+2019-11-18 17:12:30.772 automation.py[75] main -> Starts, Current Cursor Position: (1028, 592)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: UIDingNotifyV2Wnd    AutomationId:     Rect: (922,420,1280,680)[358x260]    Name:     Handle: 0x4079A(264090)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+2019-11-18 17:12:30.889 automation.py[110] main -> Ends
+
