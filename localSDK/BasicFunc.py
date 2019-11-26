@@ -93,7 +93,7 @@ class AppControl:
             DescStr = ", Desc='" + Name + "')"
             searchStr += DescStr if (i == 0 and Name != "None") else ")"
 
-            print(searchStr)
+            # print(searchStr)
             try:
                 searchObj = eval(searchStr)
                 searchObj.Refind()
@@ -106,7 +106,7 @@ class AppControl:
 
                 # 检查坐标是否匹配
                 rect = searchObj.BoundingRectangle
-                print(rect)
+                # print(rect)
                 assert x <= rect.right and x >= rect.left \
                        and y <= rect.bottom and y >= rect.top, \
                     "第 %s 层控件坐标不匹配！" %(i + 1)
@@ -119,7 +119,7 @@ class AppControl:
                 # raise e
                 return False
 
-        print("唯一性校验完毕！")
+        # print("唯一性校验完毕！")
         return searchObj
 
 

@@ -6,4 +6,6 @@ from hooker.Hook import *
 cf._init()
 path = os.getcwd()
 cf.set_value("path", path)
-hooks()
+
+HK = Hooker()
+HK.hooks()

@@ -32,14 +32,33 @@ def readFromLog():
 filePath = "log.txt"
 
 if __name__ == "__main__":
+    import time
     AC = AppControl()
     AC.dict = readFromLog()
-    AC.appName = "SAP"
+    AC.appName = "计算器"
 
     # AC.openApp("D:\SAP\SAPgui\saplogon.exe")
     # AC.objControl("SAP-登陆环境", "点击")
     # AC.objControl("SAP-登陆按钮", "点击")
-    AC.objControl("SAP-登陆按钮", "点击")
+    # AC.objControl("SAP-登陆按钮", "点击")
     # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
 
     # AC.killApp("saplogon.exe")
+
+
+    # AC.openApp("Calc.exe")
+    # # AC.objControl("计算器-侧边栏", "点击")
+    # # AC.objControl("计算器-科学", "点击")
+    # AC.objControl("计算器-5", "点击")
+    # AC.objControl("计算器-×", "点击")
+    # AC.objControl("计算器-7", "点击")
+    # AC.objControl("计算器-等于", "点击")
+
+
+    AC.openApp("notepad.exe")
+    AC.objControl("记事本-格式按钮", "点击")
+    time.sleep(1)
+    AC.objControl("记事本-字体按钮2", "点击")
+    AC.objControl("记事本-字体-倾斜", "点击")
+    AC.objControl("记事本-确认按钮5", "点击")
+

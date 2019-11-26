@@ -13,6 +13,7 @@ def myPopen(cmd):
         popen = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         popen.wait()
         lines = popen.stdout.readlines()
+        # print(lines)
         dt = compileData(lines)
         return dt
 
@@ -34,7 +35,7 @@ def compileData(data):
     myDict["Depth"] = dict()
     for i in range(len(data)):
         info = data[i].decode("UTF-8")
-
+        # print(info)
         if "Starts" in info:
             startTime = info.split("automation.py")[0].strip()
             myDict["Starts"] = startTime
