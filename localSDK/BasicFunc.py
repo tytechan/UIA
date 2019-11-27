@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import copy
 import uiautomation as auto
+from localSDK import *
 
 class AppControl:
     def __init__(self):
@@ -10,6 +11,7 @@ class AppControl:
         self.dict = None                 # 工程下“log.txt”中的所有控件信息
         self.appName = None              # 应用名称（用于写日志）
         self.maxNum = 9999               # 相同搜索条件下需遍历的控件量最大值
+        self.projectName = None          # 工程名
 
     def openApp(self, path):
         ''' 打开应用程序
@@ -93,7 +95,7 @@ class AppControl:
             DescStr = ", Desc='" + Name + "')"
             searchStr += DescStr if (i == 0 and Name != "None") else ")"
 
-            # print(searchStr)
+            print(searchStr)
             try:
                 searchObj = eval(searchStr)
                 searchObj.Refind()
@@ -122,6 +124,61 @@ class AppControl:
         # print("唯一性校验完毕！")
         return searchObj
 
+    def checkObjFromLog(self, name):
+        ''' 对本地控件库中控件进行唯一性校验
+        :param name: 控件名
+        :param projectName: 所在工程名
+        '''
+        import win32api
+        import win32con
+
+        # TODO：根据判断识别出结果但应用程序实际不可识别的处理方法
+        try:
+            filePath = r"%s\%s\log.txt" %(parentDirPath, self.projectName)
+            with open(filePath, "r+") as f:
+                rawData = f.read()
+                if not rawData:
+                    rawData = "{}"
+
+            rawDict = eval(rawData)
+            objDict = rawDict.get(name)
+            assert objDict is not None, \
+                "本地控件库中未找到控件 [%s] ，请检查控件名称！" %name
+
+            keyObj = objDict.get("Depth")
+            flag = self.checkBottom(keyObj)
+            if not flag:
+                win32api.MessageBox(0, "依据获取信息无法识别控件 [%s] ，请检查控件状态或重新识别！" %name,
+                                    "提示", win32con.MB_OK)
+        except AssertionError as e:
+            raise e
+        except Exception as e:
+            raise e
+
+    def deleteObjFromLog(self, name):
+        ''' 删除本地控件
+        :param name: 控件名
+        '''
+        try:
+            filePath = r"%s\%s\log.txt" %(parentDirPath, self.projectName)
+            with open(filePath, "r+") as f:
+                rawData = f.read()
+                if not rawData:
+                    rawData = "{}"
+
+            rawDict = eval(rawData)
+            objDict = rawDict.get(name)
+            assert objDict is not None, \
+                "本地控件库中未找到控件 [%s] ，请检查控件名称！" %name
+
+            del rawDict[name]
+
+            with open(filePath, "w") as f:
+                f.write(str(rawDict))
+        except AssertionError as e:
+            raise e
+        except Exception as e:
+            raise e
 
     def checkBottom_EX(self, keyObj):
         ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）

@@ -110,7 +110,6 @@ def recordIntoProject(eleProperties):
     import win32api, win32con
     import easygui
 
-    AC = AppControl()
     try:
         keyObj = eleProperties.get("Depth")
         info = keyObj[str(len(keyObj) - 1)]
@@ -130,13 +129,7 @@ def recordIntoProject(eleProperties):
         # print(result)
         path = cf.get_value("path")
         if result == 1:
-            # 保存前脚本进行唯一性校验
-            # （True：可直接保存；False：人工进行index判断）
-            flag = AC.checkBottom(keyObj)           # TODO：根据判断识别出结果但应用程序实际不可识别处理方法
-            if not flag:
-                win32api.MessageBox(0, "依据获取信息无法识别控件，请检查控件状态！", "提示", win32con.MB_OK)
-                return False
-
+            # 此处不再做唯一性校验
             # 点击后保存
             filePath = path + r"\log.txt"
             # print(filePath)
