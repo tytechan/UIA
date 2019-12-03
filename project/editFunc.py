@@ -55,11 +55,12 @@ if __name__ == "__main__":
     AC.objControl("计算器-等于", "点击")
 
 
-    # AC.openApp("notepad.exe")
+    AC.openApp("notepad.exe")
+    AC.objControl("记事本-格式", "点击")
+    AC.objControl("记事本-字体", "点击")
+    AC.objControl("记事本-字体-倾斜", "点击")
+    AC.objControl("记事本-字体-确认按钮", "点击")
     # time.sleep(2)
-    # AC.objControl("记事本-格式", "点击")
-    # time.sleep(1)
-    # AC.objControl("记事本-字体", "点击")
-    # AC.objControl("记事本-字体-倾斜", "点击")
-    # AC.objControl("记事本-确认按钮5", "点击")
+    AC.objControl("计算器-编辑框", "点击")
+    AC.objControl("计算器-编辑框", "输入", "test")
 

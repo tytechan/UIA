@@ -3,6 +3,8 @@
 import tkinter
 import tkinter.messagebox as msg
 
+# def returnResult(var):
+#     return var
 
 def getInput(title, message):
     def return_callback(event):
@@ -10,7 +12,7 @@ def getInput(title, message):
         root.quit()
 
     def close_callback():
-        msg.showinfo('提示', '请输入值并回车...')
+        msg.showinfo('提示', '请输入控件名并回车...')
 
     root = tkinter.Tk(className=title)
     root.wm_attributes('-topmost', 1)
@@ -27,6 +29,12 @@ def getInput(title, message):
     entry.bind('<Return>', return_callback)
     entry.pack()
     entry.focus_set()
+
+    # btn1 = tkinter.Button(root, text="确定", command=returnResult(True)).pack()
+    # btn1.grid(row=0, column=0, padx=5,pady=5)
+    # btn2 = tkinter.Button(root, text="取消", font=('Helvetica 10 bold'), command=root.quit()).pack()
+    # btn2.grid(row=0, column=0, padx=5,pady=5)
+
     root.protocol("WM_DELETE_WINDOW", close_callback)
     root.mainloop()
     str = entry.get()

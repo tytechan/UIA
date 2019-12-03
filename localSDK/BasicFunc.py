@@ -4,7 +4,7 @@ import copy
 import uiautomation as auto
 from localSDK import *
 
-class AppControl:
+class AppControl(object):
     def __init__(self):
         self.waitTime = 5                # 最长等待时间
         self.intervalTime = 1            # 查找控件间隔时间
@@ -49,9 +49,10 @@ class AppControl:
             except AssertionError as e:
                 raise e
 
-    def checkBottom(self, keyObj):
+    def checkBottom(self, keyObj, flag=False):
         ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
         :param keyObj: 控件树信息
+        :param flag: True（进行唯一性校验，只用在录制时）/False（反之）
         :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
         '''
         import uiautomation as auto
@@ -106,12 +107,14 @@ class AppControl:
                     searchObj.SetActive()
                     # searchObj.SetFocus()
 
-                # 检查坐标是否匹配
-                rect = searchObj.BoundingRectangle
-                # print(rect)
-                assert x <= rect.right and x >= rect.left \
-                       and y <= rect.bottom and y >= rect.top, \
-                    "第 %s 层控件坐标不匹配！" %(i + 1)
+                if flag:
+                    # 检查坐标是否匹配
+                    rect = searchObj.BoundingRectangle
+                    # print(rect)
+
+                    assert x <= rect.right and x >= rect.left \
+                           and y <= rect.bottom and y >= rect.top, \
+                        "第 %s 层控件坐标不匹配！" %(i + 1)
             except AssertionError as e:
                 print(e)
                 # raise e
@@ -247,7 +250,8 @@ class AppControl:
             print(container)
 
 
-    def objControl(self, name, conductType, string=None, **kwargs):
+    # def objControl(self, name, conductType, string=None, **kwargs):
+    def objControl(self, name, conductType, inputStr=None):
         try:
             assert self.dict.get(name) is not None, \
                 "本地库中未找到名称为 [%s] 的控件，请检查“log.txt”文件！" %name
@@ -257,6 +261,9 @@ class AppControl:
 
             if conductType == "点击":
                 obj.Click()
+
+            elif conductType == "输入":
+                obj.SendKeys(inputStr)
         except AssertionError as e:
             raise e
         except Exception as e:
@@ -317,6 +324,9 @@ class AppControl:
         # 每层遍历，在上一层的所有子控件中查找
         info = self.dict.get(name)["Depth"]
 
+class ABC:
+    def click(self):
+        self.Click()
 
 if __name__ == "__main__":
     AC = AppControl()
