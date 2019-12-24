@@ -4944,3 +4944,133 @@ getValue() missing 2 required positional arguments: 'key' and 'str'
 
 [层级结构]
 {'Starts': '2019-12-03 14:11:42.792', 'Depth': {'0': {'Rect': '(0,0,1280,720)[1280x720]', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Depth': '0', 'Name': '桌面', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl'}, '1': {'Rect': '(0,680,1280,720)[1280x40]', 'ClassName': 'Shell_TrayWnd', 'Handle': '0x1011A(65818)', 'Depth': '1', 'Name': '任务栏', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl'}, '5': {'D\\QQ\\Bin\\QQ.exe': '\\QQ\\Bin\\QQ.exe', 'Rect': '(819,680,869,720)[50x40]', 'ClassName': '', 'Handle': '0x0(0)', 'Depth': '5', 'Name': '腾讯QQ', 'AutomationId': 'D:\\QQ\\Bin\\QQ.exe', 'SupportedPattern': 'InvokePattern', 'ControlType': 'ButtonControl'}, '2': {'Rect': '(47,680,1030,720)[983x40]', 'ClassName': 'ReBarWindow32', 'Handle': '0x10172(65906)', 'Depth': '2', 'Name': '', 'AutomationId': '40965', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl'}, '4': {'Rect': '(66,680,981,720)[915x40]', 'ClassName': 'MSTaskListWClass', 'Handle': '0x20162(131426)', 'Depth': '4', 'Name': '运行中的应用程序', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'ToolBarControl'}, '3': {'Rect': '(66,680,981,720)[915x40]', 'ClassName': 'MSTaskSwWClass', 'Handle': '0x20164(131428)', 'Depth': '3', 'Name': '运行中的应用程序', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ControlType': 'PaneControl'}}, 'Ends': '2019-12-03 14:11:43.243'}
+-----
+[捕获时间] 12/12/19 14:29:25.900866
+[MessageName] mouse left down
+[Message] 513
+[position] (449, 698)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'3': {'Depth': '3', 'Rect': '(66,680,981,720)[915x40]', 'AutomationId': '', 'ControlType': 'PaneControl', 'ClassName': 'MSTaskSwWClass', 'Handle': '0x1016C(65900)', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'Depth': '1', 'Rect': '(0,680,1280,720)[1280x40]', 'AutomationId': '', 'ControlType': 'PaneControl', 'ClassName': 'Shell_TrayWnd', 'Handle': '0x10108(65800)', 'Name': '任务栏', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'Depth': '4', 'Rect': '(66,680,981,720)[915x40]', 'AutomationId': '', 'ControlType': 'ToolBarControl', 'ClassName': 'MSTaskListWClass', 'Handle': '0x1016E(65902)', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '5': {'Depth': '5', 'ExpandCollapsePattern.ExpandCollapseState': 'ExpandCollapseState.LeafNode', 'Rect': '(419,680,469,720)[50x40]', 'AutomationId': 'Microsoft.Windows.Explorer', 'ControlType': 'MenuItemControl', 'ClassName': '', 'Handle': '0x0(0)', 'Name': '文件资源管理器', 'SupportedPattern': 'InvokePattern'}, '0': {'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'AutomationId': '', 'ControlType': 'PaneControl', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'Depth': '2', 'Rect': '(47,680,1030,720)[983x40]', 'AutomationId': '40965', 'ControlType': 'PaneControl', 'ClassName': 'ReBarWindow32', 'Handle': '0x20162(131426)', 'Name': '', 'SupportedPattern': 'LegacyIAccessiblePattern'}}, 'Ends': '2019-12-12 14:29:28.247', 'Starts': '2019-12-12 14:29:27.877'}
+-----
+[捕获时间] 12/13/19 11:39:19.918051
+[MessageName] mouse left down
+[Message] 513
+[position] (617, 410)
+[Window] 855668
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'SelectionPattern', 'AutomationId': 'lstXPath', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1', 'Handle': '0x40BD4(265172)', 'Rect': '(539,372,865,472)[326x100]', 'ControlType': 'ListControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(519,98,884,526)[365x428]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:39:21.699', 'Ends': '2019-12-13 11:39:21.956'}
+-----
+[捕获时间] 12/13/19 11:40:07.801179
+[MessageName] mouse left down
+[Message] 513
+[position] (630, 360)
+[Window] 855668
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': 'label1', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.STATIC.app.0.141b42a_r9_ad1', 'Handle': '0x20B94(134036)', 'Rect': '(539,357,682,369)[143x12]', 'ControlType': 'TextControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(519,98,884,526)[365x428]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:40:09.332', 'Ends': '2019-12-13 11:40:09.468'}
+-----
+[捕获时间] 12/13/19 11:41:19.076937
+[MessageName] mouse left down
+[Message] 513
+[position] (960, 528)
+[Window] 1707936
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'SelectionPattern', 'AutomationId': 'lstXPath', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1', 'Handle': '0x40BD4(265172)', 'Rect': '(840,464,1166,564)[326x100]', 'ControlType': 'ListControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(820,190,1185,618)[365x428]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:41:20.761', 'Ends': '2019-12-13 11:41:20.917'}
+-----
+[捕获时间] 12/13/19 11:41:58.875727
+[MessageName] mouse left down
+[Message] 513
+[position] (2360, 525)
+[Window] 197912
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\log\HookLog.txt [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': 'groupBox1', 'Name': '', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xF0B42(985922)', 'Rect': '(2202,362,2527,568)[325x206]', 'ControlType': 'GroupControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(2182,321,2547,749)[365x428]', 'ControlType': 'WindowControl'}, '3': {'Depth': '3', 'SupportedPattern': 'ValuePattern', 'ValuePattern.Value': '邮箱帐号', 'AutomationId': 'txtText', 'Name': 'Value', 'ClassName': 'WindowsForms10.EDIT.app.0.141b42a_r9_ad1', 'Handle': '0x110B9A(1117082)', 'Rect': '(2270,514,2521,535)[251x21]', 'ControlType': 'EditControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:42:00.433', 'Ends': '2019-12-13 11:42:00.592'}
+-----
+[捕获时间] 12/13/19 11:42:07.059401
+[MessageName] mouse left down
+[Message] 513
+[position] (2247, 501)
+[Window] 197912
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\log\HookLog.txt [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': 'groupBox1', 'Name': '', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xF0B42(985922)', 'Rect': '(2202,362,2527,568)[325x206]', 'ControlType': 'GroupControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(2182,321,2547,749)[365x428]', 'ControlType': 'WindowControl'}, '3': {'Depth': '3', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': 'label5', 'Name': 'HTML', 'ClassName': 'WindowsForms10.STATIC.app.0.141b42a_r9_ad1', 'Handle': '0x110BCE(1117134)', 'Rect': '(2235,496,2264,508)[29x12]', 'ControlType': 'TextControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:42:08.570', 'Ends': '2019-12-13 11:42:08.733'}
+-----
+[捕获时间] 12/13/19 11:42:18.044511
+[MessageName] mouse left down
+[Message] 513
+[position] (2265, 584)
+[Window] 197912
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\log\HookLog.txt [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': 'label1', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.STATIC.app.0.141b42a_r9_ad1', 'Handle': '0x20B94(134036)', 'Rect': '(2202,580,2345,592)[143x12]', 'ControlType': 'TextControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(2182,321,2547,749)[365x428]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:42:19.592', 'Ends': '2019-12-13 11:42:19.726'}
+-----
+[捕获时间] 12/13/19 11:42:35.315661
+[MessageName] mouse left down
+[Message] 513
+[position] (2307, 676)
+[Window] 197912
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\log\HookLog.txt [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'SelectionPattern', 'AutomationId': 'lstXPath', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1', 'Handle': '0x40BD4(265172)', 'Rect': '(2202,595,2528,695)[326x100]', 'ControlType': 'ListControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(2182,321,2547,749)[365x428]', 'ControlType': 'WindowControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:42:36.836', 'Ends': '2019-12-13 11:42:36.971'}
+-----
+[捕获时间] 12/13/19 11:42:43.239717
+[MessageName] mouse left down
+[Message] 513
+[position] (2280, 605)
+[Window] 197912
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\log\HookLog.txt [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'2': {'Depth': '2', 'SupportedPattern': 'SelectionPattern', 'AutomationId': 'lstXPath', 'Name': 'XPath（选择后双击复制）', 'ClassName': 'WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1', 'Handle': '0x40BD4(265172)', 'Rect': '(2202,595,2528,695)[326x100]', 'ControlType': 'ListControl'}, '1': {'Depth': '1', 'SupportedPattern': 'WindowPattern', 'AutomationId': 'frmIEXPath', 'Name': 'IEXPath', 'ClassName': 'WindowsForms10.Window.8.app.0.141b42a_r9_ad1', 'Handle': '0xB0BF6(723958)', 'Rect': '(2182,321,2547,749)[365x428]', 'ControlType': 'WindowControl'}, '3': {'Depth': '3', 'SelectionItemPattern.IsSelected': 'True', 'AutomationId': '', 'Name': '//*[@id="mail_username"]', 'ClassName': '', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'Rect': '(2204,597,2526,609)[322x12]', 'ControlType': 'ListItemControl'}, '0': {'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'Rect': '(0,0,1280,720)[1280x720]', 'ControlType': 'PaneControl'}}, 'Starts': '2019-12-13 11:42:44.757', 'Ends': '2019-12-13 11:42:44.944'}
+-----
+[捕获时间] 12/13/19 11:46:06.415679
+[MessageName] mouse left down
+[Message] 513
+[position] (495, 126)
+[Window] 2493374
+[WindowName] Chrome Legacy Window
+
+[层级结构]
+{'Starts': '2019-12-13 11:46:07.987', 'Depth': {}}
+-----
+[捕获时间] 12/13/19 17:40:27.504507
+[MessageName] mouse left down
+[Message] 513
+[position] (702, 697)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'ControlType': 'PaneControl', 'Rect': '(47,680,1054,720)[1007x40]', 'Handle': '0x20120(131360)', 'ClassName': 'ReBarWindow32', 'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '40965', 'Name': ''}, '3': {'ControlType': 'PaneControl', 'Rect': '(66,680,1005,720)[939x40]', 'Handle': '0x2016C(131436)', 'ClassName': 'MSTaskSwWClass', 'Depth': '3', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序'}, '1': {'ControlType': 'PaneControl', 'Rect': '(0,680,1280,720)[1280x40]', 'Handle': '0x10130(65840)', 'ClassName': 'Shell_TrayWnd', 'Depth': '1', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '任务栏'}, '5': {'ControlType': 'ButtonControl', 'Rect': '(669,680,719,720)[50x40]', 'Handle': '0x0(0)', 'Name': 'HiJson', 'Depth': '5', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'D:\\Json格式化\\HiJson\\HiJson', 'D\\Json格式化\\HiJson\\HiJson': '\\Json格式化\\HiJson\\HiJson', 'ClassName': ''}, '4': {'ControlType': 'ToolBarControl', 'Rect': '(66,680,1005,720)[939x40]', 'Handle': '0x20170(131440)', 'ClassName': 'MSTaskListWClass', 'Depth': '4', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序'}, '0': {'ControlType': 'PaneControl', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'ClassName': '#32769', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面'}}, 'Starts': '2019-12-13 17:40:29.712', 'Ends': '2019-12-13 17:40:30.062'}
+-----
+[捕获时间] 12/14/19 15:39:43.934395
+[MessageName] mouse left down
+[Message] 513
+[position] (660, 285)
+[Window] 789536
+[WindowName] UIA [E:\python相关\RPA\UIA] - ...\project\hookFunc.py [UIA] - PyCharm
+
+[层级结构]
+{'Depth': {'0': {'Name': '桌面', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'Depth': '0', 'AutomationId': '', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '1': {'Name': 'UIA', 'ClassName': 'SunAwtFrame', 'Rect': '(-7,-7,1288,688)[1295x695]', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]', 'ControlType': 'WindowControl', 'SupportedPattern': 'WindowPattern', 'Depth': '1', 'AutomationId': '', 'Handle': '0xC0C20(789536)'}}, 'Ends': '2019-12-14 15:39:45.884', 'Starts': '2019-12-14 15:39:45.625'}
+-----
+[捕获时间] 12/17/19 14:56:58.218922
+[MessageName] mouse left down
+[Message] 513
+[position] (847, 701)
+[Window] 65944
+[WindowName] FolderView
+
+[层级结构]
+{'Depth': {'0': {'Name': '桌面', 'ClassName': '#32769', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0', 'AutomationId': '', 'ControlType': 'PaneControl'}, '2': {'Name': '', 'ClassName': 'ReBarWindow32', 'Handle': '0x10158(65880)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(47,680,1030,720)[983x40]', 'Depth': '2', 'AutomationId': '40965', 'ControlType': 'PaneControl'}, '3': {'Name': '运行中的应用程序', 'ClassName': 'MSTaskSwWClass', 'Handle': '0x10162(65890)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(66,680,981,720)[915x40]', 'Depth': '3', 'AutomationId': '', 'ControlType': 'PaneControl'}, '1': {'Name': '任务栏', 'ClassName': 'Shell_TrayWnd', 'Handle': '0x20046(131142)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(0,680,1280,720)[1280x40]', 'Depth': '1', 'AutomationId': '', 'ControlType': 'PaneControl'}, '5': {'Name': 'AliyunRPA(Private)', 'ClassName': '', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'Rect': '(819,680,869,720)[50x40]', 'Depth': '5', 'ExpandCollapsePattern.ExpandCollapseState': 'ExpandCollapseState.LeafNode', 'AutomationId': 'Microsoft.AutoGenerated.{28A15049-4E54-CB52-A56B-BF4A29955A14}', 'ControlType': 'MenuItemControl'}, '4': {'Name': '运行中的应用程序', 'ClassName': 'MSTaskListWClass', 'Handle': '0x10164(65892)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'Rect': '(66,680,981,720)[915x40]', 'Depth': '4', 'AutomationId': '', 'ControlType': 'ToolBarControl'}}, 'Starts': '2019-12-17 14:57:00.623', 'Ends': '2019-12-17 14:57:01.027'}

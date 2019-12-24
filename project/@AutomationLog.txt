@@ -3479,3 +3479,100 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
                     ControlType: ButtonControl    ClassName:     AutomationId: D:\QQ\Bin\QQ.exe    Rect: (819,680,869,720)[50x40]    Name: 腾讯QQ - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
 2019-12-03 14:11:43.243 automation.py[110] main -> Ends
 
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-12 14:29:27.877 automation.py[75] main -> Starts, Current Cursor Position: (449, 698)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10108(65800)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x20162(131426)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016E(65902)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: MenuItemControl    ClassName:     AutomationId: Microsoft.Windows.Explorer    Rect: (419,680,469,720)[50x40]    Name: 文件资源管理器 - 3 个运行窗口    Handle: 0x0(0)    Depth: 5    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.LeafNode    SupportedPattern: InvokePattern ExpandCollapsePattern LegacyIAccessiblePattern
+2019-12-12 14:29:28.247 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:39:21.699 automation.py[75] main -> Starts, Current Cursor Position: (617, 410)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (519,98,884,526)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: ListControl    ClassName: WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1    AutomationId: lstXPath    Rect: (539,372,865,472)[326x100]    Name: XPath（选择后双击复制）    Handle: 0x40BD4(265172)    Depth: 2    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+2019-12-13 11:39:21.956 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:40:09.332 automation.py[75] main -> Starts, Current Cursor Position: (630, 360)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (519,98,884,526)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: TextControl    ClassName: WindowsForms10.STATIC.app.0.141b42a_r9_ad1    AutomationId: label1    Rect: (539,357,682,369)[143x12]    Name: XPath（选择后双击复制）    Handle: 0x20B94(134036)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+2019-12-13 11:40:09.468 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:41:20.761 automation.py[75] main -> Starts, Current Cursor Position: (960, 528)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (820,190,1185,618)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: ListControl    ClassName: WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1    AutomationId: lstXPath    Rect: (840,464,1166,564)[326x100]    Name: XPath（选择后双击复制）    Handle: 0x40BD4(265172)    Depth: 2    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+2019-12-13 11:41:20.917 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:42:00.433 automation.py[75] main -> Starts, Current Cursor Position: (2360, 524)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (2182,321,2547,749)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: GroupControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: groupBox1    Rect: (2202,362,2527,568)[325x206]    Name:     Handle: 0xF0B42(985922)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: EditControl    ClassName: WindowsForms10.EDIT.app.0.141b42a_r9_ad1    AutomationId: txtText    Rect: (2270,514,2521,535)[251x21]    Name: Value    Handle: 0x110B9A(1117082)    Depth: 3    ValuePattern.Value: 邮箱帐号    SupportedPattern: ValuePattern LegacyIAccessiblePattern
+2019-12-13 11:42:00.592 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:42:08.570 automation.py[75] main -> Starts, Current Cursor Position: (2247, 501)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (2182,321,2547,749)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: GroupControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: groupBox1    Rect: (2202,362,2527,568)[325x206]    Name:     Handle: 0xF0B42(985922)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: TextControl    ClassName: WindowsForms10.STATIC.app.0.141b42a_r9_ad1    AutomationId: label5    Rect: (2235,496,2264,508)[29x12]    Name: HTML    Handle: 0x110BCE(1117134)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+2019-12-13 11:42:08.733 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:42:19.592 automation.py[75] main -> Starts, Current Cursor Position: (2265, 584)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (2182,321,2547,749)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: TextControl    ClassName: WindowsForms10.STATIC.app.0.141b42a_r9_ad1    AutomationId: label1    Rect: (2202,580,2345,592)[143x12]    Name: XPath（选择后双击复制）    Handle: 0x20B94(134036)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+2019-12-13 11:42:19.726 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:42:36.836 automation.py[75] main -> Starts, Current Cursor Position: (2306, 674)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (2182,321,2547,749)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: ListControl    ClassName: WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1    AutomationId: lstXPath    Rect: (2202,595,2528,695)[326x100]    Name: XPath（选择后双击复制）    Handle: 0x40BD4(265172)    Depth: 2    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+2019-12-13 11:42:36.971 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:42:44.757 automation.py[75] main -> Starts, Current Cursor Position: (2280, 605)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: WindowsForms10.Window.8.app.0.141b42a_r9_ad1    AutomationId: frmIEXPath    Rect: (2182,321,2547,749)[365x428]    Name: IEXPath - 1.0    Handle: 0xB0BF6(723958)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: ListControl    ClassName: WindowsForms10.LISTBOX.app.0.141b42a_r9_ad1    AutomationId: lstXPath    Rect: (2202,595,2528,695)[326x100]    Name: XPath（选择后双击复制）    Handle: 0x40BD4(265172)    Depth: 2    SupportedPattern: SelectionPattern LegacyIAccessiblePattern
+            ControlType: ListItemControl    ClassName:     AutomationId:     Rect: (2204,597,2526,609)[322x12]    Name: //*[@id="mail_username"]    Handle: 0x0(0)    Depth: 3    SelectionItemPattern.IsSelected: True    SupportedPattern: InvokePattern SelectionItemPattern LegacyIAccessiblePattern
+2019-12-13 11:42:44.944 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 11:46:07.987 automation.py[75] main -> Starts, Current Cursor Position: (495, 126)
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-13 17:40:29.712 automation.py[75] main -> Starts, Current Cursor Position: (702, 697)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10130(65840)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1054,720)[1007x40]    Name:     Handle: 0x20120(131360)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,1005,720)[939x40]    Name: 运行中的应用程序    Handle: 0x2016C(131436)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,1005,720)[939x40]    Name: 运行中的应用程序    Handle: 0x20170(131440)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: D:\Json格式化\HiJson\HiJson 64位和32位\HiJson 2.1.2_jdk64.exe    Rect: (669,680,719,720)[50x40]    Name: HiJson - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2019-12-13 17:40:30.062 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-14 15:39:45.625 automation.py[75] main -> Starts, Current Cursor Position: (660, 278)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: UIA [E:\python相关\RPA\UIA] - ...\project\hookFunc.py [UIA] - PyCharm    Handle: 0xC0C20(789536)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2019-12-14 15:39:45.884 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2019-12-17 14:57:00.623 automation.py[75] main -> Starts, Current Cursor Position: (847, 701)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x20046(131142)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10158(65880)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x10162(65890)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x10164(65892)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: MenuItemControl    ClassName:     AutomationId: Microsoft.AutoGenerated.{28A15049-4E54-CB52-A56B-BF4A29955A14}    Rect: (819,680,869,720)[50x40]    Name: AliyunRPA(Private) Attended - 2 个运行窗口    Handle: 0x0(0)    Depth: 5    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.LeafNode    SupportedPattern: InvokePattern ExpandCollapsePattern LegacyIAccessiblePattern
+2019-12-17 14:57:01.027 automation.py[110] main -> Ends
+

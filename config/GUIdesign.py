@@ -42,6 +42,15 @@ def getInput(title, message):
     return str
 
 
+def message_askyesno(title, message):
+    top = tkinter.Tk()
+    top.withdraw()                          # 实现主窗口隐藏
+    top.update()                            # 需要update一下
+    txt = tkinter.messagebox.askyesno(title, message)
+    top.destroy()
+    return txt
+
 if __name__ == "__main__":
-    a = getInput("title", "msg")
-    print(a)
+    # a = getInput("title", "msg")
+    # print(a)
+    message_askyesno("提示", "测试？")
