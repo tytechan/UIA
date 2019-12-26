@@ -6,7 +6,7 @@ from localSDK import *
 
 class AppControl(object):
     def __init__(self):
-        self.waitTime = 5                # 最长等待时间
+        self.waitTime = 2                # 最长等待时间
         self.intervalTime = 1            # 查找控件间隔时间
         self.dict = None                 # 工程下“log.txt”中的所有控件信息
         self.appName = None              # 应用名称（用于写日志）
@@ -99,7 +99,7 @@ class AppControl(object):
             print(searchStr)
             try:
                 searchObj = eval(searchStr)
-                searchObj.Refind()
+                searchObj.Refind(maxSearchSeconds=self.waitTime, searchIntervalSeconds=self.intervalTime)
 
                 # 置顶应用程序
                 if i == 0:

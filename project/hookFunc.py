@@ -21,7 +21,14 @@ def clickMe():
     global autoType
     win.destroy()
     autoType = browser.get()
+    cf.set_value("autoType", autoType)
     # print(result)
+
+
+# 初始化全局变量
+cf._init()
+path = os.getcwd()
+cf.set_value("path", path)
 
 win = tk.Tk()
 # win.geometry("300x150+500+200")  # 大小和位置
@@ -44,21 +51,32 @@ win.mainloop()
 
 
 if __name__ == "__main__":
-    # 打开自调chrome
+    # # 打开自调chrome
     # openChrome()
 
     print("本次录制类型:", autoType)
+    cf.set_value("autoType", autoType)
 
     if autoType == "Windows":
-
-        cf._init()
-        path = os.getcwd()
-        cf.set_value("path", path)
-
         HK = Hooker()
         HK.hooks()
     elif autoType == "Chrome":
-        pass
+        HK = Hooker()
+        CH = ChromeHooker()
+
+        # CH.keyUp("ctrl")
+        # CH.keyUp("shift")
+
+        # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
+        # CH.keyDown("shift")
+
+        t = threading.Thread(target=CH.refreshDriver, args=[])
+        t.setDaemon(True)
+        t.start()
+
+        HK.hooks()
+
+        CH.keyUp("shift")
     elif autoType == "IE":
         pass
     elif autoType == "Firefox":
