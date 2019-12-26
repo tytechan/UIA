@@ -1,0 +1,102 @@
+
+-----
+[捕获时间] 12/26/19 15:25:33.002832
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (656, 705)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'5': {'ControlType': 'ButtonControl', 'ClassName': '', 'Rect': '(619,680,669,720)[50x40]', 'Handle': '0x0(0)', 'Name': '腾讯QQ', 'Depth': '5', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'D:\\QQ\\Bin\\QQ.exe', 'D\\QQ\\Bin\\QQ.exe': '\\QQ\\Bin\\QQ.exe'}, '3': {'ControlType': 'PaneControl', 'ClassName': 'MSTaskSwWClass', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AA(65962)', 'Depth': '3', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序'}, '1': {'ControlType': 'PaneControl', 'ClassName': 'Shell_TrayWnd', 'Rect': '(0,680,1280,720)[1280x40]', 'Handle': '0x10162(65890)', 'Depth': '1', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '任务栏'}, '4': {'ControlType': 'ToolBarControl', 'ClassName': 'MSTaskListWClass', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AC(65964)', 'Depth': '4', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序'}, '0': {'ControlType': 'PaneControl', 'ClassName': '#32769', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'Depth': '0', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面'}, '2': {'ControlType': 'PaneControl', 'ClassName': 'ReBarWindow32', 'Rect': '(47,680,1030,720)[983x40]', 'Handle': '0x101A4(65956)', 'Depth': '2', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '40965', 'Name': ''}}, 'Starts': '2019-12-26 15:25:34.861', 'Ends': '2019-12-26 15:25:35.175'}
+-----
+[捕获时间] 12/26/19 15:27:59.698909
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (380, 704)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Depth': {'2': {'Handle': '0x101A4(65956)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '40965', 'Name': '', 'Rect': '(47,680,1030,720)[983x40]', 'Depth': '2', 'ControlType': 'PaneControl', 'ClassName': 'ReBarWindow32'}, '0': {'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '桌面', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0', 'ControlType': 'PaneControl', 'ClassName': '#32769'}, '1': {'Handle': '0x10162(65890)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '任务栏', 'Rect': '(0,680,1280,720)[1280x40]', 'Depth': '1', 'ControlType': 'PaneControl', 'ClassName': 'Shell_TrayWnd'}, '5': {'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'D:\\企业微信\\WXWORK\\WXWork.exe', 'Name': '企业微信', 'Rect': '(369,680,419,720)[50x40]', 'Depth': '5', 'ControlType': 'ButtonControl', 'ClassName': '', 'D\\企业微信\\WXWORK\\WXWork.exe': '\\企业微信\\WXWORK\\WXWork.exe'}, '4': {'Handle': '0x101AC(65964)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序', 'Rect': '(66,680,981,720)[915x40]', 'Depth': '4', 'ControlType': 'ToolBarControl', 'ClassName': 'MSTaskListWClass'}, '3': {'Handle': '0x101AA(65962)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Name': '运行中的应用程序', 'Rect': '(66,680,981,720)[915x40]', 'Depth': '3', 'ControlType': 'PaneControl', 'ClassName': 'MSTaskSwWClass'}}, 'Starts': '2019-12-26 15:28:01.476', 'Ends': '2019-12-26 15:28:01.775'}
+-----
+[捕获时间] 12/26/19 15:46:14.047501
+[捕获对象类型] Chrome
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[12]/strong
+-----
+[捕获时间] 12/26/19 16:09:21.732578
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (242, 705)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Ends': '2019-12-26 16:09:24.436', 'Depth': {'0': {'ClassName': '#32769', 'Depth': '0', 'Handle': '0x10010(65552)', 'ControlType': 'PaneControl', 'Name': '桌面', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]'}, '1': {'ClassName': 'Shell_TrayWnd', 'Depth': '1', 'Handle': '0x10162(65890)', 'ControlType': 'PaneControl', 'Name': '任务栏', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(0,680,1280,720)[1280x40]'}, '3': {'ClassName': 'MSTaskSwWClass', 'Depth': '3', 'Handle': '0x101AA(65962)', 'ControlType': 'PaneControl', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(48,680,1030,720)[982x40]'}, '4': {'ClassName': 'MSTaskListWClass', 'Depth': '4', 'Handle': '0x101AC(65964)', 'ControlType': 'ToolBarControl', 'Name': '运行中的应用程序', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '', 'Rect': '(48,680,1030,720)[982x40]'}, '5': {'ClassName': '', 'Depth': '5', 'Handle': '0x0(0)', 'ControlType': 'ButtonControl', 'Name': '便笺', 'SupportedPattern': 'InvokePattern', 'AutomationId': 'Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe!App', 'Rect': '(201,680,251,720)[50x40]'}, '2': {'ClassName': 'ReBarWindow32', 'Depth': '2', 'Handle': '0x101A4(65956)', 'ControlType': 'PaneControl', 'Name': '', 'SupportedPattern': 'LegacyIAccessiblePattern', 'AutomationId': '40965', 'Rect': '(47,680,1030,720)[983x40]'}}, 'Starts': '2019-12-26 16:09:24.139'}
+-----
+[捕获时间] 12/26/19 16:31:07.194342
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (2059, 935)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-12-26 16:31:08.801', 'Depth': {'1': {'ControlType': 'WindowControl', 'Name': 'UIA', 'Handle': '0x80852(526418)', 'SupportedPattern': 'WindowPattern', 'ClassName': 'SunAwtFrame', 'AutomationId': '', '[E\\python相关\\RPA\\UIA]': '\\python相关\\RPA\\UIA]', 'Rect': '(1529,-7,3591,1119)[2062x1126]', 'Depth': '1'}, '0': {'ControlType': 'PaneControl', 'Name': '桌面', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern', 'ClassName': '#32769', 'AutomationId': '', 'Rect': '(0,0,1280,720)[1280x720]', 'Depth': '0'}}, 'Ends': '2019-12-26 16:31:09.001'}
+-----
+[捕获时间] 12/26/19 17:02:18.878326
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (350, 704)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-12-26 17:02:20.409', 'Ends': '2019-12-26 17:02:20.645', 'Depth': {'5': {'Name': '钉钉', 'ControlType': 'ButtonControl', 'AutomationId': 'D:\\钉钉\\DingDing\\main\\current\\DingTalk.exe', 'ClassName': '', 'Depth': '5', 'D\\钉钉\\DingDing\\main\\current\\DingTalk.exe': '\\钉钉\\DingDing\\main\\current\\DingTalk.exe', 'Rect': '(319,680,369,720)[50x40]', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern'}, '1': {'Name': '任务栏', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': 'Shell_TrayWnd', 'Depth': '1', 'Rect': '(0,680,1280,720)[1280x40]', 'Handle': '0x10162(65890)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'Name': '运行中的应用程序', 'ControlType': 'ToolBarControl', 'AutomationId': '', 'ClassName': 'MSTaskListWClass', 'Depth': '4', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AC(65964)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'Name': '', 'ControlType': 'PaneControl', 'AutomationId': '40965', 'ClassName': 'ReBarWindow32', 'Depth': '2', 'Rect': '(47,680,1030,720)[983x40]', 'Handle': '0x101A4(65956)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'Name': '桌面', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': '#32769', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '3': {'Name': '运行中的应用程序', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': 'MSTaskSwWClass', 'Depth': '3', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AA(65962)', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 12/26/19 17:02:42.499079
+[捕获对象类型] Windows
+[MessageName] mouse left down
+[Message] 513
+[position] (739, 701)
+[Window] 0
+[WindowName] None
+
+[层级结构]
+{'Starts': '2019-12-26 17:02:43.941', 'Ends': '2019-12-26 17:02:44.177', 'Depth': {'5': {'Name': 'HiJson', 'ControlType': 'ButtonControl', 'AutomationId': 'D:\\Json格式化\\HiJson\\HiJson', 'D\\Json格式化\\HiJson\\HiJson': '\\Json格式化\\HiJson\\HiJson', 'Depth': '5', 'ClassName': '', 'Rect': '(719,680,769,720)[50x40]', 'Handle': '0x0(0)', 'SupportedPattern': 'InvokePattern'}, '1': {'Name': '任务栏', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': 'Shell_TrayWnd', 'Depth': '1', 'Rect': '(0,680,1280,720)[1280x40]', 'Handle': '0x10162(65890)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '4': {'Name': '运行中的应用程序', 'ControlType': 'ToolBarControl', 'AutomationId': '', 'ClassName': 'MSTaskListWClass', 'Depth': '4', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AC(65964)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '2': {'Name': '', 'ControlType': 'PaneControl', 'AutomationId': '40965', 'ClassName': 'ReBarWindow32', 'Depth': '2', 'Rect': '(47,680,1030,720)[983x40]', 'Handle': '0x101A4(65956)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '0': {'Name': '桌面', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': '#32769', 'Depth': '0', 'Rect': '(0,0,1280,720)[1280x720]', 'Handle': '0x10010(65552)', 'SupportedPattern': 'LegacyIAccessiblePattern'}, '3': {'Name': '运行中的应用程序', 'ControlType': 'PaneControl', 'AutomationId': '', 'ClassName': 'MSTaskSwWClass', 'Depth': '3', 'Rect': '(66,680,981,720)[915x40]', 'Handle': '0x101AA(65962)', 'SupportedPattern': 'LegacyIAccessiblePattern'}}}
+-----
+[捕获时间] 12/26/19 17:29:53.227228
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[4]/strong
+-----
+[捕获时间] 12/26/19 17:31:11.944400
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[4]/strong
+-----
+[捕获时间] 12/26/19 17:46:00.256213
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[8]/strong
+-----
+[捕获时间] 12/26/19 17:47:43.978497
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[8]/strong
+-----
+[捕获时间] 12/26/19 17:47:46.692146
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[8]/strong
