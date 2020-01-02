@@ -2,13 +2,12 @@
 
 import PyHook3
 import threading
-import time
 import pythoncom
-import win32api, win32con
 import win32clipboard as wc
 import config.Globals as cf
 import uiautomation as auto
 from hooker import *
+from localSDK.BrowserFunc import *
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -18,7 +17,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 hm = PyHook3.HookManager()
-# cf._init()
 
 class Hooker:
     def __init__(self):
@@ -122,11 +120,17 @@ class Hooker:
                 # 类型选择Chrome，且开始录制后两次点击快捷开关（先暂停，后开启录制）
                 # 默认此时焦点在driver对应Chrome浏览器上
                 CH = ChromeHooker()
+                OM = ObjectMap(CH.driver)
 
-                html = WebDriverWait(CH.driver, 5).until(
-                    EC.visibility_of_element_located((By.XPATH, '/html')), "请检查Chrome状态！")
+                html = OM.findElebyMethod("xpath", "/html",
+                                          errInfo="请检查Chrome状态！", timeout=5)
                 time.sleep(1)
-                html.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
+
+                try:
+                    newFrame = OM.findElebyMethod("xpath", '//iframe[@id="xh-bar"]',
+                                                  errInfo="未定位到目标frame！", timeout=1)
+                except:
+                    html.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
 
                 # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
                 CH.keyDown("shift")
@@ -298,16 +302,15 @@ class ChromeHooker:
                 # print(self.page_source)
 
     def getTarget(self):
+        OM = ObjectMap(self.driver)
         # 借助chrome插件“xpath helper”
         # 切换frame
-        newFrame = WebDriverWait(self.driver, 5).until(
-            EC.visibility_of_element_located((By.XPATH, '//iframe[@id="xh-bar"]')),
-            "未定位到目标frame！")
+        newFrame = OM.findElebyMethod("xpath", '//iframe[@id="xh-bar"]',
+                                      errInfo="未定位到目标frame！", timeout=5)
         self.driver.switch_to.frame(newFrame)
 
-        queryBox = WebDriverWait(self.driver, 5).until(
-            EC.visibility_of_element_located((By.XPATH, '//textarea[@id="query"]')),
-            "未定位到 xpath helper 扩展程序的 QUERY 文本框！")
+        queryBox = OM.findElebyMethod("xpath", '//textarea[@id="query"]',
+                                      errInfo="未定位到 xpath helper 扩展程序的 QUERY 文本框！", timeout=5)
         queryBox.click()
 
         queryBox.send_keys(Keys.CONTROL, "a")         # "ctrl+a"
@@ -315,12 +318,8 @@ class ChromeHooker:
 
         text = self.getCopyText()
         print("[chrome_text] ", text)
-        self.keyUp("shift")
+        # self.keyUp("shift")
         return text
-
-    def writeFile(self):
-        # 向 HookLog.txt 及 工程下 log.txt 写入日志
-        pass
 
 if __name__ == "__main__":
     # loopToHook()

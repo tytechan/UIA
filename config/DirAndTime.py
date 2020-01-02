@@ -20,9 +20,13 @@ def getCurrentTime():
 def createCurrentDateDir(parentDir):
     # 创建日期格式的目录
     dirName = os.path.join(parentDir, getCurrentDate())
-    if not os.path.exists(dirName):
-        os.makedirs(dirName)
+    createDir(dirName)
     return dirName
+
+def createDir(dir):
+    # 当地址不存在时，创建目录
+    if not os.path.exists(dir):
+        os.makedirs(dir)
 
 def createTXT(filePath, fileName):
     # 在filePath下创建.txt文件

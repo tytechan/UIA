@@ -100,3 +100,33 @@
 
 [层级结构]
 /html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[8]/strong
+-----
+[捕获时间] 12/26/19 18:07:11.073004
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[6]/strong
+-----
+[捕获时间] 12/26/19 18:08:07.424766
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[8]/strong
+-----
+[捕获时间] 12/26/19 18:12:13.141409
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[10]/strong
+-----
+[捕获时间] 12/26/19 18:12:19.672977
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[10]/strong
+-----
+[捕获时间] 12/26/19 18:12:39.073528
+[捕获对象类型] Chrome
+
+[层级结构]
+/html/body[@class=' ng-scope pace-done']/div[@class='app ng-scope']/div[@id='content']/div[@class='app-body']/div[@id='view']/div[@class='main padding']/div[@class='wrap ']/div[@class='ng-scope']/div[@id='mainView']/div[@class='viewTable ng-scope']/ul/li[10]/strong

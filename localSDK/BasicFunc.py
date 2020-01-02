@@ -1,17 +1,24 @@
 #!python3
 # -*- coding: utf-8 -*-
+from localSDK import *
+from tkinter import ttk
+from config.ErrConfig import CNBMException, handleErr
+import tkinter as tk
 import copy
 import uiautomation as auto
-from localSDK import *
+import config.Globals as cf
+import win32api, win32con
+import threading
 
-class AppControl(object):
+class AppControl:
+    ''' Windows控件基本处理方法 '''
     def __init__(self):
-        self.waitTime = 2                # 最长等待时间
-        self.intervalTime = 1            # 查找控件间隔时间
-        self.dict = None                 # 工程下“log.txt”中的所有控件信息
-        self.appName = None              # 应用名称（用于写日志）
-        self.maxNum = 9999               # 相同搜索条件下需遍历的控件量最大值
-        self.projectName = None          # 工程名
+        self.appName = None                             # 应用名称（用于写日志）
+        self.waitTime = 2                               # 最长等待时间
+        self.intervalTime = 1                           # 查找控件间隔时间
+        self.dict = dict()                              # 工程下“log.txt”中的所有控件信息
+        self.maxNum = 9999                              # 相同搜索条件下需遍历的控件量最大值
+        self.projectName = None                         # 工程名
 
     def openApp(self, path):
         ''' 打开应用程序
@@ -250,12 +257,14 @@ class AppControl(object):
             print(container)
 
 
-    # def objControl(self, name, conductType, string=None, **kwargs):
+    @CNBMException
     def objControl(self, name, conductType, inputStr=None):
+        sucFlag = False
+        errInfo = ""
         try:
-            assert self.dict.get(name) is not None, \
+            assert self.dict["Windows"].get(name) is not None, \
                 "本地库中未找到名称为 [%s] 的控件，请检查“log.txt”文件！" %name
-            info = self.dict.get(name).get("Depth")
+            info = self.dict["Windows"].get(name).get("Depth")
             obj = self.checkBottom(info)
             assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
 
@@ -264,15 +273,21 @@ class AppControl(object):
 
             elif conductType == "输入":
                 obj.SendKeys(inputStr)
+
+            sucFlag = True
         except AssertionError as e:
+            errInfo = e
             raise e
         except Exception as e:
+            errInfo = e
             raise e
         finally:
+            if not sucFlag:
+                handleErr(errInfo)
+                # cf.set_value("err", errInfo)
             # auto.Logger.Write(name)
-            logInfo = "----- 控件 [%s]，操作类型 [%s]，执行结束 -----" %(name, conductType)
-            auto.Logger.WriteLine(logInfo, auto.ConsoleColor.Cyan, writeToFile = True)
-
+            # logInfo = "[节点日志] 控件 [%s]，操作类型 [%s]，执行结束" %(name, conductType)
+            # auto.Logger.WriteLine(logInfo, auto.ConsoleColor.Cyan, writeToFile = True)
 
     def objControl_EX(self, name, conductType, string=None, **kwargs):
         import win32api
@@ -324,9 +339,107 @@ class AppControl(object):
         # 每层遍历，在上一层的所有子控件中查找
         info = self.dict.get(name)["Depth"]
 
-class ABC:
-    def click(self):
-        self.Click()
+class PublicFunc:
+    ''' （录制、回放）功能函数 '''
+    def readFromLog(self):
+        ''' 读取log文件信息 '''
+        objDict = None
+        try:
+            filePath = "log.txt"
+            with open(filePath, "r+") as f:
+                rawData = f.read()
+            assert rawData and type(rawData) == str, "本地数据为空，请先维护本地控件库！"
+            objDict = eval(rawData)
+            # print(rawData)
+        except AssertionError as e:
+            win32api.MessageBox(0, "请先维护本地控件库！", "提示", win32con.MB_OK)
+            raise e
+        except Exception as e:
+            raise e
+        finally:
+            return objDict
+
+    def openChrome(self, path=r"C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"):
+        ''' 调起chrome进程，可用于后续流程识别
+        :param path: chrome安装路径
+        '''
+        import subprocess
+        cmd = 'chrome.exe --remote-debugging-port=9222 --user-data-dir="%s"' %path
+        # cmd = r'chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"'
+        popen = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+        # popen.wait()
+
+
+    def clickMe(self):
+        # button被点击之后会被执行
+        global autoType
+        win.destroy()
+        autoType = browser.get()
+        cf.set_value("autoType", autoType)
+        # print(result)
+
+    def initProcess(self):
+        global win, browser
+        # 初始化全局变量
+        cf._init()
+        path = os.getcwd()
+        cf.set_value("path", path)
+
+        win = tk.Tk()
+        # win.geometry("300x150+500+200")  # 大小和位置
+        win.title("请确认")
+        ttk.Label(win, text="请选择浏览器类型：").grid(column=1, row=0)  # 添加一个标签，并将其列设置为1，行设置为0
+
+        # 按钮
+        action = ttk.Button(win, text="选择", command=self.clickMe)
+        action.grid(column=2, row=1)
+
+        # 创建一个下拉列表
+        browser = tk.StringVar()
+        browserChosen = ttk.Combobox(win, width=12, textvariable=browser)
+        browserChosen['values'] = ("", "Chrome", "IE", "Firefox", "Windows")
+        browserChosen.grid(column=1, row=1)
+        # 设置下拉列表默认显示的值，0为 numberChosen['values'] 的下标值
+        browserChosen.current(0)
+        # 当调用mainloop()时,窗口才会显示出来
+        win.mainloop()
+
+    def startHook(self):
+        ''' 开始录制流程 '''
+        import hooker.Hook as H
+        self.initProcess()
+        autoType = cf.get_value("autoType")
+        print("本次录制类型:", autoType)
+        cf.set_value("autoType", autoType)
+
+        if autoType == "Windows":
+            HK = H.Hooker()
+            HK.hooks()
+        elif autoType == "Chrome":
+            HK = H.Hooker()
+            CH = H.ChromeHooker()
+
+            # CH.keyUp("ctrl")
+            # CH.keyUp("shift")
+
+            # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
+            # CH.keyDown("shift")
+
+            t = threading.Thread(target=CH.refreshDriver, args=[])
+            t.setDaemon(True)
+            t.start()
+
+            HK.hooks()
+
+            CH.keyUp("shift")
+        elif autoType == "IE":
+            pass
+        elif autoType == "Firefox":
+            pass
+        else:
+            pass
+
+        # os._exit(0)
 
 if __name__ == "__main__":
     AC = AppControl()

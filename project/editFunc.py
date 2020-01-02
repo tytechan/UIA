@@ -1,66 +1,79 @@
 #!python3
 # -*- coding: utf-8 -*-
 from localSDK.BasicFunc import *
+from localSDK.BrowserFunc import *
+from config.DirAndTime import *
 from project import parentDirPath
+from project import projectName
+import config.Globals as cf
+import uiautomation as auto
 
 auto.uiautomation.DEBUG_EXIST_DISAPPEAR = True
 auto.uiautomation.DEBUG_SEARCH_TIME = True
 auto.uiautomation.TIME_OUT_SECOND = 10
-auto.Logger.SetLogFile(parentDirPath + "\log\ExecuteLog.txt")
 
-def readFromLog():
-    ''' 读取log文件信息 '''
-    import win32api, win32con
+dateDir = createCurrentDateDir("%s\log" %parentDirPath)
+auto.Logger.SetLogFile("%s\ExecuteLog.txt" %dateDir)
 
-    objDict = None
-    try:
-        filePath = "log.txt"
-        with open(filePath, "r+") as f:
-            rawData = f.read()
-        assert rawData and type(rawData) == str, "本地数据为空，请先维护本地控件库！"
-        objDict = eval(rawData)
-        # print(rawData)
-    except AssertionError as e:
-        win32api.MessageBox(0, "请先维护本地控件库！", "提示", win32con.MB_OK)
-        raise e
-    except Exception as e:
-        raise e
-    finally:
-        return objDict
+# 保存全局变量”工程名“
+cf._init()
+cf.set_value("projectName", projectName)
+# 读取工程下日志文件
+PF = PublicFunc()
+logDict = PF.readFromLog()
 
-# 读取log内容
-filePath = "log.txt"
+AC = AppControl()
+AC.dict = logDict
 
+# ---------- 以上为公共流程 ----------
 if __name__ == "__main__":
-    import time
-    AC = AppControl()
-    AC.dict = readFromLog()
+    # ----- Windows -----
+
+    # # AC.openApp("D:\SAP\SAPgui\saplogon.exe")
+    # # AC.objControl("SAP-登陆环境", "点击")
+    # # AC.objControl("SAP-登陆按钮", "点击")
+    # # AC.objControl("SAP-登陆按钮", "点击")
+    # # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
+    #
+    # # AC.killApp("saplogon.exe")
+    #
+    #
     AC.appName = "计算器"
-
-    # AC.openApp("D:\SAP\SAPgui\saplogon.exe")
-    # AC.objControl("SAP-登陆环境", "点击")
-    # AC.objControl("SAP-登陆按钮", "点击")
-    # AC.objControl("SAP-登陆按钮", "点击")
-    # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
-
-    # AC.killApp("saplogon.exe")
-
-
     AC.openApp("Calc.exe")
     # AC.objControl("计算器-侧边栏", "点击")
     # AC.objControl("计算器-科学", "点击")
     AC.objControl("计算器-5", "点击")
     AC.objControl("计算器-×", "点击")
-    AC.objControl("计算器-7", "点击")
+    AC.objControl("计算器-8", "点击")
     AC.objControl("计算器-等于", "点击")
 
+    #
+    # AC.openApp("notepad.exe")
+    # AC.objControl("记事本-格式", "点击")
+    # AC.objControl("记事本-字体", "点击")
+    # AC.objControl("记事本-字体-倾斜", "点击")
+    # AC.objControl("记事本-字体-确认按钮", "点击")
+    # # time.sleep(2)
+    # AC.objControl("计算器-编辑框", "点击")
+    # AC.objControl("计算器-编辑框", "输入", "test")
 
-    AC.openApp("notepad.exe")
-    AC.objControl("记事本-格式", "点击")
-    AC.objControl("记事本-字体", "点击")
-    AC.objControl("记事本-字体-倾斜", "点击")
-    AC.objControl("记事本-字体-确认按钮", "点击")
-    # time.sleep(2)
-    AC.objControl("计算器-编辑框", "点击")
-    AC.objControl("计算器-编辑框", "输入", "test")
+
+    # ----- Chrome -----
+    PA = PageAction()
+    PA.open_browser("chrome")
+    PA.visit_url("http://cdwp.cnbmxinyun.com")
+
+    # OM = ObjectMap(PA.driver)
+
+    # el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
+    # print(el.get_attribute("placeholder"))
+    # el.send_keys("abc")
+    #
+    # el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
+    # print(el1.get_attribute("placeholder"))
+    # el1.send_keys("123456")
+
+    PA.sendkeys("xpath", '//input[@ng-model="user_name"]', "abc")
+    PA.sendkeys("xpath", '//input[@ng-model="password3"]', "123456", 2)
+
 
