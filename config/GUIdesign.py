@@ -12,7 +12,11 @@ def getInput(title, message):
         root.quit()
 
     def close_callback():
-        msg.showinfo('提示', '请输入控件名并回车...')
+        global quitConfirm
+        # msg.showinfo('提示', '请输入控件名并回车...')
+        quitConfirm = msg.askokcancel("请确认", "是否退出此控件保存？")
+        if quitConfirm:
+            root.destroy()
 
     root = tkinter.Tk(className=title)
     root.wm_attributes('-topmost', 1)
@@ -37,9 +41,23 @@ def getInput(title, message):
 
     root.protocol("WM_DELETE_WINDOW", close_callback)
     root.mainloop()
-    str = entry.get()
-    root.destroy()
-    return str
+
+    # if "quitConfirm" not in locals().keys() or not quitConfirm:
+    #     str = entry.get()
+    #     root.destroy()
+    #     return str
+
+    try:
+        assert quitConfirm == False
+        str = entry.get()
+        root.destroy()
+        return str
+    except NameError:
+        str = entry.get()
+        root.destroy()
+        return str
+    except AssertionError:
+        pass
 
 
 def message_askyesno(title, message):
@@ -51,6 +69,6 @@ def message_askyesno(title, message):
     return txt
 
 if __name__ == "__main__":
-    # a = getInput("title", "msg")
-    # print(a)
-    message_askyesno("提示", "测试？")
+    a = getInput("title", "msg")
+    print(a)
+    # message_askyesno("提示", "测试？")

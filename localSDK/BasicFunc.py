@@ -9,6 +9,7 @@ import uiautomation as auto
 import config.Globals as cf
 import win32api, win32con
 import threading
+import re
 
 class AppControl:
     ''' Windows控件基本处理方法 '''
@@ -57,7 +58,7 @@ class AppControl:
                 raise e
 
     def checkBottom(self, keyObj, flag=False):
-        ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
+        ''' （Windows）用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
         :param keyObj: 控件树信息
         :param flag: True（进行唯一性校验，只用在录制时）/False（反之）
         :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
@@ -134,11 +135,55 @@ class AppControl:
         # print("唯一性校验完毕！")
         return searchObj
 
-    def checkObjFromLog(self, name):
+    def checkBrowserElement(self, eleInfo):
+        ''' （Chrome/Firefox/IE）用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
+        :param eleInfo: 网页元素
+        :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
+        '''
+        from hooker.Hook import ChromeHooker
+
+        # if not driver:
+        #     driver = cf.get_value("driver")
+        # OM = ObjectMap(driver)
+
+        CH = ChromeHooker()
+        try:
+            # element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
+            element = CH.checkElement(eleInfo)
+            # OM.highlight(element)
+            return eleInfo
+        except:
+            splitList = re.findall(r"\[@class=(.+?)]", eleInfo)
+            for i in range(len(splitList)-1, -1, -1):
+                flag = False
+                # 通过eleInfo定位失败时，从后往前删除@class属性，直至定位成功
+                s = "[@class=%s]" %splitList[i]
+                eleInfo = "".join(eleInfo.rsplit(s, 1))
+                eleInfo = eleInfo.replace("\'", '\"')
+                # mySlice = eleInfo.rfind(s)
+                # eleInfo = eleInfo[:mySlice] + eleInfo[mySlice+1:]
+
+                try:
+                    # element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
+                    element = CH.checkElement(eleInfo)
+                    flag = True
+                except:
+                    continue
+
+                if flag:
+                    # OM.highlight(element)
+                    return eleInfo
+
+            print("唯一性校验失败！")
+            return False
+
+    def checkObjFromLog(self, conductType, name):
         ''' 对本地控件库中控件进行唯一性校验
+        :param conductType: 控件类型
         :param name: 控件名
         :param projectName: 所在工程名
         '''
+        from hooker.Hook import ChromeHooker
         import win32api
         import win32con
 
@@ -151,22 +196,38 @@ class AppControl:
                     rawData = "{}"
 
             rawDict = eval(rawData)
-            objDict = rawDict.get(name)
+            objDict = rawDict.get(conductType)
             assert objDict is not None, \
-                "本地控件库中未找到控件 [%s] ，请检查控件名称！" %name
+                "本地控件库无 [%s] 类型控件，请检查！" %conductType
+            objDict = rawDict[conductType].get(name)
+            assert objDict is not None, \
+                "[%s] 库中未找到控件 [%s] ，请检查控件名称！" %(conductType, name)
 
-            keyObj = objDict.get("Depth")
-            flag = self.checkBottom(keyObj)
+            if conductType == "Windows":
+                keyObj = objDict.get("Depth")
+                flag = self.checkBottom(keyObj)
+            else:
+                CH = ChromeHooker()
+                eleInfo = objDict["xpath"]
+                # flag = self.checkBrowserElement(eleInfo)
+                try:
+                    flag = CH.checkElement(eleInfo)
+                except:
+                    flag = False
+
             if not flag:
-                win32api.MessageBox(0, "依据获取信息无法识别控件 [%s] ，请检查控件状态或重新识别！" %name,
-                                    "提示", win32con.MB_OK)
+                win32api.MessageBox(0, "依据获取信息无法在识别 [%s] 库中控件 [%s] ，请检查控件状态或重新识别！"
+                                    %(conductType, name), "提示", win32con.MB_OK)
+            else:
+                print("本地库 [%s] 下 [%s] 控件校验通过！")
         except AssertionError as e:
             raise e
         except Exception as e:
             raise e
 
-    def deleteObjFromLog(self, name):
+    def deleteObjFromLog(self, conductType, name):
         ''' 删除本地控件
+        :param conductType: 控件类型
         :param name: 控件名
         '''
         try:
@@ -177,11 +238,14 @@ class AppControl:
                     rawData = "{}"
 
             rawDict = eval(rawData)
-            objDict = rawDict.get(name)
+            objDict = rawDict.get(conductType)
             assert objDict is not None, \
-                "本地控件库中未找到控件 [%s] ，请检查控件名称！" %name
+                "本地控件库无 [%s] 类型控件，请检查！" %conductType
+            objDict = rawDict[conductType].get(name)
+            assert objDict is not None, \
+                "[%s] 库中未找到控件 [%s] ，请检查控件名称！" %(conductType, name)
 
-            del rawDict[name]
+            del rawDict[conductType][name]
 
             with open(filePath, "w") as f:
                 f.write(str(rawDict))
@@ -358,6 +422,22 @@ class PublicFunc:
             raise e
         finally:
             return objDict
+
+    def getObjFromLog(self, elementType, name):
+        try:
+            rawDict = self.readFromLog()
+            assert elementType in rawDict.keys(), \
+                "本地库中无 %s 类型控件，请检查！" %elementType
+            assert name in rawDict[elementType].keys(), \
+                      "本地库中 %s 类型下未找到名为 %s 控件，请检查！" %(elementType, name)
+            objDict = rawDict[elementType][name]
+            return objDict
+        except AssertionError as e:
+            raise e
+        except KeyError as e:
+            raise e
+        except Exception as e:
+            raise e
 
     def openChrome(self, path=r"C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"):
         ''' 调起chrome进程，可用于后续流程识别

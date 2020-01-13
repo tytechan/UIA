@@ -1,4 +1,5 @@
 # encoding = utf - 8
+from localSDK.BasicFunc import PublicFunc
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -10,8 +11,9 @@ from config.ErrConfig import CNBMException, handleErr
 from time import sleep
 import win32api
 import win32con
-import uiautomation as auto
+import time
 
+PF = PublicFunc()
 
 class ObjectMap:
     ''' 用于存放定位元素及操作的基本方法 '''
@@ -82,23 +84,30 @@ class ObjectMap:
         except Exception as e:
             raise e
 
-    def highlight(self, element):
+    def highlight(self, element, timeToDisappear=None):
+        style = element.get_attribute("style")
         self.driver.execute_script("arguments[0].setAttribute('style',arguments[1]);",
-                              element,"background:green;border:2px solid red;")
+                              element,"border:2px solid red;")
+                              # element,"background:green;border:2px solid red;")
+        if timeToDisappear:
+            while timeToDisappear:
+                time.sleep(1)
+                timeToDisappear -= 1
+            self.setAttribute(element, "style", style)
 
     def addAttribute(self, element, attributeName, value):
-        self.driver.execute_script("arguments[0].%s = arguments[1]" %attributeName,element,value)
+        self.driver.execute_script("arguments[0].%s = arguments[1]" %attributeName, element, value)
 
     def setAttribute(self, element, attributeName, value):
         self.driver.execute_script("arguments[0].setAttribute(arguments[1],arguments[2])",
-                              element,attributeName,value)
+                              element, attributeName, value)
 
     def removeAttribute(self, element, attributeName):
         self.driver.execute_script("arguments[0].removeAttribute(arguments[1])",
-                              element,attributeName)
+                              element, attributeName)
 
 
-class KeyboardKeys(object):
+class KeyboardKeys:
     ''' 模拟键盘按键类
     （瞬时按键未封装，可直接调用）如：
     obj.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
@@ -244,10 +253,11 @@ class PageAction:
         ifExistThenPass_xpath_combination
     12、JS相关：setDataByJS；
     '''
-    def __init__(self):
-        self.driver = None
-        self.timeout = 10
 
+    _driver = None
+    def __init__(self):
+        # self.driver = None
+        self.timeout = 10
 
     @CNBMException
     def open_browser(self, browserName):
@@ -256,7 +266,7 @@ class PageAction:
         :return: 全局变量driver
         '''
         try:
-            global driver,waitUtil
+            global waitUtil
             if browserName.lower() == 'ie':
                 driver = webdriver.Ie()
             elif browserName.lower() == 'chrome':
@@ -271,7 +281,7 @@ class PageAction:
                 driver = webdriver.Firefox()
             # driver对象创建成功，创建等待类实例对象
             waitUtil = WaitUtil(driver)
-            self.driver = driver
+            self._driver = driver
         except Exception as e:
             handleErr(e)
             raise e
@@ -281,8 +291,7 @@ class PageAction:
     def visit_url(self, url):
         ''' 访问网址 '''
         try:
-            global driver
-            driver.get(url)
+            self._driver.get(url)
         except Exception as e:
             handleErr(e)
             raise e
@@ -291,10 +300,9 @@ class PageAction:
     def close_browser(self):
         ''' 关闭浏览器 '''
         try:
-            global driver
-            if driver:
-                driver.quit()
-                driver = None
+            if self._driver:
+                self._driver.quit()
+                self._driver = None
         except Exception as e:
             handleErr(e)
             raise e
@@ -303,8 +311,7 @@ class PageAction:
     def maximize_browser(self):
         ''' 窗口最大化 '''
         try:
-            global driver
-            driver.maximize_window(self)
+            self._driver.maximize_window(self)
         except Exception as e:
             handleErr(e)
             raise e
@@ -313,8 +320,7 @@ class PageAction:
     def close_page(self):
         ''' 关闭标签页 '''
         try:
-            global driver
-            driver.close()
+            self._driver.close()
         except Exception as e:
             handleErr(e)
             raise e
@@ -323,103 +329,206 @@ class PageAction:
     def refresh_page(self):
         ''' 刷新网页 '''
         try:
-            global driver
-            driver.refresh()
+            self._driver.refresh()
         except Exception as e:
             handleErr(e)
             raise e
 
     @CNBMException
-    def clear(self, locationType, locatorExpression, timeout=None):
-        ''' 清除输入框默认内容
-        :param locationType: 输入框控件定位类型
-        :param locatorExpression: 输入框控件定位属性值
-        '''
-        try:
-            global driver
-            OM = ObjectMap(driver)
-            time = timeout if timeout else self.timeout
-
-            element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-            try:
-                element.clear()
-            except Exception as e:
-                # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-                OM.highlight(element)
-                raise e
-        except Exception as e:
-            handleErr(e)
-            raise e
-
-    @CNBMException
-    def sendkeys(self, locationType, locatorExpression, inputContent, timeout=None):
-        ''' 向输入框输值
-        :param locationType: 输入框控件定位类型
-        :param locatorExpression: 输入框控件定位属性值
-        :param inputContent: 待输值
-        '''
-        try:
-            global driver
-            OM = ObjectMap(driver)
-            time = timeout if timeout else self.timeout
-
-            element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-            try:
-                element.clear()
-                element.send_keys(inputContent)
-            except Exception as e:
-                # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-                OM.highlight(element)
-                raise e
-        except Exception as e:
-            handleErr(e)
-            raise e
-
-    @CNBMException
-    def selectValues(self, locationType, locatorExpression, inputContent, timeout=None):
-        ''' 输入框输值
+    def findElement(self, locationType, locatorExpression, timeout=None):
+        ''' 通过属性值查找控件
         :param locationType: 下拉框控件定位类型
         :param locatorExpression: 下拉框控件定位属性值
-        :param inputContent: 待选值
         '''
         try:
-            global driver
-            OM = ObjectMap(driver)
+            OM = ObjectMap(self._driver)
             time = timeout if timeout else self.timeout
 
             element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-            try:
-                element = Select(element)
-                element.select_by_visible_text(inputContent)
-            except Exception as e:
-                # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-                OM.highlight(element)
-                raise e
+            return WebElement(element)
         except Exception as e:
             handleErr(e)
             raise e
 
     @CNBMException
-    def leftClick(self, locationType, locatorExpression, timeout=None):
-        ''' 点击页面元素
-        :param locationType: 控件定位类型
-        :param locatorExpression: 控件定位属性值
+    def localElement(self, name, timeout=None):
+        ''' 从本地库查找控件
+        :param name: 本地工程对象库中控件名称
         '''
         try:
-            global driver
-            OM = ObjectMap(driver)
+            OM = ObjectMap(self._driver)
             time = timeout if timeout else self.timeout
 
-            element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-            try:
-                element.click()
-            except Exception as e:
-                # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-                OM.highlight(element)
-                raise e
+            locatorExpression = PF.getObjFromLog("Chrome", name)
+            locatorExpression = locatorExpression["xpath"]
+            element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
+            return WebElement(element)
         except Exception as e:
             handleErr(e)
             raise e
+
+    # @CNBMException
+    # def clear(self, locationType, locatorExpression, timeout=None):
+    #     ''' 清除输入框默认内容
+    #     :param locationType: 输入框控件定位类型
+    #     :param locatorExpression: 输入框控件定位属性值
+    #     '''
+    #     try:
+    #         OM = ObjectMap(self._driver)
+    #         time = timeout if timeout else self.timeout
+    #
+    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+    #         try:
+    #             element.clear()
+    #         except Exception as e:
+    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
+    #             OM.highlight(element)
+    #             raise e
+    #     except Exception as e:
+    #         handleErr(e)
+    #         raise e
+    #
+    # @CNBMException
+    # def sendkeys(self, inputContent, locationType=None, locatorExpression=None, obj=None, **kwargs):
+    #     ''' 向输入框输值
+    #     :param obj: 从对象库取已存控件时，控件名称
+    #     :param locationType: 输入框控件定位类型
+    #     :param locatorExpression: 自写属性时，输入框控件定位属性值
+    #     :param inputContent: 待输值
+    #     '''
+    #     try:
+    #         OM = ObjectMap(self._driver)
+    #         time = kwargs["timeout"] if "timeout" in kwargs.keys() else self.timeout
+    #
+    #
+    #
+    #         locationType = "xpath" if obj else locationType
+    #         locatorExpression = PF.getObjFromLog("Chrome", ) if obj else locatorExpression
+    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+    #         try:
+    #             element.clear()
+    #             element.send_keys(inputContent)
+    #         except Exception as e:
+    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
+    #             OM.highlight(element)
+    #             raise e
+    #     except Exception as e:
+    #         handleErr(e)
+    #         raise e
+    #
+    # @CNBMException
+    # def selectValues(self, locationType, locatorExpression, inputContent, timeout=None):
+    #     ''' 输入框输值
+    #     :param locationType: 下拉框控件定位类型
+    #     :param locatorExpression: 下拉框控件定位属性值
+    #     :param inputContent: 待选值
+    #     '''
+    #     try:
+    #         OM = ObjectMap(self._driver)
+    #         time = timeout if timeout else self.timeout
+    #
+    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+    #         try:
+    #             element = Select(element)
+    #             element.select_by_visible_text(inputContent)
+    #         except Exception as e:
+    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
+    #             OM.highlight(element)
+    #             raise e
+    #     except Exception as e:
+    #         handleErr(e)
+    #         raise e
+    #
+    # @CNBMException
+    # def leftClick(self, locationType, locatorExpression, timeout=None):
+    #     ''' 点击页面元素
+    #     :param locationType: 控件定位类型
+    #     :param locatorExpression: 控件定位属性值
+    #     '''
+    #     try:
+    #         OM = ObjectMap(self._driver)
+    #         time = timeout if timeout else self.timeout
+    #
+    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+    #         try:
+    #             element.click()
+    #         except Exception as e:
+    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
+    #             OM.highlight(element)
+    #             raise e
+    #     except Exception as e:
+    #         handleErr(e)
+    #         raise e
+
+    @CNBMException
+    def highlight(self, element, timeToDisappear=None):
+        style = element.get_attribute("style")
+        self._driver.execute_script("arguments[0].setAttribute('style',arguments[1]);",
+                              element,"border:2px solid red;")
+                              # element,"background:green;border:2px solid red;")
+        if timeToDisappear:
+            while timeToDisappear:
+                time.sleep(1)
+                timeToDisappear -= 1
+            self.setAttribute(element, "style", style)
+
+    @CNBMException
+    def addAttribute(self, element, attributeName, value):
+        self._driver.execute_script("arguments[0].%s = arguments[1]" %attributeName, element, value)
+
+    @CNBMException
+    def setAttribute(self, element, attributeName, value):
+        self._driver.execute_script("arguments[0].setAttribute(arguments[1],arguments[2])",
+                              element, attributeName, value)
+
+    @CNBMException
+    def removeAttribute(self, element, attributeName):
+        self._driver.execute_script("arguments[0].removeAttribute(arguments[1])",
+                              element, attributeName)
+
+
+class WebElement:
+    def __init__(self, element):
+        self.element = element
+
+    @CNBMException
+    def click(self):
+        ''' 点击控件 '''
+        try:
+            self.element.click()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def sendkeys(self, inputContent):
+        ''' 输入框输值 '''
+        try:
+            self.element.clear()
+            self.element.send_keys(inputContent)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def select(self, inputContent):
+        ''' 下拉框选择 '''
+        try:
+            element = Select(self.element)
+            element.select_by_visible_text(inputContent)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def clear(self):
+        ''' 清除下拉框默认值 '''
+        try:
+            self.element.clear()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
 
 if __name__ == "__main__":
     # driver = webdriver.Chrome()
@@ -433,14 +542,15 @@ if __name__ == "__main__":
     PA.open_browser("chrome")
     PA.visit_url("http://cdwp.cnbmxinyun.com")
 
-    OM = ObjectMap(driver)
 
-    el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
-    print(el.get_attribute("placeholder"))
-    el.send_keys("abc")
-
-    el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
-    print(el1.get_attribute("placeholder"))
-    el1.send_keys("123456")
-
+    # el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
+    # print(el.get_attribute("placeholder"))
+    # el.send_keys("abc")
+    #
+    # el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
+    # print(el1.get_attribute("placeholder"))
+    # el1.send_keys("123456")
+    #
     # driver.quit()
+
+    PA.findElement("xpath", '//input[@ng-model="password"]').sendkeys("123456")

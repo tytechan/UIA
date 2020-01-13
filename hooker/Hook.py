@@ -172,7 +172,7 @@ class Hooker:
         while True:
             # 中断录制功能判断
             if self.output:
-                print("[output]\n", self.output)
+                print("[output]\n", self.output, "\n")
                 hm.UnhookMouse()
                 hm.UnhookKeyboard()
                 break
@@ -195,9 +195,11 @@ class Hooker:
 
                 isRecord = recordIntoProject_Win(output)
             elif self.autoType == "Chrome":
+                CH = ChromeHooker()
                 assert self.output is not None, ""
-                # isRecord = recordIntoProject_Chrome()
-                isRecord = None
+                isRecord = recordIntoProject_Chrome(self.output)
+                CH.keyDown("shift")
+
         except AssertionError as e:
             win32api.MessageBox(0, e, "提示", win32con.MB_OK)
             isRecord = False
@@ -260,7 +262,15 @@ class ChromeHooker:
         self.chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 
         self.driver = webdriver.Chrome(self.chrome_driver, chrome_options=self.chrome_options)
+
+        try:
+            cf._global_dict
+        except:
+            # checkFunc中调用时，此前未定义 cf._global_dict
+            cf._init()
+        cf.set_value("driver", self.driver)
         print("[title] ", self.driver.title)
+
         self.page_source = self.driver.page_source
         self.url = self.driver.current_url
 
@@ -320,6 +330,15 @@ class ChromeHooker:
         print("[chrome_text] ", text)
         # self.keyUp("shift")
         return text
+
+    def checkElement(self, eleInfo):
+        OM = ObjectMap(self.driver)
+        try:
+            element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
+            OM.highlight(element, 1)
+            return element
+        except Exception as e:
+            raise e
 
 if __name__ == "__main__":
     # loopToHook()

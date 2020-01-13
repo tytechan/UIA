@@ -15,9 +15,11 @@ auto.uiautomation.TIME_OUT_SECOND = 10
 dateDir = createCurrentDateDir("%s\log" %parentDirPath)
 auto.Logger.SetLogFile("%s\ExecuteLog.txt" %dateDir)
 
-# 保存全局变量”工程名“
+# 保存全局变量”工程名“，并写入日志
 cf._init()
 cf.set_value("projectName", projectName)
+auto.Logger.WriteLine("-----\n[%s %s] 开始执行工程 '%s'"
+                      %(getCurrentDate(), getCurrentTime(), projectName))
 # 读取工程下日志文件
 PF = PublicFunc()
 logDict = PF.readFromLog()
@@ -36,18 +38,18 @@ if __name__ == "__main__":
     # # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
     #
     # # AC.killApp("saplogon.exe")
-    #
-    #
-    AC.appName = "计算器"
-    AC.openApp("Calc.exe")
-    # AC.objControl("计算器-侧边栏", "点击")
-    # AC.objControl("计算器-科学", "点击")
-    AC.objControl("计算器-5", "点击")
-    AC.objControl("计算器-×", "点击")
-    AC.objControl("计算器-8", "点击")
-    AC.objControl("计算器-等于", "点击")
 
-    #
+
+    # AC.appName = "计算器"
+    # AC.openApp("Calc.exe")
+    # # AC.objControl("计算器-侧边栏", "点击")
+    # # AC.objControl("计算器-科学", "点击")
+    # AC.objControl("计算器-5", "点击")
+    # AC.objControl("计算器-×", "点击")
+    # AC.objControl("计算器-8", "点击")
+    # AC.objControl("计算器-等于", "点击")
+
+
     # AC.openApp("notepad.exe")
     # AC.objControl("记事本-格式", "点击")
     # AC.objControl("记事本-字体", "点击")
@@ -73,7 +75,19 @@ if __name__ == "__main__":
     # print(el1.get_attribute("placeholder"))
     # el1.send_keys("123456")
 
-    PA.sendkeys("xpath", '//input[@ng-model="user_name"]', "abc")
-    PA.sendkeys("xpath", '//input[@ng-model="password3"]', "123456", 2)
+
+    # PA.sendkeys("abc", "xpath", '//input[@ng-model="user_name"]')
+    # PA.sendkeys("123456", "xpath", '//input[@ng-model="password3"]', 0.5)
+
+
+    # PA.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
+    # PA.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
+    # PA.findElement("text", '登录').sendkeys("abc")
+
+    PA.localElement("登陆-姓名", 0.5).sendkeys("abc")
+    PA.localElement("登陆-姓名", 0.5).sendkeys("abc")
+    PA.localElement("登陆按钮").click()
+
+    # PA.findElement("xpath", '//input[@ng-model="password3"]', 0.5).sendkeys("abc")
 
 
