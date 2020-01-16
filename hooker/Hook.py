@@ -3,6 +3,7 @@
 import PyHook3
 import threading
 import pythoncom
+import re
 import win32clipboard as wc
 import config.Globals as cf
 import uiautomation as auto
@@ -15,6 +16,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from bs4 import BeautifulSoup
 
 hm = PyHook3.HookManager()
 
@@ -123,17 +125,39 @@ class Hooker:
                 OM = ObjectMap(CH.driver)
 
                 html = OM.findElebyMethod("xpath", "/html",
-                                          errInfo="请检查Chrome状态！", timeout=5)
-                time.sleep(1)
-
+                                          errInfo="请检查Chrome状态！", timeout=0.5)
+                time.sleep(0.5)
                 try:
                     newFrame = OM.findElebyMethod("xpath", '//iframe[@id="xh-bar"]',
-                                                  errInfo="未定位到目标frame！", timeout=1)
+                                                  errInfo="未定位到目标frame！", timeout=0.5)
                 except:
                     html.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
 
                 # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
                 CH.keyDown("shift")
+        elif keyType == "Delete":
+            # TODO: 退出录制快捷键“Del”（shift+esc 为打开chrome任务管理器默认快捷键），后期可放开
+            hm.UnhookMouse()
+            hm.UnhookKeyboard()
+
+            if self.autoType == "Chrome":
+                CH = ChromeHooker()
+                OM = ObjectMap(CH.driver)
+
+                try:
+                    html = OM.findElebyMethod("xpath", "/html", timeout=0.1)
+                    try:
+                        newFrame = OM.findElebyMethod("xpath", '//iframe[@id="xh-bar"]',
+                                                      errInfo="未定位到目标frame！", timeout=0.1)
+                        html.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
+                    except:
+                        pass
+                    # 释放长按的“shift”
+                    CH.keyUp("shift")
+                except:
+                    pass
+            print("退出录制！")
+            os._exit(0)
 
         # 同上
         return True
@@ -160,6 +184,10 @@ class Hooker:
         # fp=open("E:\python相关\RPA_test\log\hook_log.txt","a",encoding='utf-8')
 
         try:
+            if cf.get_value("autoType") == "Chrome":
+                CH = ChromeHooker()
+                CH.refreshDriver()
+
             # _thread.start_new_thread(main, ())
 
             t = threading.Thread(target=self.main, args=())              # 创建线程
@@ -301,15 +329,15 @@ class ChromeHooker:
         return result
 
     def refreshDriver(self):
-        while True:
-            if self.url != self.driver.current_url:
-                # 网页有变动，更新driver
-                self.url = self.driver.current_url
-                self.driver = webdriver.Chrome(self.chrome_driver, chrome_options=self.chrome_options)
+        # while True:
+        if self.url != self.driver.current_url:
+            # 网页有变动，更新driver
+            self.url = self.driver.current_url
+            self.driver = webdriver.Chrome(self.chrome_driver, chrome_options=self.chrome_options)
 
-                self.page_source = self.driver.page_source
-                # print("刷新后 title 为：", self.driver.title, "\n")
-                # print(self.page_source)
+            self.page_source = self.driver.page_source
+            # print("刷新后 title 为：", self.driver.title, "\n")
+            # print(self.page_source)
 
     def getTarget(self):
         OM = ObjectMap(self.driver)
@@ -332,6 +360,10 @@ class ChromeHooker:
         return text
 
     def checkElement(self, eleInfo):
+        ''' 唯一性校验
+        :param eleInfo: 目标元素xpath
+        :return: 目标元素
+        '''
         OM = ObjectMap(self.driver)
         try:
             element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
@@ -339,6 +371,66 @@ class ChromeHooker:
             return element
         except Exception as e:
             raise e
+
+    def getElementSource(self, eleInfo):
+        ''' 通过自动生成xpath成功定位目标控件后，获取其属性值
+        :param eleInfo: 简化后xpath
+        :return: 元素属性（dict）
+        '''
+        soup = BeautifulSoup(self.page_source, features="lxml")
+        splitList = eleInfo.split("/")
+
+        tagName = splitList[-1]                         # 最下层tag
+        keyList = soup.select(tagName)
+
+        for i in range(len(splitList)-1, -1, -1):
+            # 从后向前遍历，找到第一个同级有多个相同tag的祖先元素
+            # 正序index为 (len(splitList)-i-1)
+            myStr = splitList[i]
+            result = re.findall(r"[\d+]", myStr)
+            if result:
+                ind = len(splitList) - i - 1
+                tn = splitList[i].split("[")[0]         # 同级存在多个相同类的tag名称
+                num = int(result[0])                    # 相同tag数
+
+                for j in range(len(keyList)-1, -1, -1):
+                    # 依次查询keyList中每个候选项的祖先元素
+                    # 排除至只剩一个候选项可跳出循环
+                    loopTime = 0
+                    par = keyList[j]
+                    flag = False
+
+                    while loopTime < ind:
+                        loopTime += 1
+                        par = par.find_parent()
+                        if par.name != tn:
+                            # 父元素与原始路径不对应
+                            flag = True
+                            break
+                    if flag:
+                        del keyList[j]
+                    else:
+                        siblings = par.find_previous_siblings()
+                        count = 0
+
+                        for obj in siblings:
+                            # 获取该tag以前的相同类总数
+                            if obj.name == tn:
+                                count += 1
+
+                        if count != num - 1:
+                            # 与原始路径不符，删除候选项
+                            del keyList[j]
+
+                    if len(keyList) == 1:
+                        return keyList[0].attrs
+                    elif i == 1:
+                        # i=1 为“html”层
+                        return "通过已有路径无法获取控件属性！"
+
+        # 路径中无 [\d+] ,此方法无法获取具体属性
+        return "通过已有路径无法获取控件属性！"
+
 
 if __name__ == "__main__":
     # loopToHook()

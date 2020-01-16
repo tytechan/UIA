@@ -142,39 +142,55 @@ class AppControl:
         '''
         from hooker.Hook import ChromeHooker
 
-        # if not driver:
-        #     driver = cf.get_value("driver")
-        # OM = ObjectMap(driver)
+        CH = ChromeHooker()
+
+        splitList = re.findall(r"\[@class=\'(.+?)\']", eleInfo)
+        for myStr in splitList:
+            initValue = "[@class=\'%s\']" %myStr
+            eleInfo = eleInfo.replace(initValue, "")
+        eleInfo = eleInfo.replace("\'", '\"')
+
+        try:
+            element = CH.checkElement(eleInfo)
+            return eleInfo
+        except:
+            print("唯一性校验失败！")
+            return False
+
+    def checkBrowserElement_EX(self, eleInfo):
+        ''' （Chrome/Firefox/IE）用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
+            该方法删除所有class中“ng”值，暂不可用
+        :param eleInfo: 网页元素
+        :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
+        '''
+        from hooker.Hook import ChromeHooker
 
         CH = ChromeHooker()
+
+        splitList = re.findall(r"\[@class=\'(.+?)\']", eleInfo)
+        for i in range(len(splitList)-1, -1, -1):
+            myStr = splitList[i]
+            initValue = "[@class=\'%s\']" %myStr
+
+            # 删除“ng-”开头属性值（动态属性）
+            classValueList = myStr.split(" ")
+            for j in range(len(classValueList)-1, -1, -1):
+                myStr = classValueList[j].strip()
+                if myStr.startswith("ng-"):
+                    del classValueList[j]
+            finalValue = "[@class=\'%s\']" %(" ".join(classValueList))
+
+            # 通过eleInfo定位失败时，从后往前删除@class属性，直至定位成功
+            eleInfo = finalValue.join(eleInfo.rsplit(initValue, 1))
+        eleInfo = eleInfo.replace("\'", '\"')
+            # mySlice = eleInfo.rfind(s)
+            # eleInfo = eleInfo[:mySlice] + eleInfo[mySlice+1:]
+
         try:
             # element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
             element = CH.checkElement(eleInfo)
-            # OM.highlight(element)
             return eleInfo
         except:
-            splitList = re.findall(r"\[@class=(.+?)]", eleInfo)
-            for i in range(len(splitList)-1, -1, -1):
-                flag = False
-                # 通过eleInfo定位失败时，从后往前删除@class属性，直至定位成功
-                s = "[@class=%s]" %splitList[i]
-                eleInfo = "".join(eleInfo.rsplit(s, 1))
-                eleInfo = eleInfo.replace("\'", '\"')
-                # mySlice = eleInfo.rfind(s)
-                # eleInfo = eleInfo[:mySlice] + eleInfo[mySlice+1:]
-
-                try:
-                    # element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
-                    element = CH.checkElement(eleInfo)
-                    flag = True
-                except:
-                    continue
-
-                if flag:
-                    # OM.highlight(element)
-                    return eleInfo
-
-            print("唯一性校验失败！")
             return False
 
     def checkObjFromLog(self, conductType, name):
@@ -219,7 +235,7 @@ class AppControl:
                 win32api.MessageBox(0, "依据获取信息无法在识别 [%s] 库中控件 [%s] ，请检查控件状态或重新识别！"
                                     %(conductType, name), "提示", win32con.MB_OK)
             else:
-                print("本地库 [%s] 下 [%s] 控件校验通过！")
+                print("本地库 [%s] 下 [%s] 控件校验通过！" %(conductType, name))
         except AssertionError as e:
             raise e
         except Exception as e:

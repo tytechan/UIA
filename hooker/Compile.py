@@ -2,6 +2,7 @@
 from hooker import *
 from config.GUIdesign import *
 from localSDK.BasicFunc import *
+from hooker.Hook import ChromeHooker
 import subprocess
 import config.Globals as cf
 
@@ -183,10 +184,8 @@ def recordIntoProject_Chrome(eleInfo):
     import easygui
 
     AC = AppControl()
+    CH = ChromeHooker()
     try:
-        eleInfo = eleInfo.replace("", "")
-
-
         message = "是否添加控件：\n" + str(eleInfo)
         # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
         result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
@@ -231,6 +230,7 @@ def recordIntoProject_Chrome(eleInfo):
                 rawDict[autoType][objName] = dict()
                 rawDict[autoType][objName]["xpath"] = eleInfo
                 rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
+                rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo)
                 # print(rawDict)
             with open(filePath, "w") as f:
                 f.write(str(rawDict))
