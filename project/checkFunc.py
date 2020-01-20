@@ -26,4 +26,4 @@ if __name__ == "__main__":
     ''' 在已启动driver中调试 '''
     # PF.openChrome()
     # AC.checkObjFromLog("Chrome", "登陆-用户名")          # 检测成功
-    # AC.checkObjFromLog("Chrome", "登陆-密码")              # 检测成功
+    AC.checkObjFromLog("Chrome", "登陆-密码")              # 检测成功

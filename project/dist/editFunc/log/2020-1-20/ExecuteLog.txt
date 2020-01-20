@@ -1,0 +1,12 @@
+-----
+[2020-1-20 14-41-11.860040] 开始执行工程 'editFunc'
+[2020-1-20 14-41-11.861038] 执行语句 open_browser('chrome')
+[2020-1-20 14-41-14.723924] 执行语句 visit_url('http://cdwp.cnbmxinyun.com')
+[2020-1-20 14-41-17.891678] 执行语句 localElement('登陆-用户名', 1)
+
+[工程名称] editFunc
+[报错文件] E:\python相关\RPA\UIA\project\dist\editFunc\localSDK\BrowserFunc.pyc
+[错误行] 362
+[关键字] localElement
+[异常信息] AttributeError("'NoneType' object has no attribute 'keys'",)
+

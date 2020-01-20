@@ -343,7 +343,7 @@ class AppControl:
         errInfo = ""
         try:
             assert self.dict["Windows"].get(name) is not None, \
-                "本地库中未找到名称为 [%s] 的控件，请检查“log.txt”文件！" %name
+                "本地库中 [%s] 类型下未找到名为 [%s] 的控件，请检查“log.txt”文件！" %(conductType, name)
             info = self.dict["Windows"].get(name).get("Depth")
             obj = self.checkBottom(info)
             assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
@@ -443,9 +443,9 @@ class PublicFunc:
         try:
             rawDict = self.readFromLog()
             assert elementType in rawDict.keys(), \
-                "本地库中无 %s 类型控件，请检查！" %elementType
+                "本地库中无 [%s] 类型控件，请检查！" %elementType
             assert name in rawDict[elementType].keys(), \
-                      "本地库中 %s 类型下未找到名为 %s 控件，请检查！" %(elementType, name)
+                      "本地库中 [%s] 类型下未找到名为 [%s] 的控件，请检查！" %(elementType, name)
             objDict = rawDict[elementType][name]
             return objDict
         except AssertionError as e:

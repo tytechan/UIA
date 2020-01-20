@@ -1,10 +1,11 @@
 # _*_ coding:utf-8 _*_
 import win32api
 import win32con
-from PIL import ImageGrab
-from config.DirAndTime import *
+import frozen_dir
 import config.Globals as cf
 import uiautomation as auto
+from PIL import ImageGrab
+from config.DirAndTime import *
 
 class CNBMError(Exception):
     def __init__(self,ErrorInfo):
@@ -39,8 +40,11 @@ def CNBMException(func):
             except Exception as e:
                 if "projectName" in cf._global_dict.keys():
                     projectName = cf.get_value("projectName")
-                    picPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) \
-                              + "\\pictures\\%s" %projectName
+                    # picPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) \
+                    #           + "\\pictures\\%s" %projectName
+                    picPath = "%s\\pictures\\%s" \
+                              %(frozen_dir.app_path(), projectName)
+
                     dirName = createCurrentDateDir(picPath)
                     capture_screen(dirName)
 
