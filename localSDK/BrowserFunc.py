@@ -7,10 +7,9 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from config.ErrConfig import CNBMException, handleErr
+# from config.ErrConfig import CNBMException, handleErr, capture_screen
+from config.ErrConfig import *
 from time import sleep
-import win32api
-import win32con
 import time
 
 PF = PublicFunc()
@@ -260,7 +259,7 @@ class PageAction:
         self.timeout = 10
 
     @CNBMException
-    def open_browser(self, browserName):
+    def open_browser(self, browserName, capture=False):
         ''' 打开指定类型浏览器
         :param browserName: 浏览器类型（ie/chrome/edge/firefox）
         :return: 全局变量driver
@@ -367,99 +366,6 @@ class PageAction:
             handleErr(e)
             raise e
 
-    # @CNBMException
-    # def clear(self, locationType, locatorExpression, timeout=None):
-    #     ''' 清除输入框默认内容
-    #     :param locationType: 输入框控件定位类型
-    #     :param locatorExpression: 输入框控件定位属性值
-    #     '''
-    #     try:
-    #         OM = ObjectMap(self._driver)
-    #         time = timeout if timeout else self.timeout
-    #
-    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-    #         try:
-    #             element.clear()
-    #         except Exception as e:
-    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-    #             OM.highlight(element)
-    #             raise e
-    #     except Exception as e:
-    #         handleErr(e)
-    #         raise e
-    #
-    # @CNBMException
-    # def sendkeys(self, inputContent, locationType=None, locatorExpression=None, obj=None, **kwargs):
-    #     ''' 向输入框输值
-    #     :param obj: 从对象库取已存控件时，控件名称
-    #     :param locationType: 输入框控件定位类型
-    #     :param locatorExpression: 自写属性时，输入框控件定位属性值
-    #     :param inputContent: 待输值
-    #     '''
-    #     try:
-    #         OM = ObjectMap(self._driver)
-    #         time = kwargs["timeout"] if "timeout" in kwargs.keys() else self.timeout
-    #
-    #
-    #
-    #         locationType = "xpath" if obj else locationType
-    #         locatorExpression = PF.getObjFromLog("Chrome", ) if obj else locatorExpression
-    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-    #         try:
-    #             element.clear()
-    #             element.send_keys(inputContent)
-    #         except Exception as e:
-    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-    #             OM.highlight(element)
-    #             raise e
-    #     except Exception as e:
-    #         handleErr(e)
-    #         raise e
-    #
-    # @CNBMException
-    # def selectValues(self, locationType, locatorExpression, inputContent, timeout=None):
-    #     ''' 输入框输值
-    #     :param locationType: 下拉框控件定位类型
-    #     :param locatorExpression: 下拉框控件定位属性值
-    #     :param inputContent: 待选值
-    #     '''
-    #     try:
-    #         OM = ObjectMap(self._driver)
-    #         time = timeout if timeout else self.timeout
-    #
-    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-    #         try:
-    #             element = Select(element)
-    #             element.select_by_visible_text(inputContent)
-    #         except Exception as e:
-    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-    #             OM.highlight(element)
-    #             raise e
-    #     except Exception as e:
-    #         handleErr(e)
-    #         raise e
-    #
-    # @CNBMException
-    # def leftClick(self, locationType, locatorExpression, timeout=None):
-    #     ''' 点击页面元素
-    #     :param locationType: 控件定位类型
-    #     :param locatorExpression: 控件定位属性值
-    #     '''
-    #     try:
-    #         OM = ObjectMap(self._driver)
-    #         time = timeout if timeout else self.timeout
-    #
-    #         element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-    #         try:
-    #             element.click()
-    #         except Exception as e:
-    #             # 找到元素，但后续失败时，可通过截图查看报错高亮元素
-    #             OM.highlight(element)
-    #             raise e
-    #     except Exception as e:
-    #         handleErr(e)
-    #         raise e
-
     @CNBMException
     def highlight(self, element, timeToDisappear=None):
         style = element.get_attribute("style")
@@ -471,6 +377,18 @@ class PageAction:
                 time.sleep(1)
                 timeToDisappear -= 1
             self.setAttribute(element, "style", style)
+
+    @CNBMException
+    def captureScreen(self):
+        try:
+            projectName = cf.get_value("projectName")
+            picPath = "%s\\pictures\\%s" \
+                      %(frozen_dir.app_path(), projectName)
+            dirName = createCurrentDateDir(picPath)
+            capture_screen(dirName)
+        except Exception as e:
+            handleErr(e)
+            raise e
 
     @CNBMException
     def addAttribute(self, element, attributeName, value):
