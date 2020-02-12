@@ -4206,3 +4206,64 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
     ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10138(65848)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
 2020-01-16 13:42:01.799 automation.py[110] main -> Ends
 
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-10 16:23:21.980 automation.py[75] main -> Starts, Current Cursor Position: (789, 707)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10112(65810)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: ReBarWindow32    AutomationId: 40965    Rect: (47,680,1030,720)[983x40]    Name:     Handle: 0x10162(65890)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: MSTaskSwWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016C(65900)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: ToolBarControl    ClassName: MSTaskListWClass    AutomationId:     Rect: (66,680,981,720)[915x40]    Name: 运行中的应用程序    Handle: 0x1016E(65902)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName:     AutomationId: D:\Json格式化\HiJson\HiJson 64位和32位\HiJson 2.1.2_jdk64.exe    Rect: (769,680,819,720)[50x40]    Name: HiJson - 1 个运行窗口    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2020-02-10 16:23:22.803 automation.py[110] main -> Ends
+
+2020-02-10 16:25:13.002 BasicFunc.py[110] checkBottom -> Find Control Timeout: {RegexName: '.*H.*i.*J.*s.*o.*n.*', ClassName: '', SupportedPattern: 'InvokePattern', AutomationId: 'D:\\Json格式化\\HiJson\\HiJson', ControlType: ButtonControl}
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-10 16:27:35.811 automation.py[75] main -> Starts, Current Cursor Position: (655, 537)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: StandardFrame_DingTalk    AutomationId:     Rect: (37,33,897,673)[860x640]    Name: 钉钉    Handle: 0x40298(262808)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: DingChatWnd    AutomationId:     Rect: (117,115,895,670)[778x555]    Name:     Handle: 0x3051C(197916)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+2020-02-10 16:27:35.967 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-10 16:29:06.387 automation.py[75] main -> Starts, Current Cursor Position: (749, 296)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: StandardFrame_DingTalk    AutomationId:     Rect: (37,33,897,673)[860x640]    Name: 钉钉    Handle: 0x40298(262808)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: DingChatWnd    AutomationId:     Rect: (117,115,895,670)[778x555]    Name:     Handle: 0x3051C(197916)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: CefBrowserWindow    AutomationId:     Rect: (353,115,895,451)[542x336]    Name:     Handle: 0x5062C(329260)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: WindowControl    ClassName: Chrome_WidgetWin_0    AutomationId:     Rect: (353,115,895,451)[542x336]    Name:     Handle: 0x3052A(197930)    Depth: 4    SupportedPattern: LegacyIAccessiblePattern
+                    ControlType: DocumentControl    ClassName: Chrome_RenderWidgetHostHWND    AutomationId: 311912520    Rect: (353,115,895,451)[542x336]    Name: chatbox    Handle: 0x507B6(329654)    Depth: 5    ValuePattern.Value: app://desktop.dingtalk.com/web_content/chatbox.html?isFourColumnMode=true    ScrollPattern.HorizontalScrollPercent: 0.0    ScrollPattern.VerticalScrollPercent: 0.0    TextPattern.Text: UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-11 11:13:11.602 automation.py[75] main -> Starts, Current Cursor Position: (445, 409)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: Notepad++    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: E:\python相关\RPA\UIA\requirements.txt - Notepad++    Handle: 0x309B4(199092)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: Scintilla    AutomationId:     Rect: (1,89,1278,656)[1277x567]    Name: PyMouse==1.0
+easygui==0.98.1
+pywin32==225
+uiautomation==2.0.3
+beautifulsoup4==4.8.2
+psutil==5.6.7
+PyHook3==1.6.1
+PyInstaller==3.6
+    Handle: 0x30982(199042)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+2020-02-11 11:13:11.774 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-11 11:13:26.921 automation.py[75] main -> Starts, Current Cursor Position: (731, 417)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: Notepad++    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: E:\python相关\RPA\UIA\requirements.txt - Notepad++    Handle: 0x309B4(199092)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: PaneControl    ClassName: Scintilla    AutomationId:     Rect: (1,89,1278,656)[1277x567]    Name: PyMouse==1.0
+easygui==0.98.1
+pywin32==225
+uiautomation==2.0.3
+beautifulsoup4==4.8.2
+psutil==5.6.7
+PyHook3==1.6.1
+PyInstaller==3.6
+    Handle: 0x30982(199042)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+2020-02-11 11:13:27.033 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-11 11:13:41.869 automation.py[75] main -> Starts, Current Cursor Position: (755, 715)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x10102(65794)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+2020-02-11 11:13:42.025 automation.py[110] main -> Ends
+

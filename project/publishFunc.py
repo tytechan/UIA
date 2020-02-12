@@ -11,6 +11,7 @@ configFile = "version_control.txt"                                  # 版本控�
 versionPath = "%s\\versions" %os.getcwd()                           # 备份路径
 versionFile = "%s\\version_log.txt" %versionPath                    # 版本日志文件（\dist 目录下）
 imgPath = "%s\\image\\app_logo.ico" %frozen_dir.app_path()          # 执行程序图标路径
+projectName = os.getcwd().split("\\")[-1]                           # 工程名称
 
 def versionControl(appName, appDesc):
     ''' 发布前写入应用版本信息
@@ -87,6 +88,8 @@ def publish():
         if not os.path.exists(versionPath):
             os.makedirs(versionPath)
         shutil.copyfile("editFunc.py", os.path.join(versionPath, "%s.py" %FileVersion))
+        shutil.copyfile("log.txt",
+                        os.path.join("%s\\dist\\editFunc" %os.getcwd(), "log.txt"))
         print("当前版本备份完成！")
 
         with open(versionFile, "a+", encoding='UTF-8'):
@@ -116,8 +119,7 @@ if __name__ == "__main__":
     # 应用描述
     appDesc = \
     '''
-    1、abc修改修改修改修改修改修改修改修改修改修改修改修改；
-    2、完成完成完成完成完成完成完成完成完成完成完成完成完成完成完成完成。
+    添加截图。
     '''
 
     # 更新配置文件

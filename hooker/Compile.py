@@ -230,7 +230,9 @@ def recordIntoProject_Chrome(eleInfo):
                 rawDict[autoType][objName] = dict()
                 rawDict[autoType][objName]["xpath"] = eleInfo
                 rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
-                rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo)
+                rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) \
+                    if flag else "唯一性校验失败，强制保存"
+                # rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) if flag else ""
                 # print(rawDict)
             with open(filePath, "w") as f:
                 f.write(str(rawDict))
@@ -258,4 +260,5 @@ if __name__ == "__main__":
 
     # compileLogFile()
 
-    recordIntoProject_Win("test")
+    # recordIntoProject_Win("test")
+    recordIntoProject_Chrome("test")

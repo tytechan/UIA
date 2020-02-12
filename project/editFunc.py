@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     # ----- Chrome -----
     PA = PageAction()
-    PA.open_browser("chrome")
+    PA.open_browser("chrome", capture=True)
     PA.visit_url("http://cdwp.cnbmxinyun.com")
 
     # OM = ObjectMap(PA.driver)
@@ -87,5 +87,6 @@ if __name__ == "__main__":
     # PA.findElement("text", '登录').sendkeys("abc")
 
     PA.localElement("登陆-用户名", 1).sendkeys("abc")
+    PA.captureScreen()
     PA.localElement("登陆-密码1", 1).sendkeys("123456")
     PA.localElement("登陆-按钮").click()

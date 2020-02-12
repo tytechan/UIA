@@ -40,7 +40,7 @@ def CNBMException(func):
             except Exception as e:
                 if "projectName" in cf._global_dict.keys():
                     projectName = cf.get_value("projectName")
-                    # picPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) \
+                    # picPath = os.path.dirname(os.path.dirname(os.path.abspath(_ _file__))) \
                     #           + "\\pictures\\%s" %projectName
                     picPath = "%s\\pictures\\%s" \
                               %(frozen_dir.app_path(), projectName)

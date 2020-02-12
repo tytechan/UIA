@@ -3,6 +3,7 @@
 from localSDK import *
 from tkinter import ttk
 from config.ErrConfig import CNBMException, handleErr
+from config.DirAndTime import getCurrentDate, getCurrentTime
 import tkinter as tk
 import copy
 import uiautomation as auto
@@ -151,7 +152,7 @@ class AppControl:
         eleInfo = eleInfo.replace("\'", '\"')
 
         try:
-            element = CH.checkElement(eleInfo)
+            CH.checkElement(eleInfo)
             return eleInfo
         except:
             print("唯一性校验失败！")
@@ -269,6 +270,37 @@ class AppControl:
             raise e
         except Exception as e:
             raise e
+
+    def insertIntoLog(self, autoType, objName, xpath, projectPath):
+        ''' 向本地对象库插入控件信息（只限用在浏览器控件！！！）
+        :param autoType: 控件类型
+        :param objName: 控件名
+        :param xpath: 手写xpath
+        :param projectPath: 插入工程路径
+        '''
+        try:
+            filePath = projectPath + r"\log.txt"
+            # print(filePath)
+            with open(filePath, "a+"):
+                pass
+            with open(filePath, "r+") as f:
+                rawData = f.read()
+                if not rawData:
+                    rawData = "{'%s': {}}" %autoType
+                rawDict = eval(rawData)
+
+                if autoType not in rawDict:
+                    rawDict[autoType] = dict()
+                rawDict[autoType][objName] = dict()
+                rawDict[autoType][objName]["xpath"] = xpath
+                rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
+                rawDict[autoType][objName]["info"] = "手工插入"
+            with open(filePath, "w") as f:
+                f.write(str(rawDict))
+                # f.close()
+        except Exception as e:
+            raise e
+
 
     def checkBottom_EX(self, keyObj):
         ''' 用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
@@ -460,11 +492,15 @@ class PublicFunc:
         :param path: chrome安装路径
         '''
         import subprocess
+        import ctypes, sys
         cmd = 'chrome.exe --remote-debugging-port=9222 --user-data-dir="%s"' %path
         # cmd = r'chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"'
+
+        # 判断是否管理员权限
+        if not ctypes.windll.shell32.IsUserAnAdmin():
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
         popen = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         # popen.wait()
-
 
     def clickMe(self):
         # button被点击之后会被执行
@@ -539,3 +575,4 @@ class PublicFunc:
 
 if __name__ == "__main__":
     AC = AppControl()
+    PF = PublicFunc()

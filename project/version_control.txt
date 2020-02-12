@@ -26,12 +26,12 @@ VSVersionInfo(
       [
       StringTable(
         u'080404b0',
-        [StringStruct(u'CompanyName', u'hocoding.com'),
-        StringStruct(u'FileDescription', u'1、abc修改修改修改修改修改修改修改修改修改修改修改修改；2、完成完成完成完成完成完成完成完成完成完成完成完成完成完成完成完成。'),
-        StringStruct(u'FileVersion', u'1.2.3'),
+        [StringStruct(u'CompanyName', u'CNBM'),
+        StringStruct(u'FileDescription', u'添加截图。'),
+        StringStruct(u'FileVersion', u'1.0.3'),
         StringStruct(u'LegalCopyright', u'Copyright © CNBM数字化中心'),
         StringStruct(u'ProductName', u'壳系统登陆1'),
-        StringStruct(u'ProductVersion', u'1.2.3')])
+        StringStruct(u'ProductVersion', u'1.0.3')])
       ]), 
     VarFileInfo([VarStruct(u'Translation', [2052, 1200])])
   ]
