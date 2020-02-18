@@ -259,7 +259,7 @@ class PageAction:
         self.timeout = 10
 
     @CNBMException
-    def open_browser(self, browserName, capture=False):
+    def open_browser(self, browserName):
         ''' 打开指定类型浏览器
         :param browserName: 浏览器类型（ie/chrome/edge/firefox）
         :return: 全局变量driver
@@ -344,7 +344,7 @@ class PageAction:
             time = timeout if timeout else self.timeout
 
             element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
-            return WebElement(element)
+            return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
             raise e
@@ -361,7 +361,7 @@ class PageAction:
             locatorExpression = PF.getObjFromLog("Chrome", name)
             locatorExpression = locatorExpression["xpath"]
             element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
-            return WebElement(element)
+            return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
             raise e
@@ -406,7 +406,8 @@ class PageAction:
 
 
 class WebElement:
-    def __init__(self, element):
+    def __init__(self, driver, element):
+        self.driver = driver
         self.element = element
 
     @CNBMException
@@ -443,6 +444,32 @@ class WebElement:
         ''' 清除下拉框默认值 '''
         try:
             self.element.clear()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def get_attribute(self, attrName):
+        ''' 获取控件属性值
+        :param attrName: 属性名
+        '''
+        try:
+            attribute = self.element.get_attribute(attrName)
+            return attribute
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def scroll(self, position="up"):
+        ''' 滚动页面至元素可见
+        :param position: 操作类型（top：滑动后元素置顶；bottom：滑动后元素置底）
+        '''
+        try:
+            if position == "top":
+                self.driver.execute_script("arguments[0].scrollIntoView();", self.element)
+            elif position == "bottom":
+                self.driver.execute_script("arguments[0].scrollIntoView(false);", self.element)
         except Exception as e:
             handleErr(e)
             raise e

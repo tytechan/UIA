@@ -370,7 +370,8 @@ class AppControl:
 
 
     @CNBMException
-    def objControl(self, name, conductType, inputStr=None):
+    def objControl(self, name):
+    # def objControl(self, name, conductType, inputStr=None):
         sucFlag = False
         errInfo = ""
         try:
@@ -380,13 +381,14 @@ class AppControl:
             obj = self.checkBottom(info)
             assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
 
-            if conductType == "点击":
-                obj.Click()
-
-            elif conductType == "输入":
-                obj.SendKeys(inputStr)
+            # if conductType == "点击":
+            #     obj.Click()
+            #
+            # elif conductType == "输入":
+            #     obj.SendKeys(inputStr)
 
             sucFlag = True
+            return WinElement(obj)
         except AssertionError as e:
             errInfo = e
             raise e
@@ -450,6 +452,31 @@ class AppControl:
 
         # 每层遍历，在上一层的所有子控件中查找
         info = self.dict.get(name)["Depth"]
+
+
+class WinElement:
+    def __init__(self, obj):
+        self.obj = obj
+
+    @CNBMException
+    def click(self):
+        ''' 点击控件 '''
+        try:
+            self.obj.Click()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def sendkeys(self, inputContent):
+        ''' 输入框输值 '''
+        try:
+            self.obj.clear()
+            self.obj.SendKeys(inputContent)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
 
 class PublicFunc:
     ''' （录制、回放）功能函数 '''

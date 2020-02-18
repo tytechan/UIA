@@ -42,14 +42,14 @@ if __name__ == "__main__":
     # # AC.killApp("saplogon.exe")
 
 
-    # AC.appName = "计算器"
-    # AC.openApp("Calc.exe")
-    # # AC.objControl("计算器-侧边栏", "点击")
+    AC.appName = "计算器"
+    AC.openApp("Calc.exe")
+    # AC.objControl("计算器-侧边栏").click()
     # # AC.objControl("计算器-科学", "点击")
-    # AC.objControl("计算器-5", "点击")
-    # AC.objControl("计算器-×", "点击")
-    # AC.objControl("计算器-8", "点击")
-    # AC.objControl("计算器-等于", "点击")
+    AC.objControl("计算器-5").click()
+    AC.objControl("计算器-×").click()
+    AC.objControl("计算器-8").click()
+    AC.objControl("计算器-等于").click()
 
 
     # AC.openApp("notepad.exe")
@@ -63,30 +63,30 @@ if __name__ == "__main__":
 
 
     # ----- Chrome -----
-    PA = PageAction()
-    PA.open_browser("chrome", capture=True)
-    PA.visit_url("http://cdwp.cnbmxinyun.com")
-
-    # OM = ObjectMap(PA.driver)
-
-    # el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
-    # print(el.get_attribute("placeholder"))
-    # el.send_keys("abc")
+    # PA = PageAction()
+    # PA.open_browser("chrome", capture=True)
+    # PA.visit_url("http://cdwp.cnbmxinyun.com")
     #
-    # el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
-    # print(el1.get_attribute("placeholder"))
-    # el1.send_keys("123456")
-
-
-    # PA.sendkeys("abc", "xpath", '//input[@ng-model="user_name"]')
-    # PA.sendkeys("123456", "xpath", '//input[@ng-model="password3"]', 0.5)
-
-
-    # PA.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
-    # PA.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
-    # PA.findElement("text", '登录').sendkeys("abc")
-
-    PA.localElement("登陆-用户名", 1).sendkeys("abc")
-    PA.captureScreen()
-    PA.localElement("登陆-密码1", 1).sendkeys("123456")
-    PA.localElement("登陆-按钮").click()
+    # # OM = ObjectMap(PA.driver)
+    #
+    # # el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
+    # # print(el.get_attribute("placeholder"))
+    # # el.send_keys("abc")
+    # #
+    # # el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
+    # # print(el1.get_attribute("placeholder"))
+    # # el1.send_keys("123456")
+    #
+    #
+    # # PA.sendkeys("abc", "xpath", '//input[@ng-model="user_name"]')
+    # # PA.sendkeys("123456", "xpath", '//input[@ng-model="password3"]', 0.5)
+    #
+    #
+    # # PA.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
+    # # PA.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
+    # # PA.findElement("text", '登录').sendkeys("abc")
+    #
+    # PA.localElement("登陆-用户名", 1).sendkeys("abc")
+    # PA.captureScreen()
+    # PA.localElement("登陆-密码1", 1).sendkeys("123456")
+    # PA.localElement("登陆-按钮").click()

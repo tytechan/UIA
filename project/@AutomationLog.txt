@@ -5011,3 +5011,124 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
             ControlType: ListItemControl    ClassName:     AutomationId:     Rect: (74,340,396,352)[322x12]    Name: //A[@name="tj_trnews"]    Handle: 0x0(0)    Depth: 3    SelectionItemPattern.IsSelected: True    SupportedPattern: InvokePattern SelectionItemPattern LegacyIAccessiblePattern
 2020-02-18 15:09:08.808 automation.py[110] main -> Ends
 
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:12:59.231 automation.py[75] main -> Starts, Current Cursor Position: (345, 161)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x413CC(267212)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0x113DA(70618)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ButtonControl    ClassName: Button    AutomationId: TogglePaneButton    Rect: (322,142,362,182)[40x40]    Name: 关闭导航    Handle: 0x0(0)    Depth: 3    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:12:59.489 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:17:50.668 automation.py[75] main -> Starts, Current Cursor Position: (338, 164)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0xD1366(856934)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0x31408(201736)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ButtonControl    ClassName: Button    AutomationId: TogglePaneButton    Rect: (322,142,362,182)[40x40]    Name: 关闭导航    Handle: 0x0(0)    Depth: 3    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:17:50.873 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:18:01.687 automation.py[75] main -> Starts, Current Cursor Position: (345, 165)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0xD1366(856934)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0x31408(201736)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ButtonControl    ClassName: Button    AutomationId: TogglePaneButton    Rect: (322,142,362,182)[40x40]    Name: 打开导航    Handle: 0x0(0)    Depth: 3    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:18:01.876 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:18:23.111 automation.py[75] main -> Starts, Current Cursor Position: (815, 128)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-8,-8,1288,688)[1296x696]    Name: HiJson V2.1.2    Handle: 0xF12CA(987850)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-02-18 16:18:23.308 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:18:30.010 automation.py[75] main -> Starts, Current Cursor Position: (2263, 650)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\localSDK\BasicFunc.py [UIA] - PyCharm    Handle: 0x407FA(264186)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-02-18 16:18:30.166 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:20:01.374 automation.py[75] main -> Starts, Current Cursor Position: (373, 288)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: ScientificAngleOperators    Rect: (327,254,485,289)[158x35]    Name: 角度运算符    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: degButton    Rect: (327,254,405,289)[78x35]    Name: 度数切换    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:20:01.596 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:20:17.331 automation.py[75] main -> Starts, Current Cursor Position: (373, 292)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: MemoryPanel    Rect: (327,291,819,326)[492x35]    Name: 内存控件    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: ClearMemoryButton    Rect: (327,291,405,326)[78x35]    Name: 清除所有内存    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:20:17.543 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:20:30.736 automation.py[75] main -> Starts, Current Cursor Position: (347, 179)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: ButtonControl    ClassName: Button    AutomationId: TogglePaneButton    Rect: (322,142,362,182)[40x40]    Name: 关闭导航    Handle: 0x0(0)    Depth: 3    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:20:30.923 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:20:35.701 automation.py[75] main -> Starts, Current Cursor Position: (479, 254)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: TextControl    ClassName:     AutomationId: CalculatorResults    Rect: (322,203,822,280)[500x77]    Name: 显示为 0    Handle: 0x0(0)    Depth: 4    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:20:35.869 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:20:40.940 automation.py[75] main -> Starts, Current Cursor Position: (354, 185)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: SplitViewPane    AutomationId: PaneRoot    Rect: (322,142,578,642)[256x500]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: WindowPattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:20:41.125 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:21:25.958 automation.py[75] main -> Starts, Current Cursor Position: (530, 495)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: NumberPad    Rect: (326,423,694,638)[368x215]    Name: 数字键盘    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: num5Button    Rect: (449,477,570,529)[121x52]    Name: 五    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:21:26.183 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:21:41.661 automation.py[75] main -> Starts, Current Cursor Position: (776, 457)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: StandardOperators    Rect: (697,369,818,638)[121x269]    Name: 标准运算符    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: multiplyButton    Rect: (697,423,818,475)[121x52]    Name: 乘以    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:21:41.842 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:22:04.279 automation.py[75] main -> Starts, Current Cursor Position: (525, 462)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: NumberPad    Rect: (326,423,694,638)[368x215]    Name: 数字键盘    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: num8Button    Rect: (449,423,570,475)[121x52]    Name: 八    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:22:04.498 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-02-18 16:22:14.855 automation.py[75] main -> Starts, Current Cursor Position: (766, 611)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: ApplicationFrameWindow    AutomationId:     Rect: (315,109,830,649)[515x540]    Name: 计算器    Handle: 0x31410(201744)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: Windows.UI.Core.CoreWindow    AutomationId:     Rect: (322,110,822,642)[500x532]    Name: 计算器    Handle: 0xF138C(988044)    Depth: 2    SupportedPattern: LegacyIAccessiblePattern
+            ControlType: GroupControl    ClassName: LandmarkTarget    AutomationId:     Rect: (322,142,822,638)[500x496]    Name:     Handle: 0x0(0)    Depth: 3    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                ControlType: GroupControl    ClassName: NamedContainerAutomationPeer    AutomationId: StandardOperators    Rect: (697,369,818,638)[121x269]    Name: 标准运算符    Handle: 0x0(0)    Depth: 4    SupportedPattern: ScrollItemPattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: Button    AutomationId: equalButton    Rect: (697,586,818,638)[121x52]    Name: 等于    Handle: 0x0(0)    Depth: 5    SupportedPattern: InvokePattern ScrollItemPattern LegacyIAccessiblePattern
+2020-02-18 16:22:15.032 automation.py[110] main -> Ends
+
