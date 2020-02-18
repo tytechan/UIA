@@ -565,7 +565,11 @@ class PublicFunc:
 
             CH.keyUp("shift")
         elif autoType == "IE":
-            pass
+            IEXPath = parentDirPath + r"\tools\IEXPath.exe"
+            win32api.ShellExecute(0, 'open', IEXPath, '', '', 1)
+
+            HK = H.Hooker()
+            HK.hooks()
         elif autoType == "Firefox":
             pass
         else:

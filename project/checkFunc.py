@@ -23,8 +23,11 @@ if __name__ == "__main__":
 
     # AC.deleteObjFromLog("Chrome", "首页-单据类型")            # 删除本地库没有的控件
 
-    ''' 在已启动driver中调试 '''
+    ''' chrome在已启动driver中调试 '''
     # PF.openChrome()
     # AC.checkObjFromLog("Chrome", "登陆-用户名")          # 检测成功
     # AC.checkObjFromLog("Chrome", "登陆-密码")              # 检测成功
-    AC.insertIntoLog("Chrome", "test-插入", "//abc[@id='123123']", projectPath)       # 插入控件及相关信息
+    # AC.insertIntoLog("Chrome", "test-插入", "//abc[@id='123123']", projectPath)       # 插入控件及相关信息
+
+    # AC.deleteObjFromLog("IE", "test")            # 删除本地库没有的控件
+    AC.insertIntoLog("IE", "test-插入", "//abc[@id='123123']", projectPath)       # 插入控件及相关信息

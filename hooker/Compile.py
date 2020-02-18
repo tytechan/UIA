@@ -6,6 +6,7 @@ from hooker.Hook import ChromeHooker
 import subprocess
 import config.Globals as cf
 
+autoType = cf.get_value("autoType")
 
 def myPopen(cmd):
     ''' 执行命令cmd '''
@@ -14,7 +15,8 @@ def myPopen(cmd):
         popen = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         popen.wait()
         lines = popen.stdout.readlines()
-        # print(lines)
+        # print(["lines"], type(lines), "\n", lines)
+
         dt = compileData(lines)
         return dt
 
@@ -32,11 +34,35 @@ def compileData(data):
     :param data: 列表数据
     :return: 整理后字典
     '''
+    if autoType == "IE":
+        for i in range(len(data)-1, -1, -1):
+            # 倒序遍历
+            info = data[i].decode("UTF-8")
+            # print(info)
+
+            # 在IE空间中先遍历到最下层，再把倒数第二层作为校验点
+            if "ControlType" in info:
+                try:
+                    assert "ControlType: ListItemControl" in info
+                    # 最下层控件类型符合条件
+                    parentInfo = data[i - 1].decode("UTF-8")
+                    assert "XPath（选择后双击复制）" in parentInfo
+                    break
+                except AssertionError:
+                    '''
+                    退出情况（未点击IEPath的xpath栏）：
+                    1、最下层非“ListItemControl”；
+                    2、倒数第二层不满足条件
+                    '''
+                    return {}
+            else:
+                # 继续遍历直至找到第一个控件层（最下层）
+                continue
+
     myDict = dict()
     myDict["Depth"] = dict()
     for i in range(len(data)):
         info = data[i].decode("UTF-8")
-        # print(info)
         if "Starts" in info:
             startTime = info.split("automation.py")[0].strip()
             myDict["Starts"] = startTime
@@ -55,6 +81,7 @@ def compileData(data):
             myDict["Depth"][dep] = dt
         except:
             pass
+
     # print("[myDict]\n", myDict)
     return myDict
 
@@ -233,6 +260,64 @@ def recordIntoProject_Chrome(eleInfo):
                 rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) \
                     if flag else "唯一性校验失败，强制保存"
                 # rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) if flag else ""
+                # print(rawDict)
+            with open(filePath, "w") as f:
+                f.write(str(rawDict))
+                # f.close()
+            return True
+        else:
+            # 点击后不保存，默认继续识别
+            return False
+    except Exception as e:
+        raise e
+
+def recordIntoProject_IE(eleProperties):
+    ''' 点击目标控件（IE）后，判断是否保存到本地库，并定义控件名称（不做唯一性校验）
+    :param eleProperties: 目标控件所有信息
+    :return: True：成功获取并保存/False：不保存
+    '''
+    import tkinter.messagebox as msg
+    import win32api, win32con
+    import easygui
+
+    try:
+        keyObj = eleProperties.get("Depth")
+        info = keyObj[str(len(keyObj) - 1)]
+        # print(info)
+        objXpath = info["Name"]
+
+        message = "是否添加控件：\n" + str(objXpath)
+        # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
+        result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
+        # result = message_askyesno("提示", message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
+        # print(result)
+        path = cf.get_value("path")
+        if result == 1:
+            # 点击后保存
+            filePath = path + r"\log.txt"
+            # print(filePath)
+            with open(filePath, "a+"):
+                pass
+            with open(filePath, "r+") as f:
+                rawData = f.read()
+                autoType = cf.get_value("autoType")
+                if not rawData:
+                    rawData = "{'%s': {}}" %autoType
+                rawDict = eval(rawData)
+
+                # objName = input("定义控件名称为：")
+                objName = getInput("请确认", "请定义控件名称：")
+                if objName is None:
+                    # 点击后不保存，默认继续识别
+                    return False
+
+                if autoType not in rawDict:
+                    rawDict[autoType] = dict()
+                rawDict[autoType][objName] = dict()
+                rawDict[autoType][objName]["xpath"] = objXpath
+                rawDict[autoType][objName]["Starts"] = eleProperties["Starts"]
+                rawDict[autoType][objName]["Ends"] = eleProperties["Ends"]
+                rawDict[autoType][objName]["info"] = eleProperties["Ends"]
                 # print(rawDict)
             with open(filePath, "w") as f:
                 f.write(str(rawDict))

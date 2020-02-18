@@ -47,48 +47,121 @@ class Hooker:
         # print('Injected:',event.Injected)        # 判断这个事件是否由程序方式生成，而不是正常的人为触发。
         # print('---')
 
-        if event.MessageName == "mouse left down" and not self.pause:
-            fp = open(hookLogPath, "a", encoding='utf-8')
-            fp.write('\n-----')
-            fp.write('\n' + '[捕获时间] %s' %self.getTimeNow())
-            fp.write('\n' + '[捕获对象类型] %s' %self.autoType)
+        if not self.pause:
 
-            if self.autoType == "Windows":
-                from hooker.Compile import myPopen
-                fp.write('\n' + '[MessageName] ' + str(event.MessageName))
-                fp.write('\n' + '[Message] ' + str(event.Message))
-                fp.write('\n' + '[position] ' + "(%s, %s)" %(x, y))
-                fp.write('\n' + '[Window] ' + str(event.Window))
-                fp.write('\n' + '[WindowName] ' + str(event.WindowName) + '\n')
+            '''
+            1、鼠标点击触发录制；
+            2、键盘快捷开关已打开
+            '''
+            if self.autoType == "IE":
+                ''' IE '''
+                try:
+                    # 鼠标右键触发录制
+                    assert event.MessageName == "mouse right down"
 
-                # adb = "automation.py –r –d1 –t0 -n"
-                # d = os.popen(adb)
-                # f = d.read()
-                # # print(f)
-                # fp.write('\n' + '[path] ' + str(f))
-                # ctr(focus=True, seconds=0)
-                #X fp.write('\n-----')
+                    from hooker.Compile import myPopen
+                    self.output = str(myPopen("automation.py -a -t0 -n"))
 
-                # thr = threading.Thread(ctr, args=(False, True, False, False, False, False, 0xFFFFFFFF, 0,), name="t")
-                # thr.start()
+                    fp = open(hookLogPath, "a", encoding='utf-8')
+                    fp.write('\n-----')
+                    fp.write('\n' + '[捕获时间] %s' %self.getTimeNow())
+                    fp.write('\n' + '[捕获对象类型] %s' %self.autoType)
+                    fp.write('\n\n' + '[层级结构]' + '\n')
+                    fp.write(self.output)                    # 写入 HookLog，todo：self.output 可进一步处理
+                except AssertionError:
+                    pass
 
-                fp.write('\n' + '[层级结构]' + '\n')
-                self.output = str(myPopen("automation.py -a -t0 -n"))
-                # print("output:", self.output)
+            else:
+                ''' Windows/Chrome '''
+                try:
+                    # 鼠标左键触发录制
+                    assert event.MessageName == "mouse left down"
 
-                cf.set_value("x", x)
-                cf.set_value("y", y)
-                fp.write(self.output)
-            elif self.autoType == "Chrome":
-                CH = ChromeHooker()
-                # 释放长按的“shift”
-                CH.keyUp("shift")
-                self.output = CH.getTarget()
+                    fp = open(hookLogPath, "a", encoding='utf-8')
+                    fp.write('\n-----')
+                    fp.write('\n' + '[捕获时间] %s' % self.getTimeNow())
+                    fp.write('\n' + '[捕获对象类型] %s' % self.autoType)
 
-                fp.write('\n\n' + '[层级结构]' + '\n')
-                fp.write(self.output)                    # 写入 HookLog，todo：self.output 可进一步处理
+                    if self.autoType == "Windows":
+                        from hooker.Compile import myPopen
+                        # fp.write('\n' + '[MessageName] ' + str(event.MessageName))
+                        # fp.write('\n' + '[Message] ' + str(event.Message))
+                        # fp.write('\n' + '[position] ' + "(%s, %s)" % (x, y))
+                        # fp.write('\n' + '[Window] ' + str(event.Window))
+                        # fp.write('\n' + '[WindowName] ' + str(event.WindowName) + '\n')
 
-            return
+                        # adb = "automation.py –r –d1 –t0 -n"
+                        # d = os.popen(adb)
+                        # f = d.read()
+                        # # print(f)
+                        # fp.write('\n' + '[path] ' + str(f))
+                        # ctr(focus=True, seconds=0)
+                        # X fp.write('\n-----')
+
+                        # thr = threading.Thread(ctr, args=(False, True, False, False, False, False, 0xFFFFFFFF, 0,), name="t")
+                        # thr.start()
+
+                        fp.write('\n' + '[层级结构]' + '\n')
+                        self.output = str(myPopen("automation.py -a -t0 -n"))
+                        # print("output:", self.output)
+
+                        cf.set_value("x", x)
+                        cf.set_value("y", y)
+                        fp.write(self.output)
+                    elif self.autoType == "Chrome":
+                        CH = ChromeHooker()
+                        # 释放长按的“shift”
+                        CH.keyUp("shift")
+                        self.output = CH.getTarget()
+
+                        fp.write('\n\n' + '[层级结构]' + '\n')
+                        fp.write(self.output)  # 写入 HookLog，todo：self.output 可进一步处理
+
+                    return
+                except AssertionError:
+                    pass
+
+                # fp = open(hookLogPath, "a", encoding='utf-8')
+                # fp.write('\n-----')
+                # fp.write('\n' + '[捕获时间] %s' %self.getTimeNow())
+                # fp.write('\n' + '[捕获对象类型] %s' %self.autoType)
+                #
+                # if self.autoType == "Windows":
+                #     from hooker.Compile import myPopen
+                #     fp.write('\n' + '[MessageName] ' + str(event.MessageName))
+                #     fp.write('\n' + '[Message] ' + str(event.Message))
+                #     fp.write('\n' + '[position] ' + "(%s, %s)" %(x, y))
+                #     fp.write('\n' + '[Window] ' + str(event.Window))
+                #     fp.write('\n' + '[WindowName] ' + str(event.WindowName) + '\n')
+                #
+                #     # adb = "automation.py –r –d1 –t0 -n"
+                #     # d = os.popen(adb)
+                #     # f = d.read()
+                #     # # print(f)
+                #     # fp.write('\n' + '[path] ' + str(f))
+                #     # ctr(focus=True, seconds=0)
+                #     #X fp.write('\n-----')
+                #
+                #     # thr = threading.Thread(ctr, args=(False, True, False, False, False, False, 0xFFFFFFFF, 0,), name="t")
+                #     # thr.start()
+                #
+                #     fp.write('\n' + '[层级结构]' + '\n')
+                #     self.output = str(myPopen("automation.py -a -t0 -n"))
+                #     # print("output:", self.output)
+                #
+                #     cf.set_value("x", x)
+                #     cf.set_value("y", y)
+                #     fp.write(self.output)
+                # elif self.autoType == "Chrome":
+                #     CH = ChromeHooker()
+                #     # 释放长按的“shift”
+                #     CH.keyUp("shift")
+                #     self.output = CH.getTarget()
+                #
+                #     fp.write('\n\n' + '[层级结构]' + '\n')
+                #     fp.write(self.output)                    # 写入 HookLog，todo：self.output 可进一步处理
+                #
+                # return
 
         # 返回True代表将事件继续传给其他句柄，为False则停止传递，即被拦截
         return True
@@ -117,6 +190,8 @@ class Hooker:
             # TODO：设置键盘快捷开关（此处为‘Alt’），后期可放开
             # print(self.pause, type(self.pause))
             self.pause = bool(1 - self.pause)
+            msg = "中断录制！" if self.pause else "继续录制！"
+            print(msg)
 
             if self.autoType == "Chrome" and self.pause == False:
                 # 类型选择Chrome，且开始录制后两次点击快捷开关（先暂停，后开启录制）
@@ -156,6 +231,9 @@ class Hooker:
                     CH.keyUp("shift")
                 except:
                     pass
+            elif self.autoType == "IE":
+                cmd = r"taskkill /F /IM IEXpath.exe"
+                os.system(cmd)
             print("退出录制！")
             os._exit(0)
 
@@ -178,7 +256,7 @@ class Hooker:
         pythoncom.PumpMessages(10000)
 
     def loopToHook(self):
-        from hooker.Compile import recordIntoProject_Win, recordIntoProject_Chrome
+        from hooker.Compile import recordIntoProject_Win, recordIntoProject_Chrome, recordIntoProject_IE
         # 打印操作轨迹监控
         # path=os.getcwd()        # 获取当前目录
         # fp=open("E:\python相关\RPA_test\log\hook_log.txt","a",encoding='utf-8')
@@ -199,13 +277,14 @@ class Hooker:
 
         while True:
             # 中断录制功能判断
-            if self.output:
+            try:
+                assert self.output and eval(self.output)
                 print("[output]\n", self.output, "\n")
                 hm.UnhookMouse()
                 hm.UnhookKeyboard()
                 break
                 # os._exit(0)
-            else:
+            except:
                 pass
 
         try:
@@ -224,13 +303,17 @@ class Hooker:
                 isRecord = recordIntoProject_Win(output)
             elif self.autoType == "Chrome":
                 CH = ChromeHooker()
-                assert self.output is not None, ""
+                assert self.output is not None, \
+                    "未获取到目标控件信息，请检查程序状态！"
                 isRecord = recordIntoProject_Chrome(self.output)
                 CH.keyDown("shift")
+            elif self.autoType == "IE":
+                output = eval(self.output)
+                isRecord = recordIntoProject_IE(output)
 
         except AssertionError as e:
-            win32api.MessageBox(0, e, "提示", win32con.MB_OK)
             isRecord = False
+            win32api.MessageBox(0, e, "提示", win32con.MB_OK)
         except Exception as e:
             isRecord = False
         finally:
