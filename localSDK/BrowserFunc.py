@@ -350,15 +350,16 @@ class PageAction:
             raise e
 
     @CNBMException
-    def localElement(self, name, timeout=None):
+    def localElement(self, conductType, name, timeout=None):
         ''' 从本地库查找控件
+        :param conductType: 控件类型
         :param name: 本地工程对象库中控件名称
         '''
         try:
             OM = ObjectMap(self._driver)
             time = timeout if timeout else self.timeout
 
-            locatorExpression = PF.getObjFromLog("Chrome", name)
+            locatorExpression = PF.getObjFromLog(conductType, name)
             locatorExpression = locatorExpression["xpath"]
             element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
             return WebElement(self._driver, element)
@@ -461,7 +462,7 @@ class WebElement:
             raise e
 
     @CNBMException
-    def scroll(self, position="up"):
+    def scroll(self, position="top"):
         ''' 滚动页面至元素可见
         :param position: 操作类型（top：滑动后元素置顶；bottom：滑动后元素置底）
         '''

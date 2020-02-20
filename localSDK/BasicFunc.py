@@ -376,7 +376,7 @@ class AppControl:
         errInfo = ""
         try:
             assert self.dict["Windows"].get(name) is not None, \
-                "本地库中 [%s] 类型下未找到名为 [%s] 的控件，请检查“log.txt”文件！" %(conductType, name)
+                "本地库中 [Windows] 类型下未找到名为 [%s] 的控件，请检查“log.txt”文件！" %name
             info = self.dict["Windows"].get(name).get("Depth")
             obj = self.checkBottom(info)
             assert obj, "根据本地控件信息未定位到目标控件 [%s]！" %name
