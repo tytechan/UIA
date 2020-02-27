@@ -529,6 +529,96 @@ class PublicFunc:
         popen = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         # popen.wait()
 
+    def openFirefox(self, profileDir):
+        ''' 先启动 geckodriver.exe（确保已配置环境变量），再调起firefox服务 '''
+        from selenium import webdriver
+        from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+        import pickle
+        import subprocess
+        import psutil
+
+        # 确保杀掉geckodriver进程
+        killGecko = "taskkill /F /IM geckodriver.exe"
+        popen = subprocess.Popen(killGecko, shell=True, stdout=subprocess.PIPE)
+        popen.wait()
+
+        # 打开geckodriver进程
+        cmd = 'geckodriver.exe'
+        subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+        # os.system(cmd)
+
+        # 调起Firefox前须确保geckodriver进程已启动
+        processList = list()
+        while "geckodriver.exe" not in processList:
+            pids = psutil.pids()
+            for pid in pids:
+                # print(pid)
+                p = psutil.Process(pid)
+                # print(p.name)
+                processList.append(p.name())
+
+        # import time
+        # while "geckodriver.exe" not in [psutil.Process(i).name() for i in psutil.pids()]:
+        #     time.sleep(0.2)
+
+        # profile = webdriver.FirefoxProfile(profileDir)
+        #         # profile.update_preferences()
+
+        profile = webdriver.FirefoxProfile()
+        profile.add_extension()
+        profile.add_extension(r"C:\Python35\Lib\site-packages\selenium\webdriver\firefox\xpath finder.xpi")
+        # from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+        # profile = FirefoxProfile()r
+        # profile.accept_untrusted_certs = True
+
+        # driver = webdriver.Remote(
+        #     command_executor="http://127.0.0.1:4444",
+        #                                               desired_capabilities=DesiredCapabilities.FIREFOX,
+        #                                               browser_profile=profile)
+        # driver.implicitly_wait(10)
+
+
+
+        # driver = webdriver.remote.webdriver.WebDriver(command_executor="http://127.0.0.1:4444",
+        #                                               desired_carpabilities=DesiredCapabilities.FIREFOX)
+
+        driver = webdriver.remote.webdriver.WebDriver(command_executor="http://127.0.0.1:4444",
+                                                      desired_capabilities={"browserName": "firefox",
+                                                                            "marionette": True,
+                                                                            "acceptInsecureCerts": True,
+                                                                            "javascriptEnabled": True,
+                                                                            # "platform": "ANY",
+                                                                            # "moz:firefoxOptions":{},
+                                                                            },
+                                                      browser_profile=profile
+                                                      )
+
+        # driver = webdriver.remote.webdriver.WebDriver(command_executor="http://127.0.0.1:4444",
+        #                                               desired_capabilities=DesiredCapabilities.FIREFOX,
+        #                                               browser_profile=profile)
+
+        # driver = webdriver.remote.webdriver.WebDriver(command_executor="http://127.0.0.1:4444",
+        #                                               desired_capabilities={"browserName": "firefox",
+        #                                                                     "marionette": True,
+        #                                                                     "acceptInsecureCerts": True,
+        #                                                                     "moz:firefoxOptions":{}},
+        #                                               browser_profile=profile)
+        driver.get('http://www.baidu.com/')
+        print(driver.capabilities)
+        print(driver.command_executor.keep_alive)
+        print(driver.command_executor._url)
+        print(driver.session_id)
+
+        params = {}
+        params["session_id"] = driver.session_id
+        params["server_url"] = driver.command_executor._url
+
+        dataPath = parentDirPath + r"\hooker\params.data"
+        f = open(dataPath, 'wb')
+        # 转储对象至文件
+        pickle.dump(params, f)
+        f.close()
+
     def clickMe(self):
         # button被点击之后会被执行
         global autoType
@@ -598,7 +688,9 @@ class PublicFunc:
             HK = H.Hooker()
             HK.hooks()
         elif autoType == "Firefox":
-            pass
+            HK = H.Hooker()
+            H.FirefoxHooker()
+            HK.hooks()
         else:
             pass
 
@@ -607,3 +699,6 @@ class PublicFunc:
 if __name__ == "__main__":
     AC = AppControl()
     PF = PublicFunc()
+
+    profileDir = r"C:\Users\47612\AppData\Roaming\Mozilla\Firefox\Profiles\14q6qdug.default-release-1"
+    PF.openFirefox(profileDir)

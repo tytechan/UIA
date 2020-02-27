@@ -5,6 +5,7 @@ import threading
 import pythoncom
 import re
 import win32clipboard as wc
+import pickle
 import config.Globals as cf
 import uiautomation as auto
 from hooker import *
@@ -72,7 +73,7 @@ class Hooker:
                     pass
 
             else:
-                ''' Windows/Chrome '''
+                ''' Windows/Chrome/Firefox '''
                 try:
                     # 鼠标左键触发录制
                     assert event.MessageName == "mouse left down"
@@ -116,7 +117,12 @@ class Hooker:
 
                         fp.write('\n\n' + '[层级结构]' + '\n')
                         fp.write(self.output)  # 写入 HookLog，todo：self.output 可进一步处理
+                    elif self.autoType == "Firefox":
+                        FH = FirefoxHooker()
+                        self.output = FH.getXpath()
 
+                        fp.write('\n\n' + '[层级结构]' + '\n')
+                        fp.write(self.output)  # 写入 HookLog，todo：self.output 可进一步处理
                     return
                 except AssertionError:
                     pass
@@ -186,8 +192,8 @@ class Hooker:
         # print('Transition', event.Transition)            #判断转换状态
         # print('---')
 
-        if keyType == "Lmenu":
-            # TODO：设置键盘快捷开关（此处为‘Alt’），后期可放开
+        if keyType == "Tab":
+            # TODO：设置键盘快捷开关（此处为‘Tab’），后期可放开
             # print(self.pause, type(self.pause))
             self.pause = bool(1 - self.pause)
             msg = "中断录制！" if self.pause else "继续录制！"
@@ -210,6 +216,30 @@ class Hooker:
 
                 # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
                 CH.keyDown("shift")
+            elif self.autoType == "Firefox" and self.pause == False:
+                FH = FirefoxHooker()
+
+                for i in range(3):
+                    try:
+                        FH.driver.find_element_by_id("xpath-overlay")
+                        break
+                    except:
+                        # print("\n", Exception)
+                        if i != 2:
+                            time.sleep(0.3)
+                        else:
+                            # 此方法模拟无效
+                            # html = FH.driver.find_element_by_xpath("/html")
+                            # html.send_keys(Keys.CONTROL, Keys.SHIFT, "u")
+
+                            # 模拟点击“ctrl+shift+u”，激活“xpath finder”
+                            FH.keyDown("ctrl")
+                            FH.keyDown("shift")
+                            FH.keyDown("u")
+                            FH.keyUp("u")
+                            FH.keyUp("shift")
+                            FH.keyUp("ctrl")
+
         elif keyType == "Delete":
             # TODO: 退出录制快捷键“Del”（shift+esc 为打开chrome任务管理器默认快捷键），后期可放开
             hm.UnhookMouse()
@@ -234,6 +264,20 @@ class Hooker:
             elif self.autoType == "IE":
                 cmd = r"taskkill /F /IM IEXpath.exe"
                 os.system(cmd)
+            elif self.autoType == "Firefox":
+                FH = FirefoxHooker()
+                try:
+                    FH.driver.find_element_by_id("xpath-overlay")
+
+                    FH.keyDown("ctrl")
+                    FH.keyDown("shift")
+                    FH.keyDown("u")
+                    FH.keyUp("u")
+                    FH.keyUp("shift")
+                    FH.keyUp("ctrl")
+                except:
+                    pass
+
             print("退出录制！")
             os._exit(0)
 
@@ -256,7 +300,8 @@ class Hooker:
         pythoncom.PumpMessages(10000)
 
     def loopToHook(self):
-        from hooker.Compile import recordIntoProject_Win, recordIntoProject_Chrome, recordIntoProject_IE
+        from hooker.Compile import \
+            recordIntoProject_Win, recordIntoProject_Chrome, recordIntoProject_IE, recordIntoProject_Firefox
         # 打印操作轨迹监控
         # path=os.getcwd()        # 获取当前目录
         # fp=open("E:\python相关\RPA_test\log\hook_log.txt","a",encoding='utf-8')
@@ -278,7 +323,8 @@ class Hooker:
         while True:
             # 中断录制功能判断
             try:
-                assert self.output and eval(self.output)
+                # assert self.output and eval(self.output)
+                assert self.output
                 print("[output]\n", self.output, "\n")
                 hm.UnhookMouse()
                 hm.UnhookKeyboard()
@@ -310,6 +356,8 @@ class Hooker:
             elif self.autoType == "IE":
                 output = eval(self.output)
                 isRecord = recordIntoProject_IE(output)
+            elif self.autoType == "Firefox":
+                isRecord = recordIntoProject_Firefox(self.output)
 
         except AssertionError as e:
             isRecord = False
@@ -514,6 +562,47 @@ class ChromeHooker:
         # 路径中无 [\d+] ,此方法无法获取具体属性
         return "通过已有路径无法获取控件属性！"
 
+class FirefoxHooker:
+    def __init__(self):
+        import hooker.LocalFirefox as LF
+        self.driver = None
+
+        self.dataFile = parentDirPath + "\hooker\params.data"
+        f = open(self.dataFile, 'rb')
+        params = pickle.load(f)
+        print(params)
+
+        self.driver = LF.myWebDriver(service_url=params["server_url"],
+            session_id=params["session_id"])
+
+        self.vk_code = {
+            'shift': 0X10,
+            'ctrl': 0x11,
+            'u': 0x55,
+        }
+
+    def keyDown(self, KeyboardKeys):
+        # 按下按键
+        win32api.keybd_event(self.vk_code[KeyboardKeys], 0, 0, 0)
+
+    def keyUp(self, KeyboardKeys):
+        # 释放按键
+        win32api.keybd_event(self.vk_code[KeyboardKeys], 0, win32con.KEYEVENTF_KEYUP, 0)
+
+    def getXpath(self):
+        try:
+            time.sleep(0.5)     # 确保获取最新的xpath
+            for i in range(3):
+                try:
+                    el = self.driver.find_element_by_id("xpath-content")
+                    return el.text
+                except:
+                    if i != 2:
+                        time.sleep(0.3)
+                    else:
+                        raise Exception("请检查 xpath finder 状态！")
+        except Exception as e:
+            raise e
 
 if __name__ == "__main__":
     # loopToHook()

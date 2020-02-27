@@ -26,46 +26,46 @@ auto.Logger.WriteLine("-----\n[%s %s] 开始执行工程 '%s'"
 PF = PublicFunc()
 logDict = PF.readFromLog()
 
-AC = AppControl()
-AC.dict = logDict
+browser = PageAction()
+win = AppControl()
+win.dict = logDict
 
 # ---------- 以上为公共流程 ----------
 if __name__ == "__main__":
     # ----- Windows -----
 
-    # # AC.openApp("D:\SAP\SAPgui\saplogon.exe")
-    # # AC.objControl("SAP-登陆环境", "点击")
-    # # AC.objControl("SAP-登陆按钮", "点击")
-    # # AC.objControl("SAP-登陆按钮", "点击")
-    # # AC.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
+    # # win.openApp("D:\SAP\SAPgui\saplogon.exe")
+    # # win.objControl("SAP-登陆环境", "点击")
+    # # win.objControl("SAP-登陆按钮", "点击")
+    # # win.objControl("SAP-登陆按钮", "点击")
+    # # win.objControl("SAP-登陆密码输入框", "输入", "1234qwer")
     #
-    # # AC.killApp("saplogon.exe")
+    # # win.killApp("saplogon.exe")
 
 
-    AC.appName = "计算器"
-    AC.openApp("Calc.exe")
-    # AC.objControl("计算器-侧边栏").click()
-    # # AC.objControl("计算器-科学", "点击")
-    AC.objControl("计算器-5").click()
-    AC.objControl("计算器-×").click()
-    AC.objControl("计算器-8").click()
-    AC.objControl("计算器-等于").click()
+    # win.appName = "计算器"
+    # win.openApp("Calc.exe")
+    # # win.objControl("计算器-侧边栏").click()
+    # # # win.objControl("计算器-科学", "点击")
+    # win.objControl("计算器-5").click()
+    # win.objControl("计算器-×").click()
+    # win.objControl("计算器-8").click()
+    # win.objControl("计算器-等于").click()
 
 
-    # AC.openApp("notepad.exe")
-    # AC.objControl("记事本-格式", "点击")
-    # AC.objControl("记事本-字体", "点击")
-    # AC.objControl("记事本-字体-倾斜", "点击")
-    # AC.objControl("记事本-字体-确认按钮", "点击")
+    # win.openApp("notepad.exe")
+    # win.objControl("记事本-格式", "点击")
+    # win.objControl("记事本-字体", "点击")
+    # win.objControl("记事本-字体-倾斜", "点击")
+    # win.objControl("记事本-字体-确认按钮", "点击")
     # # time.sleep(2)
-    # AC.objControl("计算器-编辑框", "点击")
-    # AC.objControl("计算器-编辑框", "输入", "test")
+    # win.objControl("计算器-编辑框", "点击")
+    # win.objControl("计算器-编辑框", "输入", "test")
 
 
     # ----- Chrome -----
-    # PA = PageAction()
-    # PA.open_browser("chrome", capture=True)
-    # PA.visit_url("http://cdwp.cnbmxinyun.com")
+    browser.open_browser("Chrome")
+    browser.visit_url("http://cdwp.cnbmxinyun.com")
     #
     # # OM = ObjectMap(PA.driver)
     #
@@ -82,11 +82,13 @@ if __name__ == "__main__":
     # # PA.sendkeys("123456", "xpath", '//input[@ng-model="password3"]', 0.5)
     #
     #
-    # # PA.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
-    # # PA.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
-    # # PA.findElement("text", '登录').sendkeys("abc")
+    # # browser.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
+    # # browser.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
+    # # browser.findElement("text", '登录').sendkeys("abc")
     #
-    # PA.localElement("登陆-用户名", 1).sendkeys("abc")
-    # PA.captureScreen()
-    # PA.localElement("登陆-密码1", 1).sendkeys("123456")
-    # PA.localElement("登陆-按钮").click()
+    browser.localElement("登陆-用户名", 1).sendkeys("abc")
+    attr = browser.localElement("登陆-用户名", 1).get_attribute("class")
+    print(attr)
+    browser.captureScreen()
+    browser.localElement("登陆-密码1", 1).sendkeys("123456")
+    browser.localElement("登陆-按钮").click()
