@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 # from config.ErrConfig import CNBMException, handleErr, capture_screen
 from config.ErrConfig import *
 from time import sleep
@@ -31,11 +32,26 @@ class ObjectMap:
         }
 
     def findElebyMethod(self, locateType, locatorExpression, errInfo="", timeout=10):
+        ''' 在 timeout 内，找到元素（显式等待页面元素出现在DOM中，并且可见，存在则返回该页面元素对象） '''
         errInfo = "%s 秒内未找到 %s 为 %s 的元素！" %(timeout, locateType, locatorExpression) + errInfo
         try:
             locateType = locateType.lower()
             objStr = 'WebDriverWait(self.driver, timeout).until(' \
                      'EC.visibility_of_element_located((By.%s, ' \
+                     '%s)), errInfo)' %(self.dict[locateType][0], self.dict[locateType][1])
+            specify_element = eval(objStr)
+
+            return specify_element
+        except Exception as e:
+            raise e
+
+    def findElePresented(self, locateType, locatorExpression, errInfo="", timeout=10):
+        ''' 在 timeout 内，找到元素（显式等待页面元素出现在DOM中，但不一定可见，存在则返回元素对象） '''
+        errInfo = "%s 秒内未找到 %s 为 %s 的元素！" %(timeout, locateType, locatorExpression) + errInfo
+        try:
+            locateType = locateType.lower()
+            objStr = 'WebDriverWait(self.driver, timeout).until(' \
+                     'EC.presence_of_element_located((By.%s, ' \
                      '%s)), errInfo)' %(self.dict[locateType][0], self.dict[locateType][1])
             specify_element = eval(objStr)
 
@@ -159,104 +175,13 @@ class KeyboardKeys:
         KeyboardKeys.keyUp(key1)
 
 
-class WaitUtil:
-    # 映射定位方式字典对象
-    def __init__(self,driver):
-        self.locationTyoeDict = {
-            "xpath":By.XPATH,
-            "id":By.ID,
-            "name":By.NAME,
-            "css_selector":By.CSS_SELECTOR,
-            "class_name":By.CLASS_NAME,
-            "tag_name":By.TAG_NAME,
-            "link_text":By.LINK_TEXT,
-            "partial_link_text":By.PARTIAL_LINK_TEXT
-        }
-        # 初始化driver
-        self.driver = driver
-        # 创建显式等待实例对象,等待时间待全局化处理
-        self.wait = WebDriverWait(self.driver, 10)
-
-    def presenceOfElementLocated(self,locatorMethod, locatorExpression):
-        '''
-        显式等待页面元素出现在DOM中，但不一定可见，存在则返回元素对象
-        :param locatorMethod: 定位方法
-        :param locatorExpression: 定位表达式
-        :param args:
-        :return: 页面元素对象
-        '''
-        errInfo = "未找到 '%s' 为 '%s' 的元素！" %(locatorMethod, locatorExpression)
-        try:
-            if locatorMethod.lower() in self.locationTyoeDict:
-                element = self.wait.until(
-                    EC.presence_of_element_located((self.locationTyoeDict[locatorMethod.lower()], locatorExpression)), errInfo)
-                return element
-            else:
-                raise TypeError(u'未找到定位方式，请确认定位方法使用是否正确')
-        except Exception as e:
-            raise e
-
-    def visibilityOfElementLocated(self,locationType, locationExpression):
-        '''
-        显式等待页面元素出现在DOM中，并且可见，存在则返回该页面元素对象
-        :param locationType: 定位方法
-        :param locationExpression: 定位表达式
-        :param args:
-        '''
-        errInfo = "未找到 '%s' 为 '%s' 的元素！" %(locationType, locationExpression)
-        try:
-            el = self.wait.until(EC.visibility_of_element_located((self.locationTyoeDict[locationType.lower()],
-                                                                   locationExpression)), errInfo)
-            print('********** 元素是否可操作：',el.is_enabled()," **********")
-            sleep(0.5)
-            # return el
-        except Exception as e:
-            raise e
-
-    def frameToBeAvailableAndSwitchToIt(self,locationType, locationExpression):
-        '''
-        检查frame是否存在，存在则切换到frame控件中
-        :param locationType: 定位方法
-        :param LocationExpression: 定位表达式
-        :param args:
-        :return: None
-        '''
-        errInfo = "未找到 '%s' 为 '%s' 的元素！" %(locationType, locationExpression)
-        try:
-            self.wait.until(
-                EC.frame_to_be_available_and_switch_to_it((self.locationTyoeDict[locationType.lower()],locationExpression)), errInfo)
-        except Exception as e:
-            # 抛出异常给上层调用者
-            raise e
-
-
 class PageAction:
-    '''
-    1、浏览器操作:open_browser、visit_url、close_browser、close_page、switch_to_frame、switch_to_default_content、
-                maximize_browser、switch_to_now_window、refresh_page、scroll_slide_field；
-    2、常规操作：clear、specObjClear、click_Obj、click_SpecObj、sendkeys_To_Obj、sendkeys_To_SpecObj、sendkeys_to_elements、SelectValues、
-        xpath_combination_click、xpath_combination_click_loop、xpath_combination_send_keys、xpath_combination_click_send_keys_loop、
-        xpath_combination_send_keys_click_loop、menu_select、
-        capture_screen（setValueByTextAside、selectValueByTextAside,capture_screen_old）；
-    3、辅助定位：highlightElement、highlightElements、whichIsEnabled、whichIsDisplayed；
-    4、获取信息：getTitle、getPageSource、getAttribute、getDate_Now、getDateCalcuated、getTextInTable；
-    5、断言及判断：assert_string_in_pagesourse、assert_title、assert_list；
-    6、剪贴板操作：paste_string、press_key；
-    7、等待：loadPage、sleep、waitPresenceOfElementLocated、waitVisibilityOfElementLocated、wait_elements_vanish
-            waitFrameToBeAvailableAndSwitchToIt；
-    8、鼠标键盘模拟：moveToElement、init_Mouse、pageKeySimulate、get_clipboard_return；
-    9、外部程序调用：runProcessFile、page_upload_file；
-    10、字符串操作：randomNum、pinyinTransform、compose_JSON；
-    11、带判断关键字：ifExistThenClick、ifExistThenSendkeys、BoxHandler、ifExistThenSelect、ifExistThenSetData、ifExistThenReturnAttribute_pinyin、
-        ifExistThenReturnOperateValue、ifExistThenChooseOperateValue、ifExistThenChooseOperateValue_diffPosition、
-        ifExistThenPass_xpath_combination
-    12、JS相关：setDataByJS；
-    '''
-
     _driver = None
     def __init__(self):
         # self.driver = None
         self.timeout = 10
+        self.pageSource = None
+        self.title = None
 
     @CNBMException
     def open_browser(self, browserName):
@@ -279,12 +204,10 @@ class PageAction:
             elif browserName.lower() == 'firefox':
                 driver = webdriver.Firefox()
             # driver对象创建成功，创建等待类实例对象
-            waitUtil = WaitUtil(driver)
             self._driver = driver
         except Exception as e:
             handleErr(e)
             raise e
-
 
     @CNBMException
     def visit_url(self, url):
@@ -334,8 +257,18 @@ class PageAction:
             raise e
 
     @CNBMException
+    def update_page_source(self):
+        ''' 重新获取页面资源 '''
+        try:
+            self.pageSource = self._driver.page_source
+            self.title = self._driver.title
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
     def findElement(self, locationType, locatorExpression, timeout=None):
-        ''' 通过属性值查找控件
+        ''' 通过属性值查找控件（找到即代表元素可见）
         :param locationType: 下拉框控件定位类型
         :param locatorExpression: 下拉框控件定位属性值
         '''
@@ -344,6 +277,22 @@ class PageAction:
             time = timeout if timeout else self.timeout
 
             element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+            return WebElement(self._driver, element)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    def wait_for_presence(self, locationType, locatorExpression, timeout=None):
+        ''' 通过属性值查找控件
+        （找到即代表元素存在于DOM中，并不一定可见！无特殊要求，直接用 findElemrnt 即可）
+        :param locationType: 下拉框控件定位类型
+        :param locatorExpression: 下拉框控件定位属性值
+        '''
+        try:
+            OM = ObjectMap(self._driver)
+            time = timeout if timeout else self.timeout
+
+            element = OM.findElePresented(locationType, locatorExpression, timeout=time)
             return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
@@ -404,6 +353,59 @@ class PageAction:
     def removeAttribute(self, element, attributeName):
         self._driver.execute_script("arguments[0].removeAttribute(arguments[1])",
                               element, attributeName)
+
+    @CNBMException
+    def switch_to_frame(self, locationType, frameLocatorExpression, timeout=None):
+        ''' 切换到指定frame
+        :param locationType: frame定位类型
+        :param frameLocatorExpression: frame定位值
+        '''
+        try:
+            frame = self.findElement(locationType, frameLocatorExpression, timeout=timeout)
+            self._driver.switch_to.frame(frame)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def switch_to_default_content(self):
+        ''' 切换到主文档（切到frame中之后，便不能继续操作主文档的元素，若想操作主文档内容，则需切回主文档） '''
+        try:
+            self._driver.switch_to.default_content()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def switch_to_window(self, name=None, num=0):
+        ''' 切换到指定的页签（若传入页签名，则依据名称查找；否则依据索引查找，默认切换到第一个页签）
+        :param name: 页签名称
+        :param num: 页签索引号
+        '''
+        try:
+            if name:
+                self._driver.switch_to.window(name)
+            else:
+                all_handles = self._driver.window_handles
+                self._driver.switch_to.window(all_handles[num])
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def set_date(self, locationType, locatorExpression, inputTime):
+        ''' 通过js修改控件“readonly”属性并设置日期
+        :param locationType: 控件定位类型
+        :param locatorExpression: 控件定位值
+        :param inputTime: 日期值（格式须与系统对应）
+        '''
+        try:
+            element = self.findElement(locationType, locatorExpression)
+            self.removeAttribute(element, "readonly")
+            element.sendkeys(inputTime)
+        except Exception as e:
+            handleErr(e)
+            raise e
 
 
 class WebElement:
@@ -475,6 +477,26 @@ class WebElement:
             handleErr(e)
             raise e
 
+    @CNBMException
+    def move(self):
+        ''' 移动鼠标光标至元素上 '''
+        try:
+            ActionChains(self.driver).move_to_element(self.element).perform()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def simulate_keys(self, keyType):
+        ''' 模拟键盘向控件发送指定键
+        :param keyType: 键类型，须与 “selenium.webdriver.common.keys” 中的键对应
+        '''
+        try:
+            keyStr = "self.element.send_keys(Keys.%s)" %keyType
+            eval(keyStr)
+        except Exception as e:
+            handleErr(e)
+            raise e
 
 if __name__ == "__main__":
     # driver = webdriver.Chrome()

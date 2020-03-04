@@ -14,7 +14,7 @@ def getCurrentDate():
 def getCurrentTime():
     # 获取当前时间，确保日期中无非法字符，否则无法生成截图文件
     timeStr = datetime.now()
-    nowTime = timeStr.strftime('%H:%M:%S.%f')
+    nowTime = timeStr.strftime('%H_%M_%S.%f')
     return nowTime
 
 def createCurrentDateDir(parentDir):
