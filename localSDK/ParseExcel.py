@@ -394,7 +394,7 @@ class ParseSheet:
     @CNBMException
     def paste(self, data, startRng=None):
         '''
-        拆分单元格
+        复制单元格区域
         :param data: （tuple）原始数据单元格
         :param startRng: 新表中粘贴的起始单元格（不填则与原表位置一致进行粘贴）
         '''

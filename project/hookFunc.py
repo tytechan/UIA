@@ -7,8 +7,8 @@ if __name__ == "__main__":
     # PF.openChrome()
     #
     # # 打开自调Firefox（须保证geckodriver路径已配环境变量）
-    # profileDir = "C:\\Users\\47612\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\ytnvvpv8.default-release"
-    # PF.openFirefox(profileDir)
+    profileDir = "C:\\Users\\47612\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\ytnvvpv8.default-release"
+    PF.openFirefox(profileDir)
     #
     # # 开始录制
     PF.startHook()
