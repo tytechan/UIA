@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from localSDK.BasicFunc import *
 from localSDK.BrowserFunc import *
+from localSDK.ParseExcel import *
 from config.DirAndTime import *
 import config.Globals as cf
 import uiautomation as auto
@@ -29,6 +30,7 @@ logDict = PF.readFromLog()
 browser = PageAction()
 win = AppControl()
 win.dict = logDict
+excel = ParseExcel()
 
 # ---------- 以上为公共流程 ----------
 if __name__ == "__main__":
