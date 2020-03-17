@@ -190,7 +190,6 @@ class PageAction:
         :return: 全局变量driver
         '''
         try:
-            global waitUtil
             if browserName.lower() == 'ie':
                 driver = webdriver.Ie()
             elif browserName.lower() == 'chrome':
