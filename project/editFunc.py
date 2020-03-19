@@ -29,6 +29,7 @@ logDict = PF.readFromLog()
 
 browser = PageAction()
 win = AppControl()
+key = KeyboardKeys()
 win.dict = logDict
 excel = ParseExcel()
 

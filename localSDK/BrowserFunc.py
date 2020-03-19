@@ -122,59 +122,6 @@ class ObjectMap:
                               element, attributeName)
 
 
-class KeyboardKeys:
-    ''' 模拟键盘按键类
-    （瞬时按键未封装，可直接调用）如：
-    obj.send_keys(Keys.CONTROL, Keys.SHIFT, "x")
-    '''
-    VK_CODE = {
-        'enter': 0x0D,
-        'shift': 0x10,
-        'ctrl': 0x11,
-        'a': 0x41,
-        'c': 0x43,
-        'v': 0x56,
-        'x': 0x58,
-        'F1': 112,
-        'F2': 113,
-        'F3': 114,
-        'F4': 115,
-        'F5': 116,
-        'F6': 117,
-        'F7': 118,
-        'F8': 119,
-        'F9': 120,
-        'F10': 121,
-        'F11': 122,
-        'F12': 123,
-        "Tab": 9,
-    }
-
-    @staticmethod
-    def keyDown(keyName):
-        # 按下按键（长按）
-        win32api.keybd_event(KeyboardKeys.VK_CODE[keyName],0,0,0)
-
-    @staticmethod
-    def keyUp(keyName):
-        # 释放按键
-        win32api.keybd_event(KeyboardKeys.VK_CODE[keyName],0,win32con.KEYEVENTF_KEYUP,0)
-
-    @staticmethod
-    def oneKey(key):
-        # 模拟单个按键
-        KeyboardKeys.keyDown(key)
-        KeyboardKeys.keyUp(key)
-
-    @staticmethod
-    def twoKeys(key1,key2):
-        # 模拟两个组合按键
-        KeyboardKeys.keyDown(key1)
-        KeyboardKeys.keyDown(key2)
-        KeyboardKeys.keyUp(key2)
-        KeyboardKeys.keyUp(key1)
-
-
 class PageAction:
     _driver = None
     def __init__(self):

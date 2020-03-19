@@ -5161,3 +5161,28 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
     ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (1529,-7,3591,1119)[2062x1126]    Name: UIA [E:\python相关\RPA\UIA] - ...\project\hookFunc.py [UIA] - PyCharm    Handle: 0x190A88(1641096)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
 2020-02-28 16:10:58.990 automation.py[110] main -> Ends
 
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 10:21:41.283 automation.py[75] main -> Starts, Current Cursor Position: (469, 513)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: new download - Google Chrome    Handle: 0x4092E(264494)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (91,143,1088,622)[997x479]    Name: 另存为    Handle: 0x40264(262756)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: DUIViewWndClassName    AutomationId:     Rect: (98,207,1081,556)[983x349]    Name:     Handle: 0x70BA0(461728)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: HWNDView    AutomationId: main    Rect: (98,207,1081,556)[983x349]    Name: 浏览器窗格    Handle: 0x20C0A(134154)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: PaneControl    ClassName: Element    AutomationId: FolderLayoutContainer    Rect: (98,239,1081,556)[983x317]    Name: 文件夹布局窗格    Handle: 0x0(0)    Depth: 5    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                        ControlType: PaneControl    ClassName: PreviewBackground    AutomationId: BackgroundClear    Rect: (98,491,1081,556)[983x65]    Name: 详细信息窗格    Handle: 0x0(0)    Depth: 6    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                            ControlType: ComboBoxControl    ClassName: AppControlHost    AutomationId: FileNameControlHost    Rect: (223,503,1075,524)[852x21]    Name: 文件名:    Handle: 0x40BAE(265134)    Depth: 7    ValuePattern.Value: 商务通知单(进供货)20191126150126.xlsm    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.Collapsed    SupportedPattern: ValuePattern ExpandCollapsePattern LegacyIAccessiblePattern
+                                ControlType: EditControl    ClassName: Edit    AutomationId: 1001    Rect: (225,505,1056,522)[831x17]    Name: 文件名:    Handle: 0x609AE(395694)    Depth: 8    ValuePattern.Value: 商务通知单(进供货)20191126150126.xlsm    SupportedPattern: ValuePattern LegacyIAccessiblePattern
+2020-03-19 10:21:42.579 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 10:22:17.024 automation.py[75] main -> Starts, Current Cursor Position: (527, 543)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: new download - Google Chrome    Handle: 0x4092E(264494)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (91,143,1088,622)[997x479]    Name: 另存为    Handle: 0x40264(262756)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: PaneControl    ClassName: DUIViewWndClassName    AutomationId:     Rect: (98,207,1081,556)[983x349]    Name:     Handle: 0x70BA0(461728)    Depth: 3    SupportedPattern: LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: HWNDView    AutomationId: main    Rect: (98,207,1081,556)[983x349]    Name: 浏览器窗格    Handle: 0x20C0A(134154)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: PaneControl    ClassName: Element    AutomationId: FolderLayoutContainer    Rect: (98,239,1081,556)[983x317]    Name: 文件夹布局窗格    Handle: 0x0(0)    Depth: 5    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                        ControlType: PaneControl    ClassName: PreviewBackground    AutomationId: BackgroundClear    Rect: (98,491,1081,556)[983x65]    Name: 详细信息窗格    Handle: 0x0(0)    Depth: 6    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                            ControlType: ComboBoxControl    ClassName: AppControlHost    AutomationId: FileTypeControlHost    Rect: (223,526,1075,547)[852x21]    Name: 保存类型:    Handle: 0x20C26(134182)    Depth: 7    ValuePattern.Value: Microsoft Excel Macro-Enabled Worksheet (*.xlsm)    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.Expanded    SupportedPattern: ValuePattern ExpandCollapsePattern LegacyIAccessiblePattern
+2020-03-19 10:22:17.280 automation.py[110] main -> Ends
+

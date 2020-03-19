@@ -12,28 +12,28 @@ from config.ErrConfig import *
 class SAP:
     def __init__(self):
         self.waitTime = 10          # 默认最长等待时间为10s
+        self.application = None
         self.session = None
         self.connection = None
         self.activewindow = None
         self.element = None
         self.shell = None
 
-    def wait(self, objStr, time=3):
-        for i in range(time):
+    def wait(self, objStr, *args):
+        for i in range(3):
             try:
                 obj = eval(objStr)
-                print("SAP成功启动！")
                 assert type(obj) == win32com.client.CDispatch
                 return obj
             except Exception as e:
-                if i + 1 < time:
+                if i < 2:
                     continue
                 else:
                     raise e
 
-    @CNBMException
+    # @CNBMException
     def open(self, path, env):
-        ''' 调起SAP服务
+        ''' 调起SAP服务3
         :param path: SAP执行文件路径
         :param env: 本地登陆环境名
         :return: 全局变量session
@@ -43,14 +43,29 @@ class SAP:
             time.sleep(1)
 
             SapGuiAuto = self.wait("win32com.client.GetObject('SAPGUI')")
-            application = self.wait("SapGuiAuto.GetScriptingEngine")
-            self.connection = self.wait("application.OpenConnection(env, True)")
-            self.session = self.wait("connection.Children(0)")
+            self.application = self.wait("args[0].GetScriptingEngine", SapGuiAuto)
+            self.connection = self.wait("self.application.OpenConnection(str(args[0]), True)", env)
+            self.session = self.wait("self.connection.Children(0)")
         except Exception as e:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
+    def switchSession(self, connectionIndex=-1, sessionIndex=-1):
+        '''
+        切换到已登录的任意connection下的任意session
+        :param connectionIndex: 登陆情况序号，默认为最后一次登陆环境
+        :param sessionIndex: 打开的窗口序号，默认为最后一个打开的窗口
+        :return:
+        '''
+        try:
+            self.connection = self.application.connections[connectionIndex]
+            self.session = self.connection.sessions[sessionIndex]
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    # @CNBMException
     def login(self, userName, passWord):
         ''' 登陆SAP '''
         try:
@@ -59,7 +74,8 @@ class SAP:
             self.getObj("id", "wnd[0]").keys("Enter")
             try:
                 # 等待“多次登陆”弹出框2s
-                self.waitUntil(session.Children.count == 2, "False", valueReturned="pass", maxSec=2)
+                self.waitUntil(self.session.Children.count == 2, "False",
+                               valueReturned="pass", maxTime=2)
                 # 父对象，'/app/con[i]'
                 ''' 方法一 .Parent '''
                 # p = self.session.Parent
@@ -88,13 +104,13 @@ class SAP:
             except:
                 pass
 
-            self.getObj("name", "wnd[0]", "GuiMainWindow", text="SAP 轻松访问")
-            # print("SAP成功登陆！")
+            # 等待主页输入框，即登陆成功
+            self.getObj("name", "okcd", "GuiOkCodeField")
         except Exception as e:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def createNewSession(self):
         '''
         创建新session（窗口）
@@ -108,19 +124,17 @@ class SAP:
             for i in range(2):
                 self.updateActiveWindow()
                 try:
-                    self.getObj("name", "titl", "GuiTitlebar",
-                                text="SAP 轻松访问 中建信息", valueReturned="pass", maxTime=3)
+                    self.getObj("name", "okcd", "GuiOkCodeField", valueReturned="pass", maxTime=3)
                     return
                 except:
                     pass
             self.updateActiveWindow()
-            self.getObj("name", "titl", "GuiTitlebar",
-                        text="SAP 轻松访问 中建信息", maxTime=3)
+            self.getObj("name", "okcd", "GuiOkCodeField", maxTime=3)
         except Exception as e:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def updateActiveWindow(self):
         '''
         更新ActiveWindow
@@ -131,10 +145,10 @@ class SAP:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def getObj(self, case, infoA, infoB=None, text=None, valueReturned="err", maxTime=None):
         '''
-        循环等待对象
+        循环等待并返回对象（可做等待函数用）
         :param case: 属性（id/name）|属性值
         :param infoA: id值/name值
         :param infoB: 选填，case为name时，对应控件type属性值
@@ -160,7 +174,7 @@ class SAP:
                                     break
                                 assert objs.count != j + 1
                         else:
-                            self.element = self.activewindow.FindByName(infoB, infoB)
+                            self.element = self.activewindow.FindByName(infoA, infoB)
                     return SAPElement(self.activewindow, self.element)
                 except:
                     try:
@@ -178,7 +192,7 @@ class SAP:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def getShell(self, case, infoA, infoB=None, text=None):
         '''
         获取table类型对象（分type为GuiShell及常规table两种类型）
@@ -194,7 +208,7 @@ class SAP:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def waitUntil(self, event, condition, valueReturned="err", maxTime=None):
         '''
         循环等待（event是否发生与condition一致时，等待，否则跳出）
@@ -224,8 +238,11 @@ class SAP:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def closeSessions(self):
+        '''
+        关闭当前connection下所有session，并注销登陆
+        '''
         try:
             if not self.connection:
                 return
@@ -253,7 +270,7 @@ class SAP:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def kill(self):
         '''
         结束SAP（所有）进程
@@ -346,7 +363,7 @@ class SAPElement:
             "Shift+F9": 21
         }
 
-    @CNBMException
+    # @CNBMException
     def click(self):
         '''
         左击控件
@@ -357,18 +374,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
-    def click(self):
-        '''
-        双击控件
-        '''
-        try:
-            self.element.doubleClick()
-        except Exception as e:
-            handleErr(e)
-            raise e
-
-    @CNBMException
+    # @CNBMException
     def sendkeys(self, text):
         '''
         输入框输值
@@ -380,7 +386,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def select(self, text):
         '''
         常规下拉框选择
@@ -392,7 +398,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def set(self):
         '''
         选择控件
@@ -403,7 +409,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def choose(self, text):
         '''
         勾选框选择
@@ -421,7 +427,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def focus(self):
         '''
         聚焦控件
@@ -432,14 +438,14 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def keys(self, text):
         '''
         模拟键盘输值
         :param text: 参照self.keys
         '''
         try:
-            if text in self.keys.keys():
+            if text in self.keysDict.keys():
                 self.element.sendVKey(self.keysDict[text])
             else:
                 self.element.sendVKey(text)
@@ -447,7 +453,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def close(self):
         '''
         关闭控件
@@ -458,7 +464,7 @@ class SAPElement:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def text(self):
         '''
         获取控件文本
@@ -474,7 +480,7 @@ class SAPGuiShell:
     def __init__(self, shell):
         self.shell = shell
 
-    @CNBMException
+    # @CNBMException
     def sendkeys(self, row, colInfo, text):
         '''
         向GuiShell类型table的具体行列输值
@@ -488,7 +494,7 @@ class SAPGuiShell:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def pressButton(self, btnType):
         '''
         向GuiShell类型table的具体行列输值
@@ -505,7 +511,7 @@ class SAPGuiShell:
             handleErr(e)
             raise e
 
-    @CNBMException
+    # @CNBMException
     def selectMenuItem(self, menuType):
         '''
         向GuiShell类型table的具体行列输值
@@ -520,4 +526,36 @@ class SAPGuiShell:
 
 
 if __name__ == "__main__":
-    pass
+    from localSDK.BasicFunc import *
+    key = KeyboardKeys()
+
+    SAP = SAP()
+    SAP.open(r"D:\SAP\SAPgui\saplogon.exe", "ET3")
+    SAP.login("itc", "4rfv%TGB")
+
+    SAP.getObj("id", "tbar[0]/okcd").sendkeys("ME21N")
+    SAP.getObj("id", "tbar[0]/btn[0]").click()
+    SAP.getObj("name", "wnd[0]", "GuiMainWindow")
+    time.sleep(2)
+
+    SAP.getObj("id", "usr").focus()
+    key.twoKeys("ctrl", "F2")
+    time.sleep(0.5)
+    key.twoKeys("ctrl", "F3")
+    time.sleep(0.5)
+
+    # 进入”基本信息“栏
+    SAP.getObj("name", "TABHDT11", "GuiTab", text="基本信息").set()
+    contractNum = "test123"
+    SAP.getObj("name", "EKKO_CI-ZZPO", "GuiTextField").sendkeys(contractNum)    # 供应商订单号
+    SAP.getObj("name", "EKKO_CI-ZZYS", "GuiComboBox").select("自提-陆运")    # 运输方式
+    SAP.getObj("name", "EKKO_CI-ZZCP", "GuiComboBox").select("F2")    # 产品线
+    SAP.getObj("name", "EKKO_CI-ZSWRY", "GuiCTextField").sendkeys("罗莎莎")    # 商务人员
+
+    # 进入”机构数据“栏
+    SAP.getObj("name", "TABHDT9", "GuiTab", text="机构数据").set()
+    SAP.getObj("id", "tbar[0]/btn[0]")  # 等待页面跳转
+    SAP.getObj("name", "MEPO1222-EKORG", "GuiCTextField").sendkeys("1000")    # 采购组织编号
+    SAP.getObj("name", "MEPO1222-EKGRP", "GuiTextField").sendkeys("110")    # 采购组编号
+    SAP.getObj("name", "MEPO1222-BUKRS", "GuiTextField").sendkeys("1000")    # 公司代码
+
