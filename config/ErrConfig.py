@@ -26,9 +26,9 @@ def CNBMException(func):
                         if count == 0:
                             continue
                         if count == 1:
-                            funcStr += "'%s'" %string if isinstance(string, str) else ", %s" %string
+                            funcStr += "'%s'" %string if isinstance(string, str) else "%s" %str(string)
                         else:
-                            funcStr += ", '%s'" %string if isinstance(string, str) else ", %s" %string
+                            funcStr += ", '%s'" %string if isinstance(string, str) else ", %s" %str(string)
                 if kwargs:
                     for key in kwargs.keys():
                         addStr = ", %s='%s'" %(key, kwargs[key])

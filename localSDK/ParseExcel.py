@@ -17,10 +17,31 @@ class ParseExcel:
         try:
             self.workbook = openpyxl.load_workbook(filaPath)
             self.excelFile = filaPath
-            return self.workbook
+            return ParseSheet(self.workbook, self.excelFile)
         except Exception as e:
             handleErr(e)
             raise e
+
+    @CNBMException
+    def create(self, filePath):
+        ''' 创建新工作簿并保存
+        :param filePath: 文件保存路径
+        '''
+        try:
+            self.workbook = openpyxl.Workbook()
+            self.excelFile = filePath
+            self.workbook.save(self.excelFile)
+            return ParseSheet(self.workbook, self.excelFile)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+
+class ParseSheet:
+    def __init__(self, workbook, excelFile):
+        self.workbook = workbook
+        self.excelFile = excelFile
+        self.sheet = None
 
     @CNBMException
     def createSheet(self, title=None, index=None):
@@ -31,8 +52,8 @@ class ParseExcel:
         '''
         try:
             self.sheet = self.workbook.create_sheet(title=title, index=index)
-            self.workbook.save(self.excelFile)
-            return ParseSheet(self.workbook, self.excelFile, self.sheet)
+            self.save()
+            return ParseCell(self.workbook, self.excelFile, self.sheet)
         except Exception as e:
             handleErr(e)
             raise e
@@ -49,7 +70,7 @@ class ParseExcel:
                 # sheet = self.workbook.get_sheet_by_name(sheetName)
             else:
                 self.sheet = self.workbook.worksheets[sheetIndex]
-            return ParseSheet(self.workbook, self.excelFile, self.sheet)
+            return ParseCell(self.workbook, self.excelFile, self.sheet)
         except Exception as e:
             handleErr(e)
             raise e
@@ -64,7 +85,7 @@ class ParseExcel:
         try:
             self.getSheet(sheetName, sheetIndex)
             self.workbook.remove(self.sheet)
-            self.workbook.save(self.excelFile)
+            self.save()
         except Exception as e:
             handleErr(e)
             raise e
@@ -80,7 +101,7 @@ class ParseExcel:
         try:
             self.getSheet(sheetName, sheetIndex)
             self.sheet.title = newName
-            self.workbook.save(self.excelFile)
+            self.save()
         except Exception as e:
             handleErr(e)
             raise e
@@ -115,21 +136,30 @@ class ParseExcel:
             raise e
 
     @CNBMException
-    def create(self, filePath):
-        ''' 创建新工作簿并保存
-        :param filePath: 文件保存路径
+    def save(self):
+        '''
+        保存文件
         '''
         try:
-            self.workbook = openpyxl.Workbook()
-            self.excelFile = filePath
             self.workbook.save(self.excelFile)
-            return self.workbook
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def close(self):
+        '''
+        关闭文件，默认保存
+        '''
+        try:
+            self.save()
+            self.workbook.close()
         except Exception as e:
             handleErr(e)
             raise e
 
 
-class ParseSheet:
+class ParseCell:
     def __init__(self, workbook, excelFile, sheet):
         self.workbook = workbook
         self.excelFile = excelFile
@@ -420,41 +450,18 @@ class ParseSheet:
             handleErr(e)
             raise e
 
-    @CNBMException
-    def save(self):
-        '''
-        保存文件
-        '''
-        try:
-            self.workbook.save(self.excelFile)
-        except Exception as e:
-            handleErr(e)
-            raise e
-
-    @CNBMException
-    def close(self):
-        '''
-        关闭文件，默认保存
-        '''
-        try:
-            self.save()
-            self.workbook.close()
-        except Exception as e:
-            handleErr(e)
-            raise e
-
 
 if __name__ == "__main__":
     # 调试前先注释 @CNBMException
     Excel = ParseExcel()
     # 创建新工作簿
-    # Excel.create(r"E:\python相关\RPA\UIA\abc.xlsx")
+    # wb0 = Excel.create(r"E:\python相关\RPA\UIA\localSDK\abc.xlsx")
 
     # 操作已有工作簿
-    wb = Excel.loadWorkBook(r"E:\python相关\RPA\UIA\test.xlsx")
-    print("所有sheet列表：", Excel.sheets())
+    wb = Excel.loadWorkBook(r"E:\python相关\RPA\UIA\localSDK\test.xlsx")
+    print("所有sheet列表：", wb.sheets())
 
-    sht = Excel.getSheet("Sheet1")
+    sht = wb.getSheet("Sheet1")
     print("最大行数：%s" %sht.rowCount())
     print("最小行数：%s" %sht.minRowNum())
     print("最大列数：%s" %sht.colCount())
@@ -492,12 +499,12 @@ if __name__ == "__main__":
     sht.unmerge("D3", "E4")
 
     # 写值
-    # sht.write("test", "G4")
-    # sht.write("test1", rowNo=7, colsNo=5)
-    #
+    sht.write("test", "G4")
+    sht.write("test1", rowNo=7, colsNo=5)
+
     # 创建sheet
-    sht1 = Excel.createSheet("test")
-    sht2 = Excel.createSheet("test1", 0)
+    sht1 = wb.createSheet("test")
+    sht2 = wb.createSheet("test1", 0)
 
     # 复制
     data = sht.range("B2", "D3")
@@ -505,15 +512,15 @@ if __name__ == "__main__":
     sht2.paste(data, "D5")
 
     # # 删除sheet
-    # Excel.remove("test")
-    # Excel.remove(sheetIndex=0)
+    # wb.remove("test")
+    # wb.remove(sheetIndex=0)
     #
     # # 重命名sheet
-    # Excel.rename("重命名", "Sheet1")
-    # Excel.rename("Sheet1", sheetIndex=0)
-    #
-    # # 运行vba
-    # Excel.runVBA("test")
+    # wb.rename("重命名", "Sheet1")
+    # wb.rename("Sheet1", sheetIndex=0)
 
-    sht.save()
-    sht.close()
+    # 运行vba
+    # wb.runVBA("test")
+
+    # wb.save()
+    wb.close()
