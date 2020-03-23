@@ -5186,3 +5186,84 @@ ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,12
                             ControlType: ComboBoxControl    ClassName: AppControlHost    AutomationId: FileTypeControlHost    Rect: (223,526,1075,547)[852x21]    Name: 保存类型:    Handle: 0x20C26(134182)    Depth: 7    ValuePattern.Value: Microsoft Excel Macro-Enabled Worksheet (*.xlsm)    ExpandCollapsePattern.ExpandCollapseState: ExpandCollapseState.Expanded    SupportedPattern: ValuePattern ExpandCollapsePattern LegacyIAccessiblePattern
 2020-03-19 10:22:17.280 automation.py[110] main -> Ends
 
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 15:48:52.388 automation.py[75] main -> Starts, Current Cursor Position: (653, 294)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: new download - Google Chrome    Handle: 0xB1C78(728184)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (91,143,1088,623)[997x480]    Name: 另存为    Handle: 0x141174(1315188)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (455,249,821,381)[366x132]    Name: 确认另存为    Handle: 0x721D6(467414)    Depth: 3    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: TaskDialog    AutomationId: Window    Rect: (457,274,819,379)[362x105]    Name: 确认另存为    Handle: 0x221D0(139728)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: TextControl    ClassName: Element    AutomationId: ContentText    Rect: (509,289,809,321)[300x32]    Name: 商务通知单(进供货)20191126102040.xlsm 已存在。
+要替换它吗?    Handle: 0x0(0)    Depth: 5    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+2020-03-19 15:48:52.576 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 15:49:11.816 automation.py[75] main -> Starts, Current Cursor Position: (768, 363)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: new download - Google Chrome    Handle: 0xB1C78(728184)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (91,143,1088,623)[997x480]    Name: 另存为    Handle: 0x141174(1315188)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (455,249,821,381)[366x132]    Name: 确认另存为    Handle: 0x721D6(467414)    Depth: 3    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: TaskDialog    AutomationId: Window    Rect: (457,274,819,379)[362x105]    Name: 确认另存为    Handle: 0x221D0(139728)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: CCPushButton    AutomationId: CommandButton_7    Rect: (743,346,809,370)[66x24]    Name: 否(N)    Handle: 0x12242(74306)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2020-03-19 15:49:11.989 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 15:49:37.539 automation.py[75] main -> Starts, Current Cursor Position: (693, 361)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: new download - Google Chrome    Handle: 0xB1C78(728184)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (91,143,1088,623)[997x480]    Name: 另存为    Handle: 0x141174(1315188)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (455,249,821,381)[366x132]    Name: 确认另存为    Handle: 0x721D6(467414)    Depth: 3    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: TaskDialog    AutomationId: Window    Rect: (457,274,819,379)[362x105]    Name: 确认另存为    Handle: 0x221D0(139728)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: CCPushButton    AutomationId: CommandButton_6    Rect: (671,346,737,370)[66x24]    Name: 是(Y)    Handle: 0x1223E(74302)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2020-03-19 15:49:37.702 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 15:57:30.073 automation.py[75] main -> Starts, Current Cursor Position: (707, 362)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (0,0,1280,680)[1280x680]    Name: new download - Google Chrome    Handle: 0x670EF6(6754038)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (7,0,1004,480)[997x480]    Name: 另存为    Handle: 0x49139C(4789148)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (455,249,821,381)[366x132]    Name: 确认另存为    Handle: 0x310E7A(3214970)    Depth: 3    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: TaskDialog    AutomationId: Window    Rect: (457,274,819,379)[362x105]    Name: 确认另存为    Handle: 0x2D0DF2(2952690)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: CCPushButton    AutomationId: CommandButton_6    Rect: (671,346,737,370)[66x24]    Name: 是(Y)    Handle: 0x160E00(1445376)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2020-03-19 15:57:30.311 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-19 15:57:42.682 automation.py[75] main -> Starts, Current Cursor Position: (795, 357)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Chrome_WidgetWin_1    AutomationId:     Rect: (0,0,1280,680)[1280x680]    Name: new download - Google Chrome    Handle: 0x670EF6(6754038)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+        ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (7,0,1004,480)[997x480]    Name: 另存为    Handle: 0x49139C(4789148)    Depth: 2    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+            ControlType: WindowControl    ClassName: #32770    AutomationId:     Rect: (455,249,821,381)[366x132]    Name: 确认另存为    Handle: 0x310E7A(3214970)    Depth: 3    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+                ControlType: PaneControl    ClassName: TaskDialog    AutomationId: Window    Rect: (457,274,819,379)[362x105]    Name: 确认另存为    Handle: 0x2D0DF2(2952690)    Depth: 4    ValuePattern.Value:     SupportedPattern: ValuePattern LegacyIAccessiblePattern
+                    ControlType: ButtonControl    ClassName: CCPushButton    AutomationId: CommandButton_7    Rect: (743,346,809,370)[66x24]    Name: 否(N)    Handle: 0xE0F0C(921356)    Depth: 5    SupportedPattern: InvokePattern LegacyIAccessiblePattern
+2020-03-19 15:57:42.894 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-20 15:24:51.158 automation.py[75] main -> Starts, Current Cursor Position: (755, 562)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Hook.py (E:\python相关\RPA\UIA\hooker)    Handle: 0x7D0CCA(8195274)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-03-20 15:24:51.353 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-20 15:24:57.748 automation.py[75] main -> Starts, Current Cursor Position: (635, 709)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: PaneControl    ClassName: Shell_TrayWnd    AutomationId:     Rect: (0,680,1280,720)[1280x40]    Name: 任务栏    Handle: 0x1012A(65834)    Depth: 1    SupportedPattern: LegacyIAccessiblePattern
+2020-03-20 15:24:57.902 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-20 15:26:14.912 automation.py[75] main -> Starts, Current Cursor Position: (746, 562)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Hook.py (E:\python相关\RPA\UIA\hooker)    Handle: 0x7D0CCA(8195274)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-03-20 15:26:15.076 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-20 15:37:29.259 automation.py[75] main -> Starts, Current Cursor Position: (779, 435)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Hook.py (E:\python相关\RPA\UIA\hooker)    Handle: 0x7D0CCA(8195274)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-03-20 15:37:29.408 automation.py[110] main -> Ends
+
+UIAutomation 2.0.4 (Python 3.5.4, 32 bit)
+2020-03-20 15:37:57.632 automation.py[75] main -> Starts, Current Cursor Position: (950, 399)
+ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern
+    ControlType: WindowControl    ClassName: SunAwtFrame    AutomationId:     Rect: (-7,-7,1288,688)[1295x695]    Name: Hook.py (E:\python相关\RPA\UIA\hooker)    Handle: 0x7D0CCA(8195274)    Depth: 1    SupportedPattern: WindowPattern TransformPattern LegacyIAccessiblePattern
+2020-03-20 15:37:57.787 automation.py[110] main -> Ends
+

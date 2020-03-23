@@ -16,15 +16,6 @@ if __name__ == "__main__":
     # AC.deleteObjFromLog("Windows", "记事本-确认按钮")            # 成功删除本地控件
     # AC.deleteObjFromLog("Windows", "test2")            # 删除本地库没有的控件
 
-    AC.deleteObjFromLog("Windows", "iepath")
-    AC.deleteObjFromLog("Windows", "test")
-    AC.deleteObjFromLog("Windows", "xpath1")
-    AC.deleteObjFromLog("Windows", "xpath2")
-    AC.deleteObjFromLog("Windows", "xpath3")
-    AC.deleteObjFromLog("Windows", "任务栏")
-    AC.deleteObjFromLog("Windows", "微信2")
-    AC.deleteObjFromLog("Windows", "微信输入框")
-
     # ----- Chrome -----
     # AC.checkObjFromLog("Chrome", "abc")               # 本地库无此控件
 
@@ -38,3 +29,6 @@ if __name__ == "__main__":
 
     # AC.deleteObjFromLog("IE", "test")            # 删除本地库没有的控件
     # AC.insertIntoLog("IE", "test-插入", "//abc[@id='123123']", projectPath)       # 插入控件及相关信息
+
+    AC.checkObjFromLog("Windows", "确认另存为-是")
+    AC.checkObjFromLog("Windows", "确认另存为-否")

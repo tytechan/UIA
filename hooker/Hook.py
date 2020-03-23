@@ -239,6 +239,9 @@ class Hooker:
                             FH.keyUp("u")
                             FH.keyUp("shift")
                             FH.keyUp("ctrl")
+            # elif self.autoType == "Windows" and self.pause == True:
+            #     hm.UnhookMouse()
+            #     hm.UnhookKeyboard()
 
         elif keyType == "Delete":
             # TODO: 退出录制快捷键“Del”（shift+esc 为打开chrome任务管理器默认快捷键），后期可放开

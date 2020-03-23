@@ -245,10 +245,11 @@ class PageAction:
             raise e
 
     @CNBMException
-    def localElement(self, conductType, name, timeout=None):
+    def localElement(self, conductType, name, index=0, timeout=None):
         ''' 从本地库查找控件
         :param conductType: 控件类型
         :param name: 本地工程对象库中控件名称
+        :param index: 当对象库中xpath对应多个元素时，通过index定位
         '''
         try:
             OM = ObjectMap(self._driver)
@@ -256,7 +257,11 @@ class PageAction:
 
             locatorExpression = PF.getObjFromLog(conductType, name)
             locatorExpression = locatorExpression["xpath"]
-            element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
+            if index == 0:
+                element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
+            else:
+                elements = OM.findElesbyMethod("xpath", locatorExpression, timeout=time)
+                element = elements[index]
             return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
@@ -428,6 +433,24 @@ class WebElement:
         ''' 移动鼠标光标至元素上 '''
         try:
             ActionChains(self.driver).move_to_element(self.element).perform()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def js_click(self):
+        ''' js点击 '''
+        try:
+            self.driver.execute_script("arguments[0].click();", self.element)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def drag_and_drop(self, x_index, y_index):
+        ''' 模拟鼠标拖拽 '''
+        try:
+            ActionChains(self.driver).drag_and_drop_by_offset(self.element, x_index, y_index).perform()
         except Exception as e:
             handleErr(e)
             raise e
