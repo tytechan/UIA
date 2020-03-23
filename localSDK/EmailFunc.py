@@ -7,11 +7,16 @@ from email.mime.multipart import MIMEMultipart
 from email.parser import Parser
 from email.header import decode_header, Header
 from email.utils import parseaddr
+from config.ErrConfig import CNBMException, handleErr
 
 
 class EmailUtil(object):
 
-    def __init__(self, user, password, pop_server=None, pop_port=None, smtp_server=None, smtp_port=None):
+    def __init__(self, user, password,
+                 pop_server=None,
+                 pop_port=None,
+                 smtp_server=None,
+                 smtp_port=None):
         '''
         收邮件初始化,邮箱配置可使用代码中默认配置,也可传入其他邮箱信息,通过邮件标题来判读有效邮件
         :param user: 邮箱账号                                                               --<str>
@@ -29,6 +34,7 @@ class EmailUtil(object):
         self.smtp_port = smtp_port
         self.charset = "UTF-8"
 
+    @CNBMException
     def get_result(self, before_index=1, email_title="", save_path=None):
         '''
         读取邮件,通过邮件标题判断有效邮件进行下载附件
@@ -37,51 +43,61 @@ class EmailUtil(object):
         :param save_path: 如果需要下载附件,传入下载附件的保存路径,不传不下载         --<str>
         :return: 返回邮箱里最新的邮件数
         '''
-        server = self.connect_server()
-        resp, mails, octets = server.list()
-        index = len(mails)
-        du_email_count = index - int(before_index)
-        for i in range(du_email_count, -1, -1):
-            print("第%s封邮件" % (index - i))
-            resp, lines, octets = server.retr(index - i)
-            try:
-                msg_content = b'\r\n'.join(lines).decode("UTF-8")
-            except Exception as e:
-                continue
-            msg = Parser().parsestr(msg_content)
-            subject = self.get_title(msg)
-            print("邮件标题为:", subject)
-            if email_title in subject:
-                for part in msg.walk():
-                    file_name = part.get_filename()
-                    charset = self.guess_charset(part)
-                    if file_name:
-                        data = part.get_payload(decode=True)
-                        if save_path:
-                            self.save_file(file_name, data, save_path)
-                    else:
-                        if charset:
-                            content = part.get_payload(decode=True).decode(charset)
-        server.quit()
-        return index
+        try:
+            server = self.connect_server()
+            resp, mails, octets = server.list()
+            index = len(mails)
+            du_email_count = index - int(before_index)
+            for i in range(du_email_count, -1, -1):
+                print("第%s封邮件" % (index - i))
+                resp, lines, octets = server.retr(index - i)
+                try:
+                    msg_content = b'\r\n'.join(lines).decode("UTF-8")
+                except Exception as e:
+                    continue
+                msg = Parser().parsestr(msg_content)
+                subject = self.get_title(msg)
+                print("邮件标题为:", subject)
+                if email_title in subject:
+                    for part in msg.walk():
+                        file_name = part.get_filename()
+                        charset = self.guess_charset(part)
+                        if file_name:
+                            data = part.get_payload(decode=True)
+                            if save_path:
+                                self.save_file(file_name, data, save_path)
+                        else:
+                            if charset:
+                                content = part.get_payload(decode=True).decode(charset)
+            server.quit()
+            return index
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def get_title(self, msg):
         '''
         获取邮件标题
         :param msg: email对象
         :return: 返回邮件标题
         '''
-        subject = ""
-        for header in ['From', 'Subject']:
-            value = msg.get(header, '')
-            if value:
-                if header == 'Subject':
-                    subject = self.decode_str(value)
-                else:
-                    hdr, addr = parseaddr(value)
-                    fromaddr = u'%s' % (addr)
-        return subject
+        try:
+            subject = ""
+            for header in ['From', 'Subject']:
+                value = msg.get(header, '')
+                if value:
+                    if header == 'Subject':
+                        subject = self.decode_str(value)
+                    else:
+                        hdr, addr = parseaddr(value)
+                        fromaddr = u'%s' % (addr)
+            return subject
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def save_file(self, filename, data, save_path):
         '''
         保存附件
@@ -90,48 +106,68 @@ class EmailUtil(object):
         :param save_path: 保存路径
         :return:
         '''
-        h = Header(filename)
-        dh = decode_header(h)
-        filename = dh[0][0]
-        if dh[0][1]:
-            filename = self.decode_str(str(filename, dh[0][1]))
-        if not os.path.exists(save_path):
-            os.makedirs(save_path)
-        os.chdir(save_path)
-        f = open(filename, 'wb')
-        f.write(data)
-        f.close()
-        print("{}文件下载成功".format(filename))
+        try:
+            h = Header(filename)
+            dh = decode_header(h)
+            filename = dh[0][0]
+            if dh[0][1]:
+                filename = self.decode_str(str(filename, dh[0][1]))
+            if not os.path.exists(save_path):
+                os.makedirs(save_path)
+            os.chdir(save_path)
+            f = open(filename, 'wb')
+            f.write(data)
+            f.close()
+            print("{}文件下载成功".format(filename))
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def connect_server(self):
         '''连接到POP3服务器'''
-        for i in range(3):
-            try:
-                server = poplib.POP3_SSL(self.pop_server, port=self.pop_port)
-                server.user(self.sender)
-                server.pass_(self.password)
-                server.rset()
-                return server
-            except Exception as e:
-                time.sleep(1)
+        try:
+            for i in range(3):
+                try:
+                    server = poplib.POP3_SSL(self.pop_server, port=self.pop_port)
+                    server.user(self.sender)
+                    server.pass_(self.password)
+                    server.rset()
+                    return server
+                except Exception as e:
+                    time.sleep(1)
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def decode_str(self, s):
         '''字符解码'''
-        value, charset = decode_header(s)[0]
-        if charset:
-            value = value.decode(charset)
-        return value
+        try:
+            value, charset = decode_header(s)[0]
+            if charset:
+                value = value.decode(charset)
+            return value
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def guess_charset(self, msg):
         '''获取邮件的字符编码，首先在message中寻找编码，如果没有，就在header的Content-Type中寻找'''
-        charset = msg.get_charset()
-        if charset is None:
-            content_type = msg.get('Content-Type', '').lower()
-            pos = content_type.find('charset=')
-            if pos >= 0:
-                charset = content_type[pos + 8:].strip()
-        return charset
+        try:
+            charset = msg.get_charset()
+            if charset is None:
+                content_type = msg.get('Content-Type', '').lower()
+                pos = content_type.find('charset=')
+                if pos >= 0:
+                    charset = content_type[pos + 8:].strip()
+            return charset
+        except Exception as e:
+            handleErr(e)
+            raise e
 
+    @CNBMException
     def send_mail(self, subject, mainText, attachs=None, toReceiver=None, ccReciver=None):
         '''
         发邮件
@@ -169,6 +205,7 @@ class EmailUtil(object):
             print("Error: 无法发送邮件2: %s" % e2)
             return False
 
+    @CNBMException
     def create_connect(self, receivers, message):
         '''
         建立smtp连接,将创建好的邮件实例发送
@@ -187,7 +224,7 @@ class EmailUtil(object):
             smtpObj.quit()
         except smtplib.SMTPException as e:
             print("Error: 无法发送邮件: %s" % e)
-            time.sleep(1)
+            handleErr(e)
             raise e
 
 
