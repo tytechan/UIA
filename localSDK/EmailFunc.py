@@ -33,9 +33,20 @@ class EmailUtil(object):
         self.smtp_server = smtp_server
         self.smtp_port = smtp_port
         self.charset = "UTF-8"
+        self.server = None
+
+    def get_index(self):
+        '''获取最新邮件数,写入excel'''
+        if self.server:
+            resp, mails, octets = self.server.list()
+        else:
+            self.server = self.connect_server()
+            resp, mails, octets = self.server.list()
+            self.server.quit()
+        return len(mails)
 
     @CNBMException
-    def get_result(self, before_index=1, email_title="", save_path=None):
+    def get_file(self, before_index=1, email_title="", save_path=None):
         '''
         读取邮件,通过邮件标题判断有效邮件进行下载附件
         :param before_index: 从那一封邮件开始读                                      --<int>
@@ -44,13 +55,12 @@ class EmailUtil(object):
         :return: 返回邮箱里最新的邮件数
         '''
         try:
-            server = self.connect_server()
-            resp, mails, octets = server.list()
-            index = len(mails)
+            self.server = self.connect_server()
+            index = self.get_index()
             du_email_count = index - int(before_index)
             for i in range(du_email_count, -1, -1):
                 print("第%s封邮件" % (index - i))
-                resp, lines, octets = server.retr(index - i)
+                resp, lines, octets = self.server.retr(index - i)
                 try:
                     msg_content = b'\r\n'.join(lines).decode("UTF-8")
                 except Exception as e:
@@ -61,16 +71,48 @@ class EmailUtil(object):
                 if email_title in subject:
                     for part in msg.walk():
                         file_name = part.get_filename()
-                        charset = self.guess_charset(part)
                         if file_name:
                             data = part.get_payload(decode=True)
                             if save_path:
                                 self.save_file(file_name, data, save_path)
-                        else:
-                            if charset:
-                                content = part.get_payload(decode=True).decode(charset)
-            server.quit()
-            return index
+            self.server.quit()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def get_title_and_cont(self, before_index=1):
+        '''
+        收邮件,返回所有邮件每封邮件的标题和正文的二维列表
+        :param before_index: 从那一封邮件开始读                                      --<int>
+        :return: emali{title:"",content:""}
+        '''
+        all_email_dict = dict()
+        try:
+            self.server = self.connect_server()
+            index = self.get_index()
+            du_email_count = index - int(before_index)
+            for i in range(du_email_count, -1, -1):
+                print("第%s封邮件" % (index - i))
+                one_email = dict()
+                resp, lines, octets = self.server.retr(index - i)
+                try:
+                    msg_content = b'\r\n'.join(lines).decode("UTF-8")
+                except Exception as e:
+                    continue
+                msg = Parser().parsestr(msg_content)
+                subject = self.get_title(msg)
+                one_email["title"]=subject
+                for part in msg.walk():
+                    charset = self.guess_charset(part)
+                    if charset:
+                        content = part.get_payload(decode=True).decode(charset)
+                        content=content.replace("\r","").replace("\n","").replace("\t","")
+                        one_email["contnet"]=content
+                all_email_dict["第%s封邮件" % (index - i)]=one_email
+                print(all_email_dict)
+            self.server.quit()
+            return all_email_dict
         except Exception as e:
             handleErr(e)
             raise e
@@ -198,12 +240,13 @@ class EmailUtil(object):
                     message.attach(att)
             self.create_connect(receivers, message)
             return True
-        except smtplib.SMTPException as e:
+        # except smtplib.SMTPException as e:
+        #     print("Error: 无法发送邮件: %s" % e)
+        #     raise e
+        except Exception as e:
             print("Error: 无法发送邮件: %s" % e)
-            return False
-        except Exception as e2:
-            print("Error: 无法发送邮件2: %s" % e2)
-            return False
+            handleErr(e)
+            raise e
 
     @CNBMException
     def create_connect(self, receivers, message):
@@ -228,7 +271,6 @@ class EmailUtil(object):
             raise e
 
 
-
 if __name__ == "__main__":
     senderInit = "yyxz_cnbm@cnbmtech.com"
     passwordInit = "rpa_123456"
@@ -238,5 +280,5 @@ if __name__ == "__main__":
     pop_portInit = 995
     read_index = 7166
     em = EmailUtil(senderInit, passwordInit, popServerInit, pop_portInit, smtpServerInit, smtp_portInit)
-    # em.get_result(7200)
-    em.send_mail("这是一个测试邮件", "testgfhjkl", [r"C:\Users\网讯达\Desktop\验证码.png"], toReceiver=["1162197278@qq.com"])
+    em.get_title_and_cont(7500)
+    # em.send_mail("这是一个测试邮件", "testgfhjkl", [r"C:\Users\网讯达\Desktop\验证码.png"], toReceiver=["1162197278@qq.com"])
