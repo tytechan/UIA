@@ -1,5 +1,6 @@
 from openpyxl.styles import Border, Side, Font, Alignment
 from config.ErrConfig import CNBMException, handleErr
+from collections import Iterable
 import openpyxl
 import win32com.client
 import re
@@ -52,7 +53,7 @@ class ParseSheet:
         '''
         try:
             self.sheet = self.workbook.create_sheet(title=title, index=index)
-            self.save()
+            # self.save()
             return ParseCell(self.workbook, self.excelFile, self.sheet)
         except Exception as e:
             handleErr(e)
@@ -77,7 +78,7 @@ class ParseSheet:
 
     @CNBMException
     def remove(self, sheetName=None, sheetIndex=None):
-        ''' 删除选定sheet并保存
+        ''' 删除选定sheet
         （若名称不为空，则优先通过名称查找；否则通过索引号查找，默认获取第一个sheet）
         :param sheetName: sheet名称
         :param sheetIndex: sheet序号
@@ -85,14 +86,14 @@ class ParseSheet:
         try:
             self.getSheet(sheetName, sheetIndex)
             self.workbook.remove(self.sheet)
-            self.save()
+            # self.save()
         except Exception as e:
             handleErr(e)
             raise e
 
     @CNBMException
     def rename(self, newName, sheetName=None, sheetIndex=None):
-        ''' 重命名选定sheet并保存
+        ''' 重命名选定sheet
         （若名称不为空，则优先通过名称查找；否则通过索引号查找，默认获取第一个sheet）
         :param newName: 新定义的sheet名称
         :param sheetName: sheet名称
@@ -101,7 +102,7 @@ class ParseSheet:
         try:
             self.getSheet(sheetName, sheetIndex)
             self.sheet.title = newName
-            self.save()
+            # self.save()
         except Exception as e:
             handleErr(e)
             raise e
@@ -136,23 +137,25 @@ class ParseSheet:
             raise e
 
     @CNBMException
-    def save(self):
+    def save(self, savePath=None):
         '''
         保存文件
         '''
         try:
-            self.workbook.save(self.excelFile)
+            path = savePath if savePath else self.excelFile
+            self.workbook.save(path)
         except Exception as e:
             handleErr(e)
             raise e
 
     @CNBMException
-    def close(self):
+    def close(self, save=True, savePath=None):
         '''
         关闭文件，默认保存
         '''
         try:
-            self.save()
+            if save:
+                self.save(savePath)
             self.workbook.close()
         except Exception as e:
             handleErr(e)
@@ -166,6 +169,48 @@ class ParseCell:
         self.sheet = sheet
         #颜色对应的RGB值
         self.RGBDict = {'red':'FFFF3030', 'green':'FF008B00'}
+
+    def getValue(self, rng):
+        '''
+        获取区域中所有单元格的值，内部函数
+        :param rng: tuple类型
+        :return: 单元格value的多维数组
+        '''
+        try:
+            cellsValue = list()
+            for cells in rng:
+                row = list()
+                if isinstance(cells, Iterable):
+                    # 可迭代
+                    for cell in cells:
+                        row.append(cell.value)
+                else:
+                    row = cells.value
+                cellsValue.append(row)
+            return cellsValue
+        except Exception as e:
+            raise e
+
+    def delNone(self, cells):
+        '''
+        删除二维value数组首位的空值，内部函数
+        :param cells: list类型
+        :return: 单元格value的二维数组
+        '''
+        try:
+            for i in range(len(cells)-1, -1, -1):
+                if cells[i]:
+                    break
+            for j in range(len(cells)):
+                if cells[j]:
+                    break
+            myList = []
+            while j <= i:
+                myList.append(cells[j])
+                j += 1
+            return myList
+        except Exception as e:
+            raise e
 
     @CNBMException
     def rowCount(self):
@@ -212,12 +257,18 @@ class ParseCell:
             raise e
 
     @CNBMException
-    def row(self, rowNo):
-        ''' 获取sheet中某一行，返回该行所有数据内容组成的tuple
+    def row(self, rowNo, getValue=True, keepNone=False):
+        ''' 获取sheet中某一行
         :param rowNo: 行号（从1开始）
+        :param getValue: True则返回单元格输值，False则返回tuple数据
+        :param keepNone: 返回数值时，False则删除首尾空值，True则保留
         '''
         try:
             myrows = self.sheet[rowNo]
+            if getValue:
+                myrows = self.getValue(myrows)
+                if not keepNone:
+                    myrows = self.delNone(myrows)
             return myrows
 
             # colNo = ParseExcel().getColsNumber(sheet)
@@ -231,12 +282,57 @@ class ParseCell:
             raise e
 
     @CNBMException
-    def column(self, colNo):
+    def column(self, colNo, getValue=True, keepNone=False):
         ''' 获取sheet中某一列，返回该列所有数据内容组成的tuple
-        :param colNo: 列号（从1开始）
+        :param colNo: 列号，可填列标或列序号（从1开始）
+        如：sheet.column(2) 或 sheet.column("B")
         '''
         try:
-            return self.sheet[colNo]
+            if isinstance(colNo, int):
+                maxRow = self.sheet.max_row
+                cells = list()
+                for i in range(maxRow):
+                    cell = self.sheet.cell(row=i+1, column=colNo)
+                    cells.append(cell)
+                    # if cell.value:
+                    #     cells.append(cell)
+                cells = tuple(cells)
+            else:
+                cells = self.sheet[colNo]
+
+            if getValue:
+                cells = self.getValue(cells)
+                if not keepNone:
+                    cells = self.delNone(cells)
+            return cells
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def delete_rows(self, idx, amount=1):
+        '''
+        删除行
+        :param idx: 起始行号
+        :param amount: 从idx开始数共删除的行数
+        '''
+        try:
+            self.sheet.delete_rows(idx, amount)
+            # self.workbook.save(self.excelFile)
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def delete_cols(self, idx, amount=1):
+        '''
+        删除列
+        :param idx: 起始列号（数值型）
+        :param amount: 从idx开始数共删除的列数
+        '''
+        try:
+            self.sheet.delete_cols(idx, amount)
+            # self.workbook.save(self.excelFile)
         except Exception as e:
             handleErr(e)
             raise e
@@ -259,6 +355,7 @@ class ParseCell:
         except Exception as e:
             handleErr(e)
             raise e
+
 
     @CNBMException
     def cell(self, coordinate=None, rowNo=None, colsNo=None):
@@ -283,7 +380,7 @@ class ParseCell:
             raise e
 
     @CNBMException
-    def range(self, startRng=None, endRng=None):
+    def range(self, startRng=None, endRng=None, getValue=True):
         '''
         获取多个单元格对象，返回tuple类型数据
         range("B2", "C3")，获取“B2”到“C3区域”
@@ -304,7 +401,11 @@ class ParseCell:
                 runStr = 'self.sheet["%s":"%s"]' %(startRng, endRng)
             else:
                 runStr = 'self.sheet[%s:%s]' %(startRng, endRng)
-            return eval(runStr)
+            cells = eval(runStr)
+
+            if getValue:
+                cells = self.getValue(cells)
+            return cells
         except Exception as e:
             handleErr(e)
             raise e
@@ -333,7 +434,7 @@ class ParseCell:
                 self.sheet.cell(row=rowNo, column=colsNo).value = content
                 if style:
                     self.sheet.cell(row=rowNo, column=colsNo).font = Font(color=self.RGBDict[style])
-            self.workbook.save(self.excelFile)
+            # self.workbook.save(self.excelFile)
         except Exception as e:
             handleErr(e)
             raise e
@@ -364,7 +465,7 @@ class ParseCell:
                         cell.alignment = Alignment(horizontal=horizontal, vertical=vertical)
             else:
                 self.sheet[startRng].alignment = Alignment(horizontal=horizontal, vertical=vertical)
-            self.workbook.save(self.excelFile)
+            # self.workbook.save(self.excelFile)
         except Exception as e:
             handleErr(e)
             raise e
@@ -467,6 +568,10 @@ if __name__ == "__main__":
     print("最大列数：%s" %sht.colCount())
     print("最小列数：%s\n" %sht.minColNum())
 
+    # 删除行列
+    sht.delete_rows(9)
+    sht.delete_cols(8, 2)
+
     cell = sht.cell("B3")
     print("B3值：", cell.value)
     cell1 = sht.cell(rowNo=3, colsNo=3)
@@ -474,16 +579,27 @@ if __name__ == "__main__":
     print("C2值：", sht.read("C2"))
     print("D2的值：", sht.read(rowNo=2, colsNo=4), "\n")
 
-    col2 = sht.column(2)
+    col2 = sht.column("B", getValue=False)
     print("第二列为：", col2)
-    row3 = sht.row(3)
+    row3 = sht.row(3, getValue=False)
     print("第三行为：", row3)
     print("C3的值：", row3[2].value, "\n")
 
-    print("B2:C3为：", sht.range("B2", "C3"))
-    print("B:C为：", sht.range("B", "C"))
-    print("2-3行为：", sht.range(2, 3))
-    print("获取整个sheet为：", sht.range())
+    col2 = sht.column(2)
+    print("第二列有值项为：", col2)
+    row3 = sht.row(3)
+    print("第三行有值项为：", row3)
+    row3 = sht.row(3, keepNone=True)
+    print("第三行所有值为：", row3, "\n")
+
+    print("B2:C3为：", sht.range("B2", "C3", getValue=False))
+    print("B2:C3值为：", sht.range("B2", "C3"))
+    print("B:C为：", sht.range("B", "C", getValue=False))
+    print("B:C值为：", sht.range("B", "C"))
+    print("2-3行为：", sht.range(2, 3, getValue=False))
+    print("2-3行值为：", sht.range(2, 3))
+    print("获取整个sheet为：", sht.range(getValue=False))
+    print("获取整个sheet值为：", sht.range())
 
     # 设置属性
     sht.alignment("B2", horizontal="right", vertical="top")
