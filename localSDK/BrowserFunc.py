@@ -184,7 +184,7 @@ class PageAction:
     def maximize_browser(self):
         ''' 窗口最大化 '''
         try:
-            self._driver.maximize_window(self)
+            self._driver.maximize_window()
         except Exception as e:
             handleErr(e)
             raise e
