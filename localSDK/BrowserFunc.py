@@ -8,9 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # from config.ErrConfig import CNBMException, handleErr, capture_screen
 from config.ErrConfig import *
-from time import sleep
 import time
 
 PF = PublicFunc()
@@ -127,6 +127,7 @@ class PageAction:
     def __init__(self):
         # self.driver = None
         self.timeout = 10
+        self.loadTime = 10
         self.pageSource = None
         self.title = None
 
@@ -137,6 +138,10 @@ class PageAction:
         :return: 全局变量driver
         '''
         try:
+            # 配置无需等driver下页面加载完毕再执行下一步
+            desired_capabilities = DesiredCapabilities.CHROME
+            desired_capabilities["pageLoadStrategy"] = "none"
+
             if browserName.lower() == 'ie':
                 driver = webdriver.Ie()
             elif browserName.lower() == 'chrome':
@@ -213,7 +218,7 @@ class PageAction:
             raise e
 
     @CNBMException
-    def findElement(self, locationType, locatorExpression, timeout=None):
+    def findElement(self, locationType, locatorExpression, elements=None, index=0, timeout=None):
         ''' 通过属性值查找控件（找到即代表元素可见）
         :param locationType: 下拉框控件定位类型
         :param locatorExpression: 下拉框控件定位属性值
@@ -222,12 +227,32 @@ class PageAction:
             OM = ObjectMap(self._driver)
             time = timeout if timeout else self.timeout
 
-            element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+            if not elements:
+                element = OM.findElebyMethod(locationType, locatorExpression, timeout=time)
+            else:
+                element = elements[index]
             return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
             raise e
 
+    @CNBMException
+    def findElements(self, locationType, locatorExpression, timeout=None):
+        ''' 通过属性值查找多个控件（找到即代表元素存在，不一定可见）
+        :param locationType: 下拉框控件定位类型
+        :param locatorExpression: 下拉框控件定位属性值
+        '''
+        try:
+            OM = ObjectMap(self._driver)
+            time = timeout if timeout else self.timeout
+
+            elements = OM.findElesbyMethod(locationType, locatorExpression, timeout=time)
+            return elements
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
     def wait_for_presence(self, locationType, locatorExpression, timeout=None):
         ''' 通过属性值查找控件
         （找到即代表元素存在于DOM中，并不一定可见！无特殊要求，直接用 findElemrnt 即可）
@@ -256,12 +281,10 @@ class PageAction:
             time = timeout if timeout else self.timeout
 
             locatorExpression = PF.getObjFromLog(conductType, name)
-            locatorExpression = locatorExpression["xpath"]
-            if index == 0:
-                element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
-            else:
-                elements = OM.findElesbyMethod("xpath", locatorExpression, timeout=time)
-                element = elements[index]
+            xpath = locatorExpression["xpath"]
+            locatorExpression = xpath if index == 0 else (xpath %index)
+            element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
+
             return WebElement(self._driver, element)
         except Exception as e:
             handleErr(e)
