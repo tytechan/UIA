@@ -154,7 +154,7 @@ class PageAction:
 
                 # 设置配置数据路径
                 chrome_options.add_argument(
-                    '--user-data-dir=C:%s' %dataPath)
+                    '--user-data-dir=%s' %dataPath)
 
                 # 让Chrome在root权限下执行
                 chrome_options.add_argument('-–no-sandbox')
