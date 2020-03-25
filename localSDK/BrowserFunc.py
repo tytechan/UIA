@@ -125,37 +125,66 @@ class ObjectMap:
 class PageAction:
     _driver = None
     def __init__(self):
-        # self.driver = None
-        self.timeout = 10
-        self.loadTime = 10
+        self.type = None            # 控件类型，从对象库取值前需定义
+        self.timeout = 10           # 默认等待控件的最长时间
+        self.loadTime = 60          # 默认等待页面加载的最长时间
         self.pageSource = None
         self.title = None
 
     @CNBMException
-    def open_browser(self, browserName):
+    def open_browser(self, dataPath):
         ''' 打开指定类型浏览器
-        :param browserName: 浏览器类型（ie/chrome/edge/firefox）
+        :param dataPath: 固定配置文件路径（可与本地已有配置相同），暂只用作chrome
         :return: 全局变量driver
         '''
         try:
-            # 配置无需等driver下页面加载完毕再执行下一步
-            desired_capabilities = DesiredCapabilities.CHROME
-            desired_capabilities["pageLoadStrategy"] = "none"
+            ''' 
+            配置无需等driver下页面加载完毕再执行下一步
+            （此操作会去掉所有等待操作，弃用）            
+            '''
+            # desired_capabilities = DesiredCapabilities.CHROME
+            # desired_capabilities["pageLoadStrategy"] = "none"
 
-            if browserName.lower() == 'ie':
+            if self.type.lower() == 'ie':
                 driver = webdriver.Ie()
-            elif browserName.lower() == 'chrome':
+            elif self.type.lower() == 'chrome':
                 chrome_options = webdriver.ChromeOptions()
+                # 最大化打开
+                chrome_options.add_argument('--start-maximized')
+
+                # 设置配置数据路径
+                chrome_options.add_argument(
+                    '--user-data-dir=C:%s' %dataPath)
+
+                # 让Chrome在root权限下执行
+                chrome_options.add_argument('-–no-sandbox')
+
                 # 用于控制进程是否在后台执行
                 # chrome_options.add_argument('--headless')
                 # chrome_options.add_argument('--disable-gpu')
+
                 driver = webdriver.Chrome(chrome_options=chrome_options)
-            elif browserName.lower() == 'edge':
+            elif self.type.lower() == 'edge':
                 driver = webdriver.Edge()
-            elif browserName.lower() == 'firefox':
+            elif self.type.lower() == 'firefox':
                 driver = webdriver.Firefox()
             # driver对象创建成功，创建等待类实例对象
             self._driver = driver
+            self.load_page()
+        except Exception as e:
+            handleErr(e)
+            raise e
+
+    @CNBMException
+    def load_page(self, loopTime=None):
+        '''
+        修改全局等待页面加载的最长时间
+        :param loopTime: 默认为self.loadTime
+        '''
+        try:
+            loopTime = self.loadTime if not loopTime else loopTime
+            self._driver.set_page_load_timeout(loopTime)
+            self._driver.set_script_timeout(loopTime)
         except Exception as e:
             handleErr(e)
             raise e
@@ -270,9 +299,8 @@ class PageAction:
             raise e
 
     @CNBMException
-    def localElement(self, conductType, name, index=0, timeout=None):
+    def localElement(self, name, index=0, timeout=None):
         ''' 从本地库查找控件
-        :param conductType: 控件类型
         :param name: 本地工程对象库中控件名称
         :param index: 当对象库中xpath对应多个元素时，通过index定位
         '''
@@ -280,7 +308,7 @@ class PageAction:
             OM = ObjectMap(self._driver)
             time = timeout if timeout else self.timeout
 
-            locatorExpression = PF.getObjFromLog(conductType, name)
+            locatorExpression = PF.getObjFromLog(self.type, name)
             xpath = locatorExpression["xpath"]
             locatorExpression = xpath if index == 0 else (xpath %index)
             element = OM.findElebyMethod("xpath", locatorExpression, timeout=time)
@@ -351,17 +379,22 @@ class PageAction:
             raise e
 
     @CNBMException
-    def switch_to_window(self, name=None, num=0):
+    def switch_to_window(self, name=None, num=0, loopTime=None):
         ''' 切换到指定的页签（若传入页签名，则依据名称查找；否则依据索引查找，默认切换到第一个页签）
         :param name: 页签名称
         :param num: 页签索引号
+        :param loopTime: 此次切换需等待页面加载的最长时间（切换完成后自动恢复为默认时间）
         '''
         try:
+            if loopTime:
+                self.load_page(loopTime)
             if name:
                 self._driver.switch_to.window(name)
             else:
                 all_handles = self._driver.window_handles
                 self._driver.switch_to.window(all_handles[num])
+            # 重置等待页面加载的最长时间
+            self.load_page(self.loadTime)
         except Exception as e:
             handleErr(e)
             raise e

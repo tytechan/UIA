@@ -67,31 +67,14 @@ if __name__ == "__main__":
 
 
     # ----- Chrome -----
-    browser.open_browser("Chrome")
+    browser.type = "Chrome"
+    # browser.open_browser(r"\Users\47612\AppData\Local\Google\Chrome\User Data\Default")
+    browser.open_browser(r"\Users\47612\AppData\Local\Google\Chrome\User Data")
     browser.visit_url("http://cdwp.cnbmxinyun.com")
-    #
-    # # OM = ObjectMap(PA.driver)
-    #
-    # # el = OM.findElebyMethod("xpath", '//input[@ng-model="user_name"]')
-    # # print(el.get_attribute("placeholder"))
-    # # el.send_keys("abc")
-    # #
-    # # el1 = OM.findElebyMethod("xpath", '//input[@ng-model="password"]')
-    # # print(el1.get_attribute("placeholder"))
-    # # el1.send_keys("123456")
-    #
-    #
-    # # PA.sendkeys("abc", "xpath", '//input[@ng-model="user_name"]')
-    # # PA.sendkeys("123456", "xpath", '//input[@ng-model="password3"]', 0.5)
-    #
-    #
-    # # browser.findElement("xpath", '//input[@ng-model="user_name"]').sendkeys("abc")
-    # # browser.findElement("xpath", '//input[@ng-model="password"]', 0.5).sendkeys("123456")
-    # # browser.findElement("text", '登录').sendkeys("abc")
-    #
-    browser.localElement("登陆-用户名", 1).sendkeys("abc")
-    attr = browser.localElement("登陆-用户名", 1).get_attribute("class")
+
+    browser.localElement("登陆-用户名", timeout=1).sendkeys("abc")
+    attr = browser.localElement("登陆-用户名", timeout=1).get_attribute("class")
     print(attr)
     browser.captureScreen()
-    browser.localElement("登陆-密码1", 1).sendkeys("123456")
+    browser.localElement("登陆-密码1", timeout=1).sendkeys("123456")
     browser.localElement("登陆-按钮").click()
