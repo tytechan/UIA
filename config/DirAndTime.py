@@ -11,10 +11,13 @@ def getCurrentDate():
         str(timeTup.tm_mon) + "-" + str(timeTup.tm_mday)
     return currentDate
 
-def getCurrentTime():
+def getCurrentTime(date=None):
     # 获取当前时间，确保日期中无非法字符，否则无法生成截图文件
     timeStr = datetime.now()
-    nowTime = timeStr.strftime('%H_%M_%S.%f')
+    if date:
+        nowTime = timeStr.strftime('%D %H:%M:%S.%f')
+    else:
+        nowTime = timeStr.strftime('%H_%M_%S.%f')
     return nowTime
 
 def createCurrentDateDir(parentDir):

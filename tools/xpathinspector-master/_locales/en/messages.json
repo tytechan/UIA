@@ -1,0 +1,29 @@
+{
+    "extDesc": {
+        "message": "XPath Inspector"
+    },
+    "defaultTitle": {
+        "message": "XPathInspector"
+    },
+    "XPathInspector": {
+        "message": "XPathInspector"
+    },
+    "EnableInspector": {
+        "message": "XPathInspector Enable"
+    },
+    "DisableInspector": {
+        "message": "XPathInspector Disable"
+    },
+    "OK": {
+        "message": "OK"
+    },
+    "Run": {
+        "message": "Run"
+    },
+    "CloseToolbar": {
+        "message": "Close"
+    },
+    "NotFindElement": {
+        "message": "no elements found"
+    }
+}

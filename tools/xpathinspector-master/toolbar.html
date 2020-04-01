@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Toolbar</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="toolbar.css">
+</head>
+<body>
+	<div class="panel">  
+		<center class="title">XPathInspector</center>
+		<textarea id="xpath_expression" class="textarea_style xpath_expression" aria-label="XPath表达式"></textarea>
+		<textarea id="xpath_result" class="textarea_style xpath_result" aria-label="XPath表达式结果"></textarea>
+
+		<div class="button_area">
+			<button id="run_xpath" type="button" class="btn btn-outline-success">运行</button>
+			<button id="hide" type="button" class="btn btn-outline-success">关闭</button>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="toolbar.js"></script>
+</body>
+</html>

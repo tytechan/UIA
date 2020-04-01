@@ -2,7 +2,6 @@
 from hooker import *
 from config.GUIdesign import *
 from localSDK.BasicFunc import *
-from hooker.Hook import ChromeHooker
 import subprocess
 import config.Globals as cf
 
@@ -129,149 +128,7 @@ def compileLogFile():
     # print(info)
     return info
 
-def recordIntoProject_Win(eleProperties):
-    ''' 点击目标控件（Windows）后，判断是否保存到本地库，并定义控件名称
-    :param eleProperties: 目标控件所有信息
-    :return: True：成功获取并保存/False：不保存
-    '''
-    import tkinter.messagebox as msg
-    import win32api, win32con
-    import easygui
-
-    AC = AppControl()
-    try:
-        keyObj = eleProperties.get("Depth")
-        info = keyObj[str(len(keyObj) - 1)]
-        # print(info)
-        copyInfo = {
-            "AutomationId": info["AutomationId"],
-            "ClassName": info["ClassName"],
-            "ControlType": info["ControlType"],
-            "Depth": info["Depth"],
-            "Name": info["Name"],
-        }
-
-        message = "是否添加控件：\n" + str(copyInfo)
-        # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
-        result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
-        # result = message_askyesno("提示", message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
-        # print(result)
-        path = cf.get_value("path")
-        if result == 1:
-            # 保存前脚本进行唯一性校验
-            # （True：可直接保存；False：人工进行index判断）
-            flag = AC.checkBottom(keyObj, True)           # TODO：根据判断识别出结果但应用程序实际不可识别处理方法
-            if not flag:
-                # win32api.MessageBox(0, "依据获取信息无法识别控件，请检查控件状态！", "提示", win32con.MB_OK)
-                # rasygui，可用
-                confirmMsg = "请检查控件当前状态，并确认是否继续保存？"
-                confirm = win32api.MessageBox(0, confirmMsg, "请确认", win32con.MB_OKCANCEL)
-                if confirm != 1:
-                    return False
-
-            # 点击后保存
-            filePath = path + r"\log.txt"
-            # print(filePath)
-            with open(filePath, "a+"):
-                pass
-            with open(filePath, "r+") as f:
-                rawData = f.read()
-                autoType = cf.get_value("autoType")
-                if not rawData:
-                    rawData = "{'%s': {}}" %autoType
-                rawDict = eval(rawData)
-
-                # objName = input("定义控件名称为：")
-                objName = getInput("请确认", "请定义控件名称：")
-                if objName is None:
-                    # 点击后不保存，默认继续识别
-                    return False
-
-                if autoType not in rawDict:
-                    rawDict[autoType] = dict()
-                rawDict[autoType][objName] = eleProperties
-                # print(rawDict)
-            with open(filePath, "w") as f:
-                f.write(str(rawDict))
-                # f.close()
-            return True
-        else:
-            # 点击后不保存，默认继续识别
-            return False
-    except Exception as e:
-        raise e
-
-def recordIntoProject_Chrome(eleInfo):
-    ''' 点击目标控件（Chrome）后，判断是否保存到本地库，并定义控件名称
-    :param eleInfo: 目标控件xpath
-    :return: True：成功获取并保存/False：不保存
-    '''
-    import tkinter.messagebox as msg
-    import win32api, win32con
-    import easygui
-
-    AC = AppControl()
-    CH = ChromeHooker()
-    try:
-        message = "是否添加控件：\n" + str(eleInfo)
-        # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
-        result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
-        # result = message_askyesno("提示", message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
-        # print(result)
-        path = cf.get_value("path")
-        if result == 1:
-            # 保存前脚本进行唯一性校验
-            # （True：可直接保存；False：人工进行index判断）
-            flag = AC.checkBrowserElement(eleInfo)
-            if not flag:
-                # win32api.MessageBox(0, "依据获取信息无法识别控件，请检查控件状态！", "提示", win32con.MB_OK)
-                # rasygui，可用
-                confirmMsg = "请检查控件当前状态，并确认是否继续保存？"
-                confirm = win32api.MessageBox(0, confirmMsg, "请确认", win32con.MB_OKCANCEL)
-                if confirm != 1:
-                    return False
-            else:
-                # 唯一性校验通过后，保存简化后xpath
-                eleInfo = flag
-
-            # 点击后保存
-            filePath = path + r"\log.txt"
-            # print(filePath)
-            with open(filePath, "a+"):
-                pass
-            with open(filePath, "r+") as f:
-                rawData = f.read()
-                autoType = cf.get_value("autoType")
-                if not rawData:
-                    rawData = "{'%s': {}}" %autoType
-                rawDict = eval(rawData)
-
-                # objName = input("定义控件名称为：")
-                objName = getInput("请确认", "请定义控件名称：")
-                if objName is None:
-                    # 点击后不保存，默认继续识别
-                    return False
-
-                if autoType not in rawDict:
-                    rawDict[autoType] = dict()
-                rawDict[autoType][objName] = dict()
-                rawDict[autoType][objName]["xpath"] = eleInfo
-                rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
-                rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) \
-                    if flag else "唯一性校验失败，强制保存"
-                # rawDict[autoType][objName]["info"] = CH.getElementSource(eleInfo) if flag else ""
-                # print(rawDict)
-            with open(filePath, "w") as f:
-                f.write(str(rawDict))
-                # f.close()
-            return True
-        else:
-            # 点击后不保存，默认继续识别
-            return False
-    except Exception as e:
-        raise e
-
-def recordIntoProject_IE(eleProperties):
+def recordIntoProject(eleProperties):
     ''' 点击目标控件（IE）后，判断是否保存到本地库，并定义控件名称（不做唯一性校验）
     :param eleProperties: 目标控件所有信息
     :return: True：成功获取并保存/False：不保存
@@ -281,70 +138,50 @@ def recordIntoProject_IE(eleProperties):
     import easygui
 
     try:
-        keyObj = eleProperties.get("Depth")
-        info = keyObj[str(len(keyObj) - 1)]
-        # print(info)
-        objXpath = info["Name"]
-
-        message = "是否添加控件：\n" + str(objXpath)
-        # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
-        result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
-        # result = message_askyesno("提示", message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
-        # print(result)
-        path = cf.get_value("path")
-        if result == 1:
-            # 点击后保存
-            filePath = path + r"\log.txt"
-            # print(filePath)
-            with open(filePath, "a+"):
-                pass
-            with open(filePath, "r+") as f:
-                rawData = f.read()
-                autoType = cf.get_value("autoType")
-                if not rawData:
-                    rawData = "{'%s': {}}" %autoType
-                rawDict = eval(rawData)
-
-                # objName = input("定义控件名称为：")
-                objName = getInput("请确认", "请定义控件名称：")
-                if objName is None:
-                    # 点击后不保存，默认继续识别
-                    return False
-
-                if autoType not in rawDict:
-                    rawDict[autoType] = dict()
-                rawDict[autoType][objName] = dict()
-                rawDict[autoType][objName]["xpath"] = objXpath
-                rawDict[autoType][objName]["Starts"] = eleProperties["Starts"]
-                rawDict[autoType][objName]["Ends"] = eleProperties["Ends"]
-                # print(rawDict)
-            with open(filePath, "w") as f:
-                f.write(str(rawDict))
-                # f.close()
-            return True
+        autoType = cf.get_value("autoType")
+        if autoType == "IE":
+            # IE类型控件
+            keyObj = eleProperties.get("Depth")
+            info = keyObj[str(len(keyObj) - 1)]
+            # print(info)
+            copyInfo = info["Name"]
+        elif autoType == "Windows":
+            keyObj = eleProperties.get("Depth")
+            info = keyObj[str(len(keyObj) - 1)]
+            # print(info)
+            copyInfo = {
+                "AutomationId": info["AutomationId"],
+                "ClassName": info["ClassName"],
+                "ControlType": info["ControlType"],
+                "Depth": info["Depth"],
+                "Name": info["Name"],
+            }
         else:
-            # 点击后不保存，默认继续识别
-            return False
-    except Exception as e:
-        raise e
+            # chrome或firefox类型控件
+            copyInfo = eleProperties
 
-def recordIntoProject_Firefox(eleInfo):
-    ''' 点击目标控件（Firefox）后，判断是否保存到本地库，并定义控件名称
-    :param eleInfo: 目标控件xpath
-    :return: True：成功获取并保存/False：不保存
-    '''
-    import tkinter.messagebox as msg
-    import win32api, win32con
-    import easygui
 
-    try:
-        message = "是否添加控件：\n" + str(eleInfo)
+        message = "是否添加控件：\n" + str(copyInfo)
         # result = easygui.boolbox(msg=message, title='提示', choices=('是', '否'), image=None)                # rasygui，可用
         result = win32api.MessageBox(0, message, "提示", win32con.MB_OKCANCEL)                                # pywin32，可用
         # result = message_askyesno("提示", message)                                                        # tk下总会有空白/多余弹框，且易卡顿，不可用
         # print(result)
+
         path = cf.get_value("path")
         if result == 1:
+            if autoType == "Windows":
+                # windows控件保存前脚本进行唯一性校验
+                # （True：可直接保存；False：人工进行index判断）
+                AC = AppControl()
+                flag = AC.checkBottom(keyObj, True)           # TODO：根据判断识别出结果但应用程序实际不可识别处理方法
+                if not flag:
+                    # win32api.MessageBox(0, "依据获取信息无法识别控件，请检查控件状态！", "提示", win32con.MB_OK)
+                    # rasygui，可用
+                    confirmMsg = "请检查控件当前状态，并确认是否继续保存？"
+                    confirm = win32api.MessageBox(0, confirmMsg, "请确认", win32con.MB_OKCANCEL)
+                    if confirm != 1:
+                        return False
+
             # 点击后保存
             filePath = path + r"\log.txt"
             # print(filePath)
@@ -352,7 +189,6 @@ def recordIntoProject_Firefox(eleInfo):
                 pass
             with open(filePath, "r+") as f:
                 rawData = f.read()
-                autoType = cf.get_value("autoType")
                 if not rawData:
                     rawData = "{'%s': {}}" %autoType
                 rawDict = eval(rawData)
@@ -366,8 +202,16 @@ def recordIntoProject_Firefox(eleInfo):
                 if autoType not in rawDict:
                     rawDict[autoType] = dict()
                 rawDict[autoType][objName] = dict()
-                rawDict[autoType][objName]["xpath"] = eleInfo
-                rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
+                if autoType == "IE":
+                    rawDict[autoType][objName]["xpath"] = copyInfo
+                    rawDict[autoType][objName]["Starts"] = eleProperties["Starts"]
+                    rawDict[autoType][objName]["Ends"] = eleProperties["Ends"]
+                elif autoType == "Windows":
+                    rawDict[autoType][objName] = eleProperties
+                else:
+                    # chrome/firefox
+                    rawDict[autoType][objName]["xpath"] = copyInfo
+                    rawDict[autoType][objName]["time"] = "%s %s" %(getCurrentDate(), getCurrentTime())
                 # print(rawDict)
             with open(filePath, "w") as f:
                 f.write(str(rawDict))
@@ -380,20 +224,4 @@ def recordIntoProject_Firefox(eleInfo):
         raise e
 
 if __name__ == "__main__":
-    # info = myPopen("automation.py -a -t0 -n")
-    # print(info)
-
-    # os_cmd()
-
-    # a = "ControlType: PaneControl    ClassName: #32769    AutomationId:     Rect: (0,0,1280,720)[1280x720]    Name: 桌面 1    Handle: 0x10010(65552)    Depth: 0    SupportedPattern: LegacyIAccessiblePattern"
-    # # a = "ControlType: PaneControl    asd:    zxc: 123123    zaa:234431     wer:"
-    # # b = getValue(a, "Name", ": ")
-    # # print(b)
-    #
-    # b = getKeyAndValue(a, ":")
-    # print(b)
-
-    # compileLogFile()
-
-    # recordIntoProject_Win("test")
-    recordIntoProject_Chrome("test")
+    recordIntoProject("test")

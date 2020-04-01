@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#xpath_inspector_toolbar{
+    position: fixed;
+    right: 4px;
+    bottom: 4px;
+    width: 320px;
+    height: 220px;
+    
+    z-index: 999999;
+    display: block;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 8px;
+    background-color:#343a40;
+}
+
+#xpath_inspector_toolbar.hidden {
+    display: none;
+}
+
+#xpath_inspector_toolbar.visible {
+    display: block;
+}
+
+@keyframes highlight_animation{
+	from { background-color: transparent;}
+	to { background-color: #28a745;}
+}
+
+.xpath_inspector_highlight {
+    animation: highlight_animation 2s infinite; 
+}
+  

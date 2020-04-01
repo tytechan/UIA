@@ -4,6 +4,16 @@ from localSDK import *
 from tkinter import ttk
 from config.ErrConfig import CNBMException, handleErr
 from config.DirAndTime import getCurrentDate, getCurrentTime
+from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+import pickle
+import pythoncom
+import time
+import PyHook3
 import tkinter as tk
 import copy
 import uiautomation as auto
@@ -136,71 +146,12 @@ class AppControl:
         # print("唯一性校验完毕！")
         return searchObj
 
-    def checkBrowserElement(self, eleInfo):
-        ''' （Chrome/Firefox/IE）用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
-        :param eleInfo: 网页元素
-        :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
-        '''
-        from hooker.Hook import ChromeHooker
-
-        CH = ChromeHooker()
-
-        splitList = re.findall(r"\[@class=\'(.+?)\']", eleInfo)
-        for myStr in splitList:
-            initValue = "[@class=\'%s\']" %myStr
-            eleInfo = eleInfo.replace(initValue, "")
-        eleInfo = eleInfo.replace("\'", '\"')
-
-        try:
-            CH.checkElement(eleInfo)
-            return eleInfo
-        except:
-            print("唯一性校验失败！")
-            return False
-
-    def checkBrowserElement_EX(self, eleInfo):
-        ''' （Chrome/Firefox/IE）用户选择该控件需保存时，进行提示（凭获取信息无法唯一识别）
-            该方法删除所有class中“ng”值，暂不可用
-        :param eleInfo: 网页元素
-        :return: True：通过已获取的层级结构及属性信息可唯一定位控件；False：反之
-        '''
-        from hooker.Hook import ChromeHooker
-
-        CH = ChromeHooker()
-
-        splitList = re.findall(r"\[@class=\'(.+?)\']", eleInfo)
-        for i in range(len(splitList)-1, -1, -1):
-            myStr = splitList[i]
-            initValue = "[@class=\'%s\']" %myStr
-
-            # 删除“ng-”开头属性值（动态属性）
-            classValueList = myStr.split(" ")
-            for j in range(len(classValueList)-1, -1, -1):
-                myStr = classValueList[j].strip()
-                if myStr.startswith("ng-"):
-                    del classValueList[j]
-            finalValue = "[@class=\'%s\']" %(" ".join(classValueList))
-
-            # 通过eleInfo定位失败时，从后往前删除@class属性，直至定位成功
-            eleInfo = finalValue.join(eleInfo.rsplit(initValue, 1))
-        eleInfo = eleInfo.replace("\'", '\"')
-            # mySlice = eleInfo.rfind(s)
-            # eleInfo = eleInfo[:mySlice] + eleInfo[mySlice+1:]
-
-        try:
-            # element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
-            element = CH.checkElement(eleInfo)
-            return eleInfo
-        except:
-            return False
-
     def checkObjFromLog(self, conductType, name):
         ''' 对本地控件库中控件进行唯一性校验
         :param conductType: 控件类型
         :param name: 控件名
         :param projectName: 所在工程名
         '''
-        from hooker.Hook import ChromeHooker
         import win32api
         import win32con
 
@@ -514,14 +465,13 @@ class PublicFunc:
         except Exception as e:
             raise e
 
-    def openChrome(self, path=r"C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"):
+    def openChrome(self, path):
         ''' 调起chrome进程，可用于后续流程识别
-        :param path: chrome安装路径
+        :param path: 存放chrome配置文件的路径（自定义）
         '''
         import subprocess
         import ctypes, sys
         cmd = 'chrome.exe --remote-debugging-port=9222 --user-data-dir="%s"' %path
-        # cmd = r'chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\Users\47612\AppData\Local\Google\Chrome\Applicationpath"'
 
         # 判断是否管理员权限
         if not ctypes.windll.shell32.IsUserAnAdmin():
@@ -664,37 +614,150 @@ class PublicFunc:
         if autoType == "Windows":
             HK = H.Hooker()
             HK.hooks()
-        elif autoType == "Chrome":
-            HK = H.Hooker()
-            CH = H.ChromeHooker()
-
-            # CH.keyUp("ctrl")
-            # CH.keyUp("shift")
-
-            # 模拟点击“ctrl+shift+x”，并长按“shift”，激活“xpath helper”识别功能
-            # CH.keyDown("shift")
-
-            t = threading.Thread(target=CH.refreshDriver, args=[])
-            t.setDaemon(True)
-            t.start()
-
-            HK.hooks()
-
-            CH.keyUp("shift")
         elif autoType == "IE":
             IEXPath = parentDirPath + r"\tools\IEXPath.exe"
             win32api.ShellExecute(0, 'open', IEXPath, '', '', 1)
 
             HK = H.Hooker()
             HK.hooks()
-        elif autoType == "Firefox":
-            HK = H.Hooker()
-            H.FirefoxHooker()
-            HK.hooks()
+        elif autoType == "Chrome" or autoType == "Firefox":
+            Init().hooks()
+            from hooker.Extension import run
+            run()
         else:
             pass
 
         # os._exit(0)
+
+
+hm = PyHook3.HookManager()
+class Init:
+    def __init__(self):
+        self.pause = False
+        self.flag = False
+        self.autoType = cf.get_value("autoType")
+
+    #键盘事件处理函数
+    def OnKeyboardEvent(self, event):
+        keyType = event.Key
+        print('Key:', keyType)
+        if keyType == "Return":
+            # print(self.pause, type(self.pause))
+            self.pause = bool(1 - self.pause)
+
+            if self.autoType == "Chrome" and self.pause:
+                # 类型选择Chrome，且开始录制后两次点击快捷开关（先暂停，后开启录制）
+                # 默认此时焦点在driver对应Chrome浏览器上
+                CH = ChromeHooker()
+
+                html = WebDriverWait(CH.driver, 0.5).until(
+                    EC.visibility_of_element_located((By.XPATH, "/html")),  "请检查Chrome状态！")
+                time.sleep(0.5)
+
+                for i in range(3):
+                    try:
+                        WebDriverWait(CH.driver, 0.5).until(
+                            EC.visibility_of_element_located((By.ID, "xpath_inspector_toolbar")),
+                            "请检查xpath_inspector状态！")
+                        break
+                    except:
+                        if i != 2:
+                            time.sleep(0.3)
+                        else:
+                            html.send_keys(Keys.CONTROL, Keys.ENTER)
+                self.flag = True
+            elif self.autoType == "Firefox" and self.pause:
+                import hooker.LocalFirefox as LF
+
+                dataFile = parentDirPath + "\hooker\params.data"
+                f = open(dataFile, 'rb')
+                params = pickle.load(f)
+                print(params)
+
+                driver = LF.myWebDriver(service_url=params["server_url"],
+                    session_id=params["session_id"])
+
+                for i in range(3):
+                    try:
+                        driver.find_element_by_id("run_xpath")
+                        break
+                    except:
+                        if i != 2:
+                            time.sleep(0.3)
+                        else:
+                            KK = KeyboardKeys()
+                            KK.keyDown("ctrl")
+                            KK.keyDown("enter")
+                            KK.keyUp("enter")
+                            KK.keyUp("ctrl")
+                self.flag = True
+        return True
+
+    def main(self):
+        hm.KeyDown = self.OnKeyboardEvent
+        hm.HookKeyboard()
+        pythoncom.PumpMessages(10000)
+
+
+    def hooks(self):
+        while True:
+            try:
+                t = threading.Thread(target=self.main, args=())
+                t.setDaemon(True)
+                t.start()
+            except:
+                print("Error")
+            if self.flag:
+                print("[开始录制]")
+                hm.UnhookMouse()
+                hm.UnhookKeyboard()
+                return
+            time.sleep(0.5)
+
+
+class ChromeHooker:
+    def __init__(self):
+        self.chrome_driver = path
+        self.chrome_options = Options()
+        self.chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+
+        self.driver = webdriver.Chrome(self.chrome_driver, chrome_options=self.chrome_options)
+
+        try:
+            cf._global_dict
+        except:
+            # checkFunc中调用时，此前未定义 cf._global_dict
+            cf._init()
+        cf.set_value("driver", self.driver)
+        print("[title] ", self.driver.title)
+
+        self.page_source = self.driver.page_source
+        self.url = self.driver.current_url
+
+    def refreshDriver(self):
+        # while True:
+        if self.url != self.driver.current_url:
+            # 网页有变动，更新driver
+            self.url = self.driver.current_url
+            self.driver = webdriver.Chrome(self.chrome_driver, chrome_options=self.chrome_options)
+
+            self.page_source = self.driver.page_source
+            # print("刷新后 title 为：", self.driver.title, "\n")
+            # print(self.page_source)
+
+    def checkElement(self, eleInfo):
+        ''' 唯一性校验
+        :param eleInfo: 目标元素xpath
+        :return: 目标元素
+        '''
+        from localSDK.BrowserFunc import ObjectMap
+        OM = ObjectMap(self.driver)
+        try:
+            element = OM.findElebyMethod("xpath", eleInfo, timeout=0.1)
+            OM.highlight(element, 1)
+            return element
+        except Exception as e:
+            raise e
 
 
 class KeyboardKeys:

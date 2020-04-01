@@ -1,0 +1,29 @@
+{
+    "extDesc": {
+        "message": "XPath Inspector"
+    },
+    "defaultTitle": {
+        "message": "XPathInspector"
+    },
+    "XPathInspector": {
+        "message": "XPathInspector"
+    },
+    "EnableInspector": {
+        "message": "探测器已启用"
+    },
+    "DisableInspector": {
+        "message": "探测器已禁用"
+    },
+    "OK": {
+        "message": "确定"
+    },
+    "Run": {
+        "message": "运行"
+    },
+    "CloseToolbar": {
+        "message": "关闭"
+    },
+    "NotFindElement": {
+        "message": "未找到任何元素"
+    }
+}

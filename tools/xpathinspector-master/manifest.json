@@ -1,0 +1,51 @@
+﻿{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "XPathInspector",
+    "short_name": "XPathInspector",
+    "description": "__MSG_extDesc__",
+    "minimum_chrome_version": "50",
+    "default_locale": "en",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        },
+        "default_title": "__MSG_defaultTitle__"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "inject.js"
+            ],
+            "css": [
+                "inject.css"
+            ],
+            "matches": ["http://*/*", "https://*/*"],
+            "exclude_matches": ["https://chrome.google.com/webstore/*", "https://addons.mozilla.org/*"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "notifications",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+        "bootstrap/css/bootstrap-reboot.min.css",
+        "bootstrap/css/bootstrap.min.css",
+        "toolbar.html",
+        "toolbar.css"
+    ]
+}
