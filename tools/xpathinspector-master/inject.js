@@ -65,6 +65,8 @@ class ToolBar
 			this.frame_.classList.add("hidden");
 			// document.removeEventListener("mouseover", handleInspectElement);
 			document.removeEventListener("mousedown", handleInspectElement);
+			// 取消所有已高亮显示的元素
+			this.clearHighlight();
 		}
 	}
 
@@ -488,7 +490,7 @@ function handleInspectElement(event)
 		let result = inspector.getXPath(current_element);
 		toolbar.showHighlightElement(current_element);
 		toolbar.update(result);
-		postHttp(result);
+		// postHttp(result);
 		console.log(`getXPath() result = ${JSON.stringify(result)}`);
 	}
 }
